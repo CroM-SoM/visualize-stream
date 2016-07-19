@@ -69,8 +69,10 @@ io.sockets.on('connection', function (socket) {
   socket.on("start tweets", function() {
 
     if(stream === null) {
-        //Connect to twitter stream passing in filter for entire world.
-        twit.stream('statuses/filter', {'locations':'52.339215, 4.874897, 52.408437, 4.935222'}, function(s) {
+      //Amsterdam
+      //North Latitude: 52.430950 South Latitude: 52.318274 East Longitude: 5.068373 West Longitude: 4.728856
+        //Connect to twitter stream passing in filter for entire world. 52.430950, 52.318274, 52.318274, 4.728856
+        twit.stream('statuses/filter', {'locations':'4.734421,52.290423,4.975433,52.431065'}, function(s) {
             stream = s;
             stream.on('data', function(data) {
               // Does the JSON result have coordinates
@@ -110,6 +112,7 @@ io.sockets.on('connection', function (socket) {
                   }
                 }
               }
+
               stream.on('limit', function(limitMessage) {
                 return console.log(limitMessage);
               });
