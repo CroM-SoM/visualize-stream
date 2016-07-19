@@ -1,0 +1,16 @@
+{
+  "name": "crom-som-stream",
+  "version": "0.0.1",
+  "author": "ahmad kabakibi",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "*",
+    "socket.io": "*",
+    "twitter": "*",
+    "winston": "^2.2.0",
+    "winston-daily-rotate-file": "^1.1.4"
+  }
+}
