@@ -38,6 +38,7 @@ function initialize() {
 
       //Flash a dot onto the map quickly
       var image = "css/small-dot-icon.png";
+      var ico="http://image.flaticon.com/icons/svg/34/34469.svg";
       var marker = new google.maps.Marker({
         position: tweetLocation,
         map: map,
@@ -45,7 +46,7 @@ function initialize() {
       });
       setTimeout(function(){
         marker.setMap(null);
-      },600);
+      },3000);
 
     });
 

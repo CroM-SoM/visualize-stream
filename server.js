@@ -9,6 +9,12 @@ var twitter = require('twitter'),
 var winston = require('winston'),
     fs = require('fs'),
     path = require('path');
+
+var dir = './logs';
+if (!fs.existsSync(dir)){
+  fs.mkdirSync(dir);
+}
+
 var filename = path.join(__dirname,'/logs/', 'created-data.log');
 
 try { fs.unlinkSync(filename); }
