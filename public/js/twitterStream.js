@@ -13,16 +13,20 @@ function initialize() {
     },
     styles: light_grey_style
   };
+
+
   var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
   
   //Setup heat map and link to Twitter array we will append data to
   var heatmap;
   var liveTweets = new google.maps.MVCArray();
+  /*
   heatmap = new google.maps.visualization.HeatmapLayer({
     data: liveTweets,
     radius: 25
   });
-  heatmap.setMap(map);
+  heatmap.setMap(map);*/
+
 
   if(io !== undefined) {
     // Storage for WebSocket connections
@@ -36,18 +40,35 @@ function initialize() {
       var tweetLocation = new google.maps.LatLng(data.lng,data.lat);
       liveTweets.push(tweetLocation);
 
+      var contentString = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">'+data.place+'</h1>'+
+          '<div id="bodyContent"><p><b>'+data.text+'</b><br>'+ data.location;
+
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
+
       //Flash a dot onto the map quickly
+      var img= 'css/icon_bludot.png'
       var image = "css/small-dot-icon.png";
       var ico="http://image.flaticon.com/icons/svg/34/34469.svg";
       var marker = new google.maps.Marker({
         position: tweetLocation,
         map: map,
-        icon: image
+        icon:img,
+        title: 'new tweet'
       });
-      setTimeout(function(){
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+
+
+      /*setTimeout(function(){
         marker.setMap(null);
       },3000);
-
+   */
     });
 
     // Listens for a success response from the server to 

@@ -89,7 +89,7 @@ io.sockets.on('connection', function (socket) {
               if (data.coordinates){
                 if (data.coordinates !== null){
                   //If so then build up some nice json and send out to web sockets
-                  var outputPoint = {"lat": data.coordinates.coordinates[0],"lng": data.coordinates.coordinates[1]};
+                  var outputPoint = {"lat": data.coordinates.coordinates[0],"lng": data.coordinates.coordinates[1],"place":data.place.full_name,"location":data.user.location,"text":data.text};
 
                   socket.broadcast.emit("twitter-stream", outputPoint);
 
@@ -97,7 +97,7 @@ io.sockets.on('connection', function (socket) {
                   socket.emit('twitter-stream', outputPoint);
                 }
                 else if(data.place){
-                  if(data.place.bounding_box === 'Polygon'){
+                  if(data.place.bounding_box.type === 'Polygon'){
                     // Calculate the center of the bounding box for the tweet
                     var coord, _i, _len;
                     var centerLat = 0;
@@ -108,11 +108,20 @@ io.sockets.on('connection', function (socket) {
                       centerLat += coord[0];
                       centerLng += coord[1];
                     }
+
+                /*
+                    north = 44.1;
+                    south = -9.9;
+                    east = -22.4;
+                    west = 55.2;
+                    x_center = x_left + (x_right - x_left) / 2
+                    y_center = y_bottom + (y_top - y_bottom) / 2*/
+
                     centerLat = centerLat / coords.length;
                     centerLng = centerLng / coords.length;
 
                     // Build json object and broadcast it
-                    var outputPoint = {"lat": centerLat,"lng": centerLng};
+                    var outputPoint = {"lat": centerLat,"lng": centerLng,"place":data.place.full_name,"location":data.user.location,"text":data.text};
                     socket.broadcast.emit("twitter-stream", outputPoint);
 
                   }
