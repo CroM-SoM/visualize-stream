@@ -63,10 +63,10 @@ function initialize() {
                 infowindow.open(map, marker);
             });
 
-            //Make list of live stream tweets.
-            console.log(data.lang);
+            // Log json object.
             console.log(data);
 
+            // Create html string.
             function create(htmlStr) {
                 var frag = document.createDocumentFragment(),
                     temp = document.createElement('li');
@@ -77,14 +77,28 @@ function initialize() {
                 return frag;
             }
 
-            var fragment = create('<li class="tweet-stream">' + data.text + '<hr></li>');
-            var fragmentLocation = create('<li class="tweet-stream">' + data.location + '<span>-</span>' + data.time_zone +'<hr></li>');
-            var fragmentLanguage = create('<li class="tweet-stream">' + data.lang +'<hr></li>');
-            // Insert new list items before older ones.
-            document.getElementById('twitter-messages').insertBefore(fragment, document.getElementById('twitter-messages').childNodes[0]);
-            document.getElementById('twitter-location').insertBefore(fragmentLocation, document.getElementById('twitter-location').childNodes[0]);
-            document.getElementById('twitter-language').insertBefore(fragmentLanguage, document.getElementById('twitter-language').childNodes[0]);
+            // String for live tweets including link to profile and profilepicture.
+            var userProfile = '<li class="tweet-stream">'+
+                '<img src="'+ data.url +'">'+
+                '<a href="https://twitter.com/'+ data.userName +
+                'target="_blank">'+ data.userName +'</a>' + data.text + '<hr></li>';
 
+            // String that displays location, language and timezone, if set by user.
+            var userPreference = '<li class="tweet-stream">' + data.location +
+                 '<span>+</span>'+ data.place +'<span>+</span>' + data.time_zone +
+                 '<span>+</span>'+ data.lang +'<hr></li>';
+
+            // Get html elements.
+            var twitterStream = document.getElementById('twitter-messages');
+            var twitterPreference = document.getElementById('twitter-location');
+
+            var fragment = create(userProfile);
+            var fragmentLocation = create(userPreference);
+           
+            // Insert new list items before older ones. 
+            twitterStream.insertBefore(fragment, twitterStream.childNodes[0]);
+            twitterPreference.insertBefore(fragmentLocation, twitterPreference.childNodes[0]);
+            
             /*setTimeout(function(){
         marker.setMap(null);
       },3000);

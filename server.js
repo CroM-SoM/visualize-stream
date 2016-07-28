@@ -89,7 +89,7 @@ io.sockets.on('connection', function (socket) {
               if (data.coordinates){
                 if (data.coordinates !== null){
                   //If so then build up some nice json and send out to web sockets
-                  var outputPoint = {"lat": data.coordinates.coordinates[0],"lng": data.coordinates.coordinates[1],"place":data.place.full_name,"location":data.user.location,"text":data.text,"lang":data.user.lang,"time_zone":data.user.time_zone};
+                  var outputPoint = {"lat": data.coordinates.coordinates[0],"lng": data.coordinates.coordinates[1],"place":data.place.full_name,"url": data.user.profile_image_url,"userName":data.user.screen_name,"location":data.user.location,"text":data.text,"lang":data.user.lang,"time_zone":data.user.time_zone};
 
                   socket.broadcast.emit("twitter-stream", outputPoint);
 
@@ -121,7 +121,7 @@ io.sockets.on('connection', function (socket) {
                     centerLng = centerLng / coords.length;
 
                     // Build json object and broadcast it
-                    var outputPoint = {"lat": centerLat,"lng": centerLng,"place":data.place.full_name,"location":data.user.location,"text":data.text,"lang":data.user.lang,"time_zone":data.user.time_zone};
+                    var outputPoint = {"lat": centerLat,"lng": centerLng,"place":data.place.full_name,"url": data.user.profile_image_url,"userName":data.user.screen_name,"location":data.user.location,"text":data.text,"lang":data.user.lang,"time_zone":data.user.time_zone};
                     socket.broadcast.emit("twitter-stream", outputPoint);
 
                   }
