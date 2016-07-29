@@ -78,15 +78,15 @@ function initialize() {
             }
 
             // String for live tweets including link to profile and profilepicture.
-            var userProfile = '<li class="tweet-stream">'+
-                '<img src="'+ data.url +'">'+
-                '<a href="https://twitter.com/'+ data.userName +
-                'target="_blank">'+ data.userName +'</a>' + data.text + '<hr></li>';
+            var userProfile = '<li class="tweet-stream">' +
+                '<img src="' + data.url + '">' +
+                '<a target="_blank" href="https://twitter.com/' + data.userName + '">' +
+                data.userName + '</a>' + data.text + '<hr></li>';
 
             // String that displays location, language and timezone, if set by user.
             var userPreference = '<li class="tweet-stream">' + data.location +
-                 '<span>+</span>'+ data.place +'<span>+</span>' + data.time_zone +
-                 '<span>+</span>'+ data.lang +'<hr></li>';
+                '<span>+</span>' + data.place + '<span>+</span>' + data.time_zone +
+                '<span>+</span>' + data.lang + '<hr></li>';
 
             // Get html elements.
             var twitterStream = document.getElementById('twitter-messages');
@@ -94,11 +94,28 @@ function initialize() {
 
             var fragment = create(userProfile);
             var fragmentLocation = create(userPreference);
-           
+
             // Insert new list items before older ones. 
             twitterStream.insertBefore(fragment, twitterStream.childNodes[0]);
             twitterPreference.insertBefore(fragmentLocation, twitterPreference.childNodes[0]);
+
+            //Tourist detection pseudo code
+            // function detectTourist(data) {
+            //     var tourist;
+            //     if (data.location !== listOfDutchCities) {
+            //         tourist = "maybe";
+            //         if (data.time_zone !== notationsOfTimezone) {
+            //             tourist = "propably";
+            //             if (data.lang !== notationsOfLanguageForNl) {
+            //                 tourist = "evenMoreProbably"
+            //             }
+            //         }
+            //     }
+            //     return tourist;
+            // }
             
+            // data.user.push()
+
             /*setTimeout(function(){
         marker.setMap(null);
       },3000);
