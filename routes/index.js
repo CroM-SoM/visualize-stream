@@ -37,7 +37,6 @@ var checkLogs = function (callback) {
             });
 
             lineReader[x].on('line', function (line) {
-                console.log(line);
                 // handle line of every fileName
                 json.push(line);
             });
@@ -57,6 +56,7 @@ module.exports = function (app) {
         for (var i = 0; i < json.length; i++) {
             jsonData.push(JSON.parse(JSON.parse(json[i]).message));
         }
+        console.log(jsonData);
         res.json({ StatusCode: 200, Data: jsonData });
     });
 
