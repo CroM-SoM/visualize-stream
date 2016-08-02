@@ -9,49 +9,53 @@ var path = require('path'),
 
 var fs = require('fs'),
     readline = require('readline');
-var walk    = require('walk');
-var files   = [];
+var walk = require('walk');
+var files = [];
 var lineReader = [];
-var json=[];
+var json = [];
+
+var checkLogs = function (callback) {
+    console.log('checking logs ... every 20 sec');
 
 // Walker options
-var walker  = walk.walk('logs', { followLinks: false });
+    var walker = walk.walk('logs', {followLinks: false});
 
-walker.on('file', function(root, stat, next) {
-    // Add this file to the list of files
-    files.push(root + '/' + stat.name);
-    next();
-});
+    walker.on('file', function (root, stat, next) {
+        // Add this file to the list of files
+        files.push(root + '/' + stat.name);
+        next();
+    });
 
-walker.on('end', function() {
+    walker.on('end', function () {
 
-    for(var x in files) {
-        var fileName = files[x];
+        for (var x in files) {
+            var fileName = files[x];
 
-        lineReader[x] = readline.createInterface({
-            input: fs.createReadStream(fileName),
-            output: process.stdout,
-            terminal: false
-        });
+            lineReader[x] = readline.createInterface({
+                input: fs.createReadStream(fileName),
+                output: process.stdout,
+                terminal: false
+            });
 
-        lineReader[x].on('line', function(line) {
-            // handle line of every fileName
-            json.push(line);
-        });
-    }
-});
-
+            lineReader[x].on('line', function (line) {
+                // handle line of every fileName
+                json.push(line);
+            });
+        }
+    });
+}
 
 //API
 module.exports = function (app) {
+    checkLogs();
+    setInterval(checkLogs,1200000);
 
-    console.log('routes set...');
     app.use('/', router);
 
     router.get('/data', function (req, res) {
-        var jsonData=[]
-        for(var i=0;i<json.length;i++){
-           jsonData.push(JSON.parse(JSON.parse(json[i]).message));
+        var jsonData = []
+        for (var i = 0; i < json.length; i++) {
+            jsonData.push(JSON.parse(JSON.parse(json[i]).message));
         }
         res.json(jsonData);
     });
