@@ -30,7 +30,6 @@ var checkLogs = function (callback) {
 
         for (var x in files) {
             var fileName = files[x];
-            console.log(fileName);
             lineReader[x] = readline.createInterface({
                 input: fs.createReadStream(fileName),
                 output: process.stdout,
@@ -38,6 +37,7 @@ var checkLogs = function (callback) {
             });
 
             lineReader[x].on('line', function (line) {
+                console.log(line);
                 // handle line of every fileName
                 json.push(line);
             });
