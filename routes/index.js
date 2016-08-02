@@ -57,7 +57,7 @@ module.exports = function (app) {
         for (var i = 0; i < json.length; i++) {
             jsonData.push(JSON.parse(JSON.parse(json[i]).message));
         }
-        res.json(jsonData);
+        res.json({ StatusCode: 200, Data: jsonData });
     });
 
 }
