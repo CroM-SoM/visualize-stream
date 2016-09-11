@@ -14,6 +14,9 @@ var files = [];
 var lineReader = [];
 var json = [];
 
+var logger = require('../services/logger.js')
+var models = require('../models');
+
 var checkLogs = function (callback) {
     console.log('checking logs ... every 20 sec');
 
@@ -44,20 +47,38 @@ var checkLogs = function (callback) {
     });
 }
 
+/*
+checkLogs();
+//setInterval(checkLogs,1200000);
+var jsonData = []
+for (var i = 0; i < json.length; i++) {
+    jsonData.push(JSON.parse(JSON.parse(json[i]).message));
+}
+models.sequelize.transaction(function (t) {
+    return models.stream.create({
+            row: jsonData
+        }
+        , {transaction: t}).then(function (stream) {
+        logger.Stream('info', stream.id_str);
+    });
+});*/
+
+
 //API
 module.exports = function (app) {
-    checkLogs();
-    setInterval(checkLogs,1200000);
-
     app.use('/', router);
 
+
+    router.get('/stream/top', function (req, res) {
+        models.stream.findAll().then(function (rows) {
+            res.json(rows);
+        })
+    });
+
     router.get('/data', function (req, res) {
-        var jsonData = []
-        for (var i = 0; i < json.length; i++) {
-            jsonData.push(JSON.parse(JSON.parse(json[i]).message));
-        }
-        console.log(jsonData);
-        res.json({ StatusCode: 200, Data: jsonData });
+        models.stream.findAll().then(function (rows) {
+            res.json(rows);
+        })
     });
 
 }

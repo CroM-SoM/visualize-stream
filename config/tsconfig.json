@@ -1,0 +1,25 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "1q2w3e4r",
+    "database": "cromsom",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "timezone": "Europe/Amsterdam"
+  },
+  "test": {
+    "username": "dclfcrunyrsyzs",
+    "password": "JHQkX-Wi9iAy8XgJLBusoTVFog",
+    "database": "d2g0l1nod1250a",
+    "host": "194.151.204.75",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "1q2w3e4r",
+    "database": "cromsom",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "timezone": "Europe/Amsterdam"
+  }
+}
