@@ -5,6 +5,9 @@
   angular
     .module('src')
     .constant('malarkey', malarkey)
-    .constant('moment', moment);
+    .constant('moment', moment)
+    .constant('appConfig', {
+    	baseUrl: 'http://localhost:8080'
+    });
 
 })();
