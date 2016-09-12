@@ -9,20 +9,29 @@ var models = require('./models');
 
 app.set('port', process.env.PORT || PORT);
 
-var server = app.listen(app.get('port'), function () {
-    console.log("NODE_ENV: " + process.env.NODE_ENV + ' server listening on port ' + server.address().port);
-});
+var moment = require('moment');
+var path = require('path');
+var favicon = require('serve-favicon');
+
+var env = process.env.NODE_ENV || 'development';
+var config = require(__dirname + '/config/tsconfig.json')[env];
+
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
 // parse application/json
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.json({type: 'application/vnd.api+json'})); // parse application/vnd.api+json as json
+app.use(bodyParser.urlencoded({'extended': 'true'})); // parse application/x-www-form-urlencoded
 app.use(cookieParser());
+//Setup rotuing for app
+app.use(express.static(__dirname + '/public'));
 
 // ROUTES
 require('./routes/index')(app);
-
-//Setup rotuing for app
-app.use(express.static(__dirname + '/public'));
 
 var allowCrossDomain = function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -45,3 +54,8 @@ models.sequelize.query('CREATE EXTENSION IF NOT EXISTS hstore').then(function ()
     });
 });
 
+var server = app.listen(app.get('port'), function () {
+  console.log("NODE_ENV: " + process.env.NODE_ENV + ' server listening on port ' + server.address().port);
+});
+
+module.exports = app;
