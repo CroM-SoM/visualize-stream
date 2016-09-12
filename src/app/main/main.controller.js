@@ -6,10 +6,9 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr,dataAPI) {
+  function MainController($timeout, webDevTec, toastr) {
     var vm = this;
 
-    vm.dataTest = 'non';
     vm.awesomeThings = [];
     vm.classAnimation = '';
     vm.creationDate = 1473683661938;
@@ -31,8 +30,6 @@
 
     function getWebDevTec() {
       vm.awesomeThings = webDevTec.getTec();
-      vm.dataTest = dataAPI.getAPI();
-
       angular.forEach(vm.awesomeThings, function(awesomeThing) {
         awesomeThing.rank = Math.random();
       });

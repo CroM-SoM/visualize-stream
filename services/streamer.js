@@ -98,6 +98,13 @@ var service = module.exports = {
         stream.on('disconnect', function (disconnectMessage) {
           return console.log(disconnectMessage);
         });
+
+        stream.on('error', function (error) {
+          console.log("Limit 420 API :@:");
+          return console.log(error);
+        });
+
+
       });
     });
 
