@@ -1,7 +1,10 @@
-.DS_Store
-.idea/
 node_modules/
-logs
-dist
-bower_components
-
+bower_components/
+coverage/
+.sass-cache/
+.idea/
+.tmp/
+dist/
+.DS_Store/
+logs/
+.idea/

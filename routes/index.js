@@ -14,6 +14,8 @@ var files = [];
 var lineReader = [];
 var json = [];
 
+var streamService = require('../services/streamer.js')
+
 var logger = require('../services/logger.js')
 var models = require('../models');
 
@@ -68,6 +70,7 @@ models.sequelize.transaction(function (t) {
 module.exports = function (app) {
     app.use('/', router);
 
+    streamService.startStream();
 
     router.get('/stream/top', function (req, res) {
         models.stream.findAll().then(function (rows) {
