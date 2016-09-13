@@ -13,6 +13,10 @@ var twit = new twitter({
 
 var service = module.exports = {
 
+  streamUser:function(id){
+
+  },
+
   startStream: function () {
 
     twit.stream('statuses/filter', {'locations': '4.734421,52.290423,4.975433,52.431065'}, function (s) {

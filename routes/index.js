@@ -7,67 +7,14 @@ var path = require('path'),
   rootPath = path.normalize(__dirname + '/../'),
   router = express.Router();
 
-var fs = require('fs'),
-  readline = require('readline');
-var walk = require('walk');
-var files = [];
-var lineReader = [];
-var json = [];
-
 var streamService = require('../services/streamer.js')
 
 var logger = require('../services/logger.js')
 var models = require('../models');
 
-var checkLogs = function (callback) {
-  console.log('checking logs ... every 20 sec');
-
-// Walker options
-  var walker = walk.walk('logs', {followLinks: false});
-
-  walker.on('file', function (root, stat, next) {
-    // Add this file to the list of files
-    files.push(root + '/' + stat.name);
-    next();
-  });
-
-  walker.on('end', function () {
-
-    for (var x in files) {
-      var fileName = files[x];
-      lineReader[x] = readline.createInterface({
-        input: fs.createReadStream(fileName),
-        output: process.stdout,
-        terminal: false
-      });
-
-      lineReader[x].on('line', function (line) {
-        // handle line of every fileName
-        json.push(line);
-      });
-    }
-  });
-}
-
-/*
- checkLogs();
- //setInterval(checkLogs,1200000);
- var jsonData = []
- for (var i = 0; i < json.length; i++) {
- jsonData.push(JSON.parse(JSON.parse(json[i]).message));
- }
- models.sequelize.transaction(function (t) {
- return models.stream.create({
- row: jsonData
- }
- , {transaction: t}).then(function (stream) {
- logger.Stream('info', stream.id_str);
- });
- });*/
-
-
 //API
 module.exports = function (app) {
+
   app.use('/', router);
 
   streamService.startStream();
@@ -82,15 +29,36 @@ module.exports = function (app) {
   });
 
 
-  router.get('/stream/top', function (req, res) {
-    models.stream.findAll().then(function (rows) {
+  router.get('/stream/between/:Rang1/:Rang2', function (req, res) {
+    models.stream.findAll({
+      where: {id: {$between: [req.params.Rang1, req.params.Rang2]}},
+      raw: true
+    }).then(function (rows) {
       res.json(rows);
     })
   });
 
-  router.get('/stream/data', function (req, res) {
-    models.stream.findAll().then(function (rows) {
-      res.json(rows);
+  //var day = 24 * 60 * 60 * 1000;
+  //var week = day*7;
+  router.get('/stream/days/:Days', function (req, res) {
+    models.stream.findAll({
+      where: {
+        "row.timestamp_ms": {
+          $overlap: [new Date(), new Date(new Date() - (24 * 60 * 60 * 1000) * req.params.Days)]
+        }
+      }
+    }).then(function (rows) {
+      res.json({count: rows.length, data: rows});
+    })
+  });
+
+  router.get('/stream/data/user/:userID', function (req, res) {
+    models.stream.findAll({
+      where: {
+        "row.user.id": req.params.userID
+      }
+    }).then(function (rows) {
+      res.json({count: rows.length, data: rows});
     })
   });
 
