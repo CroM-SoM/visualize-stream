@@ -1,32 +1,39 @@
-(function() {
+(function () {
   'use strict';
 
   angular
-    .module('src')
+    .module('test')
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, $log, dataService) {
+  function MainController($timeout,$log, dataService) {
     var vm = this;
 
     vm.awesomeThings = [];
     vm.classAnimation = '';
-    vm.creationDate = 1473683661938;
+    vm.creationDate = 1473694201167;
 
     activate();
 
     function activate() {
-     
-      $timeout(function() {
+      //getWebDevTec();
+      getData();
+      $timeout(function () {
         vm.classAnimation = 'rubberBand';
       }, 4000);
     }
-
-    getData();
 
     function getData() {
       vm.awesomeThings = dataService.apiMethod();
       $log.log(vm.awesomeThings);
     }
+
+    /*
+    function getWebDevTec() {
+      /!*vm.awesomeThings = webDevTec.getTec();
+       angular.forEach(vm.awesomeThings, function(awesomeThing) {
+       awesomeThing.rank = Math.random();
+       });*!/
+    }*/
   }
 })();

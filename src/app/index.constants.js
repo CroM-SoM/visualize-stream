@@ -3,11 +3,8 @@
   'use strict';
 
   angular
-    .module('src')
+    .module('test')
     .constant('malarkey', malarkey)
     .constant('moment', moment)
-    .constant('appConfig', {
-    	baseUrl: 'http://localhost:8080'
-    });
-
+    .constant('appConfig', {baseUrl: 'http://localhost:8080'});
 })();

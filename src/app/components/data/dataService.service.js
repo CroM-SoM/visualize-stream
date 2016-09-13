@@ -1,38 +1,35 @@
-(function() {
-    'use strict';
+(function () {
+  'use strict';
 
-    angular
-        .module('src')
-        .service('dataService', ['$http', 'appConfig', '$log',
-            dataService
-        ]);
+  angular
+    .module('test')
+    .service('dataService', dtservice);
 
-    /** @ngInject */
-    function dataService($http, appConfig, $log) {
+  /** @ngInject */
+  function dtservice($http, appConfig, $log) {
 
-        return {
-            apiMethod: function() {
+    var  dataModel = [];
 
-                this.dataModel = [];
+    this.apiMethod = apiMethod;
 
-                $http({
-                    method: 'GET',
-                    url: appConfig.baseUrl + '/data'
-                }).then(function successCallback(response) {
-                    // $log.log(response);
-                    //Push objects to data array
-                    this.dataModel.push(response);
-                    //console.log(this.dataModel);
-                    return this.dataModel;
-                    // this callback will be called asynchronously
-                    // when the response is available
-                }, function errorCallback(response) {
-                    $log.log(response);
-                    // called asynchronously if an error occurs
-                    // or server returns response with an error status.
-                });
-            }
-        }
+    function apiMethod() {
+      $http({
+        method: 'GET',
+        url: appConfig.baseUrl + '/stream/data'
+      }).then(function successCallback(response) {
+        // $log.log(response);
+        //Push objects to data array
+        dataModel.push(response);
+        //console.log(dataModel);
+        return dataModel;
+        // this callback will be called asynchronously
+        // when the response is available
+      }, function errorCallback(response) {
+        $log.log(response);
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+      });
     }
+  }
 
 })();

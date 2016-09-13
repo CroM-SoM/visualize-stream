@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('src')
+    .module('test')
     .run(runBlock);
 
   /** @ngInject */

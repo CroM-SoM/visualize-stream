@@ -70,13 +70,14 @@ var checkLogs = function (callback) {
 module.exports = function (app) {
   app.use('/', router);
 
-  //streamService.startStream();
+  streamService.startStream();
 
   // =====================================
   // HOME PAGE (with login links) ========
   // =====================================
   app.get('*', function (req, res) {
     // load the single view file (angular will handle the page changes on the front-end)
+    //console.log("@: "+path.join(__dirname, '../dist', 'index.html'));
     res.sendFile(path.join(__dirname, '../dist', 'index.html'));
   });
 
