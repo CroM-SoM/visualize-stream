@@ -38,58 +38,6 @@ var service = module.exports = {
           });
         });
 
-
-        if (data.coordinates) {
-          if (data.coordinates !== null) {
-            //If so then build up some nice json and send out to web sockets
-            var outputPoint = {
-              "lat": data.coordinates.coordinates[0],
-              "lng": data.coordinates.coordinates[1],
-              "place": data.place.full_name,
-              "url": data.user.profile_image_url,
-              "userName": data.user.screen_name,
-              "location": data.user.location,
-              "text": data.text,
-              "lang": data.user.lang,
-              "time_zone": data.user.time_zone
-            };
-          }
-          else if (data.place) {
-            if (data.place.bounding_box.type === 'Polygon') {
-
-              // Calculate the center of the bounding box for the tweet
-
-              /*var tt= [[[4.7289,52.278227],[4.7289,52.431229],[5.079207,52.431229],[5.079207,52.278227]]]
-               var coord_ = center(tt[0]);
-               for(var i=0;i<coord_.length;i++){
-               console.log("[]"+coord_[i]);
-               }
-               */
-
-              var coord = data.place.bounding_box.coordinates
-              var coord_mean = center(coord[0]);
-
-              console.log("[]" + coord_mean);
-
-              centerLat = centerLat / coords.length;
-              centerLng = centerLng / coords.length;
-
-              // Build json object and broadcast it
-              var outputPoint = {
-                "lat": coord_mean[0],
-                "lng": coord_mean[1],
-                "place": data.place.full_name,
-                "url": data.user.profile_image_url,
-                "userName": data.user.screen_name,
-                "location": data.user.location,
-                "text": data.text,
-                "lang": data.user.lang,
-                "time_zone": data.user.time_zone
-              };
-            }
-          }
-        }
-
         stream.on('limit', function (limitMessage) {
           console.log("Limit 420 API :P");
           return console.log(limitMessage);
@@ -113,15 +61,4 @@ var service = module.exports = {
     });
 
   }
-}
-
-var center = function (arr) {
-  var minX, maxX, minY, maxY;
-  for (var i = 0; i < arr.length; i++) {
-    minX = (arr[i][0] < minX || minX == null) ? arr[i][0] : minX;
-    maxX = (arr[i][0] > maxX || maxX == null) ? arr[i][0] : maxX;
-    minY = (arr[i][1] < minY || minY == null) ? arr[i][1] : minY;
-    maxY = (arr[i][1] > maxY || maxY == null) ? arr[i][1] : maxY;
-  }
-  return [(minX + maxX) / 2, (minY + maxY) / 2];
 }
