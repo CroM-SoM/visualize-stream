@@ -13,7 +13,7 @@
         getData();
 
         function getData() {
-            vm.awesomeThings = dataService.apiMethod()
+          dataService.apiMethod()
                 .then(function(response) {
                     $log.log(response);
                 })

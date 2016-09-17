@@ -2,6 +2,7 @@
   'use strict';
 
   angular
+    .module('test')
     .directive('contactPage', contactPage);
 
   /** @ngInject */
