@@ -34,7 +34,7 @@ module.exports = function (app) {
       where: {id: {$between: [req.params.Rang1, req.params.Rang2]}},
       raw: true
     }).then(function (rows) {
-      res.json(rows);
+      res.json(StreamFormat(rows));
     })
   });
 
@@ -62,4 +62,61 @@ module.exports = function (app) {
     })
   });
 
+}
+
+var StreamFormat = function (data) {
+  var coordinatesArray;
+  var stream = []
+  for (var i = 0; i < data.length; i++) {
+
+    if (data[i].row.coordinates == null) {
+      if (data[i].row.place) {
+        if (data[i].row.place.bounding_box.type === 'Polygon') {
+          var coord = data[i].row.place.bounding_box.coordinates
+          var coord_mean = center(coord[0]);
+          coordinatesArray = coord_mean;
+        }
+      }
+    } else {
+      coordinatesArray = data[i].row.coordinates;
+    }
+
+    stream.push({
+      id: data[i].row.id,
+      id_str: data[i].row.id_str,
+      text: data[i].row.text,
+      coordinates: coordinatesArray,
+      user: {
+        id: data[i].row.user.id,
+        id_str: data[i].row.user.id_str,
+        location: data[i].row.user.location,
+        name: data[i].row.user.name,
+        screen_name: data[i].row.user.screen_name,
+        time_zone: data[i].row.user.time_zone,
+        lang: data[i].row.user.lang,
+        profile_background_image_url: data[i].row.user.profile_background_image_url
+      },
+      place: {
+        id: data[i].row.place.id,
+        type: data[i].row.place.type,
+        name: data[i].row.place.name,
+        full_name: data[i].row.place.full_name,
+        country_code: data[i].row.place.country_code,
+        country: data[i].row.place.country
+      }
+    })
+
+  }
+  return stream;
+}
+
+var center = function (arr) {
+  var minX, maxX, minY, maxY;
+  for (var i = 0; i < arr.length; i++) {
+    minX = (arr[i][0] < minX || minX == null) ? arr[i][0] : minX;
+    maxX = (arr[i][0] > maxX || maxX == null) ? arr[i][0] : maxX;
+    minY = (arr[i][1] < minY || minY == null) ? arr[i][1] : minY;
+    maxY = (arr[i][1] > maxY || maxY == null) ? arr[i][1] : maxY;
+  }
+  return [(minX + maxX) / 2, (minY + maxY) / 2];
 }
