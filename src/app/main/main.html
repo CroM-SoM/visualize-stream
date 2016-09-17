@@ -1,15 +1,26 @@
 <div class="container">
-  <div>
-    <acme-navbar></acme-navbar>
-  </div>
-  <div class="jumbotron text-center">
-    <h1>CroMSoM</h1>
-    <div class="row">
-      <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-          <h3>Hello</h3>
-        </div>
-      </div>
+    <div>
+    <!-- navbar -->
+        <acme-navbar></acme-navbar>
     </div>
-  </div>
+    <!-- map -->
+    <div class="jumbotron text-center">
+        <h3>CroM-SoM/map</h3>
+    </div>
+     <!--   about -->
+    <div class="jumbotron text-center">
+        <h3>Some text</h3>
+    </div>
+    <!-- data -->
+    <div class="jumbotron text-center">
+        <h3>Data</h3>
+        <div ng-controller="MainController as vm">
+            <!--   {{vm.awesomeThings}} -->
+            <ul ng-repeat="c in vm.awesomeThings">
+                <li>{{c.data}}</li>
+            </ul>
+        </div>
+    </div>
+    <!-- contact -->
+    <contact-page></contact-page>
 </div>

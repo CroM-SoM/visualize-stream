@@ -6,22 +6,16 @@
     .service('dataService', dtservice);
 
   /** @ngInject */
-  function dtservice($http, appConfig, $log) {
-
-    var  dataModel = [];
-
-    this.apiMethod = apiMethod;
-
-    function apiMethod() {
-      $http({
+  // function dtservice($http, appConfig, $log) {
+    function dtservice($http, appConfig, $log) {
+    
+    this.apiMethod = function() {
+      return $http({
         method: 'GET',
-        url: appConfig.baseUrl + '/stream/data'
+        url: appConfig.baseUrl + '/stream/data/1/10'
       }).then(function successCallback(response) {
-        // $log.log(response);
         //Push objects to data array
-        dataModel.push(response);
-        //console.log(dataModel);
-        return dataModel;
+        $log.log(response);
         // this callback will be called asynchronously
         // when the response is available
       }, function errorCallback(response) {
