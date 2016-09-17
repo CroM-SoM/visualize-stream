@@ -7,7 +7,7 @@
 
   /** @ngInject */
   // function dtservice($http, appConfig, $log) {
-    function dtservice($http, appConfig, $log) {
+    function dtservice($http, appConfig) {
 
     this.apiMethod = function() {
       return $http({

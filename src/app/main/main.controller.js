@@ -13,11 +13,11 @@
         getData();
 
         function getData() {
-          dataService.apiMethod()
+            vm.awesomeThings = dataService.apiMethod()
                 .then(function(response) {
-                    $log.log(response);
+                    vm.awesomeThings = response;
+                    $log.log(vm.awesomeThings)
                 })
         }
-
     }
 })();

@@ -1,0 +1,9 @@
+<div class="jumbotron text-center">
+    <h3>Some stuff about data</h3>
+    <div ng-controller="MainController as vm">
+         <!--  {{vm.awesomeThings}} -->
+        <ul ng-repeat="c in vm.awesomeThings">
+                <li>{{c.data.row.id}}</li>
+            </ul>
+    </div>
+</div>
