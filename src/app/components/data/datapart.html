@@ -1,9 +1,19 @@
 <div class="jumbotron text-center">
     <h3>Some stuff about data</h3>
     <div ng-controller="MainController as vm">
-         <!--  {{vm.awesomeThings}} -->
-        <ul ng-repeat="c in vm.awesomeThings">
-                <li>{{c.data.row.id}}</li>
-            </ul>
+        <table>
+        <tr>
+    <th>Id</th>
+    <th>Time zone</th> 
+    <th>Language</th>
+    <th>Place</th>
+  </tr>
+            <tr ng-repeat="c in vm.awesomeThings.data">
+                <td>{{ c.id }}</td>
+                <td>{{ c.user.time_zone }}</td>
+                <td>{{ c.user.lang }}</td>
+                <td>{{ c.place.name }}</td>
+            </tr>
+        </table>
     </div>
 </div>

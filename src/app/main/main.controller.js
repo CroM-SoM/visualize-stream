@@ -19,5 +19,6 @@
                     $log.log(vm.awesomeThings)
                 })
         }
+
     }
 })();
