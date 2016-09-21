@@ -7,12 +7,12 @@
 
   /** @ngInject */
   // function dtservice($http, appConfig, $log) {
-    function dtservice($http, appConfig) {
+    function dtservice($http) {
 
     this.apiMethod = function() {
       return $http({
         method: 'GET',
-        url: appConfig.baseUrl + '/stream/between/1/20'
+        url:'/stream/between/1/20'
       }).then(function successCallback(response) {
         //Push objects to data array
         return response;
@@ -26,6 +26,6 @@
     }
   }
 
-  
+
 
 })();

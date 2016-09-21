@@ -20,7 +20,7 @@ module.exports = function (app) {
   try{
     streamService.startStream();
   }catch (e){
-    console.log(e)
+    console.log("@@"+ e)
   }
 
   // =====================================
