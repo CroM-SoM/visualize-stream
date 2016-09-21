@@ -7,12 +7,14 @@
     <th>Time zone</th> 
     <th>Language</th>
     <th>Place</th>
+    <th>Text</th>
   </tr>
             <tr ng-repeat="c in vm.awesomeThings.data">
                 <td>{{ c.id }}</td>
                 <td>{{ c.user.time_zone }}</td>
                 <td>{{ c.user.lang }}</td>
                 <td>{{ c.place.name }}</td>
+                <td>{{ c.text }}</td>
             </tr>
         </table>
     </div>

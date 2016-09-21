@@ -99,23 +99,6 @@ function initialize() {
             twitterStream.insertBefore(fragment, twitterStream.childNodes[0]);
             twitterPreference.insertBefore(fragmentLocation, twitterPreference.childNodes[0]);
 
-            //Tourist detection pseudo code
-            // function detectTourist(data) {
-            //     var tourist;
-            //     if (data.location !== listOfDutchCities) {
-            //         tourist = "maybe";
-            //         if (data.time_zone !== notationsOfTimezone) {
-            //             tourist = "propably";
-            //             if (data.lang !== notationsOfLanguageForNl) {
-            //                 tourist = "evenMoreProbably"
-            //             }
-            //         }
-            //     }
-            //     return tourist;
-            // }
-            
-            // data.user.push()
-
             /*setTimeout(function(){
         marker.setMap(null);
       },3000);

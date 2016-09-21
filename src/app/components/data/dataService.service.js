@@ -12,7 +12,7 @@
     this.apiMethod = function() {
       return $http({
         method: 'GET',
-        url: appConfig.baseUrl + '/stream/between/1/10'
+        url: appConfig.baseUrl + '/stream/between/1/20'
       }).then(function successCallback(response) {
         //Push objects to data array
         return response;
@@ -25,5 +25,7 @@
       });
     }
   }
+
+  
 
 })();
