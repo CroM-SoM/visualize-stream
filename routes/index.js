@@ -17,7 +17,11 @@ module.exports = function (app) {
 
   app.use('/', router);
 
-  streamService.startStream();
+  try{
+    streamService.startStream();
+  }catch (e){
+    console.log(e)
+  }
 
   // =====================================
   // HOME PAGE (with login links) ========
