@@ -11,8 +11,10 @@
 
         vm.awesomeThings = [];
         vm.cityCheck = [];
+        vm.userCheck = [];
 
         getData();
+        // userData();
 
         function getData() {
             vm.awesomeThings = dataService.apiMethod()
@@ -21,6 +23,13 @@
                     $log.log(vm.awesomeThings);
                 })
         }
+        // function userData() {
+        //     vm.userCheck = dataService.api()
+        //         .then(function(response) {
+        //             vm.userCheck = response;
+        //             $log.log(vm.userCheck);
+        //         })
+        // }
 
     }
 })();

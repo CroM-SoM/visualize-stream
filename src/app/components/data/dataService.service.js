@@ -16,34 +16,61 @@
         // Fix this list of timezonenotations.
         vm.timezoneList = ["Amsterdam", "amsterdam", "CEST (Central European Summer Time)", "CEST", "Europe/Amsterdam"];
 
-        vm.checkCity = function(data) {
+        vm.checkUserData = function(data) {
             for (var i = 0; i < data.length; i++) {
                 // Fix substring only take first 5 characters to compare.
-                var cityvalue = vm.citiesList.indexOf(data[i].user.location) !== -1;
-                var language = vm.languageList.indexOf(data[i].user.lang) !== -1;
-                var timezone = vm.timezoneList.indexOf(data[i].user.time_zone) !== -1;
-
+                var cityvalue = vm.checkCity(data[i].user.location);
+                var language = vm.checkLanguage(data[i].user.lang);
+                var timezone = vm.checkTimeZone(data[i].user.time_zone);
+                var userHistory = vm.apiUser(data[i].user.id);
+         
                 // Push values and keys to new nested property.
                 data[i].tourist = {
                     'cityval': cityvalue,
                     'langval': language,
                     'timeval': timezone
                 };
+                data[i].user_history = {
+                    'history': userHistory
+                };
             }
-            // vm.detectTourist(data)
             return data;
         }
 
-        // vm.detectTourist(data){
+        vm.checkCity = function(city) {
+             return vm.citiesList.indexOf(city) !== -1;
+        }
 
-        // }
+        vm.checkLanguage = function(language){
+             return vm.languageList.indexOf(language) !== -1;
+        }
+
+        vm.checkTimeZone = function(timez){
+             return vm.timezoneList.indexOf(timez) !== -1;
+        }
+
+
+        vm.apiUser = function(data) {
+            return $http({
+                method: 'GET',
+                url: '/stream/data/'+ data
+            }).then(function successCallback(response) {
+                return response.data;
+                // This callback will be called asynchronously
+                // when the response is available.
+            }, function errorCallback(response) {
+                return response;
+                // Called asynchronously if an error occurs
+                // or server returns response with an error status.
+            });
+        }
 
         vm.apiMethod = function() {
             return $http({
                 method: 'GET',
-                url: '/stream/between/1/50'
+                url: '/stream/between/1/200'
             }).then(function successCallback(response) {
-                return vm.checkCity(response.data);
+                return vm.checkUserData(response.data);
                 // This callback will be called asynchronously
                 // when the response is available.
             }, function errorCallback(response) {
