@@ -14,22 +14,16 @@
         vm.userCheck = [];
 
         getData();
-        // userData();
 
         function getData() {
-            vm.awesomeThings = dataService.apiMethod()
+            vm.awesomeThings = dataService.apiMethod('between/1/50')
                 .then(function(response) {
-                    vm.awesomeThings = response;
+                    vm.awesomeThings = dataService.checkUserData(response);
                     $log.log(vm.awesomeThings);
                 })
-        }
-        // function userData() {
-        //     vm.userCheck = dataService.api()
-        //         .then(function(response) {
-        //             vm.userCheck = response;
-        //             $log.log(vm.userCheck);
-        //         })
-        // }
 
+
+        }
+        
     }
 })();

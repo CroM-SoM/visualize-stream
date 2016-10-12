@@ -1,28 +1,18 @@
 <div class="jumbotron text-center">
     <h3>Some stuff about data</h3>
     <div ng-controller="MainController as vm">
-        {{vm.userCheck}}
-        <table>
-            <tr>
-                <th>Id</th>
-                <th>Time zone</th>
-                <th>Time zone check</th>
-                <th>Language</th>
-                <th>Language check</th>
-                <th>Location</th>
-                <th>Location check</th>
-                <th>Text</th>
-            </tr>
-            <tr ng-repeat="c in vm.awesomeThings">
-                <td>{{ c.id }}</td>
-                <td>{{ c.user.time_zone }}</td>
-                <td>{{ c.tourist.timeval }}</td>
-                <td>{{ c.user.lang }}</td>
-                <td>{{ c.tourist.langval }}</td>
-                <td>{{ c.user.location }}</td>
-                <td>{{ c.tourist.cityval }}</td>
-                <td>{{ c.text }}</td>
-            </tr>
-        </table>
+        <!--   {{vm.userCheck}} -->
+        <div id="tweetWrap" ng-repeat="c in vm.awesomeThings">
+            <div class="tweetBox">
+                <p>{{ c.text }}</p>
+                <div id="boxes">
+                    <div class="box {{ c.tourist.timeval }}">{{ c.user.time_zone }}</div>
+                    <div class="box {{ c.tourist.langval }}">{{ c.user.lang }}</div>
+                    <div class="box {{ c.tourist.cityval }}">{{ c.user.location }}</div>
+                    <div class="clear"></div>
+                    <hr>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
