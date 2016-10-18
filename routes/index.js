@@ -12,15 +12,17 @@ var streamService = require('../services/streamer.js')
 var logger = require('../services/logger.js')
 var models = require('../models');
 
+var request = require('request');
+
 //API
 module.exports = function (app) {
 
   app.use('/', router);
 
-  try{
+  try {
     streamService.startStream();
-  }catch (e){
-    console.log("@@"+ e)
+  } catch (e) {
+    console.log("@@" + e)
   }
 
   // =====================================
@@ -40,6 +42,24 @@ module.exports = function (app) {
     }).then(function (rows) {
       res.json(StreamFormat(rows));
     })
+  });
+
+  router.get('/stream/spotlight/:Text', function (req, res) {
+
+    request(
+      {
+        method: 'POST',
+        url: 'http://spotlight.sztaki.hu:2222/rest/annotate/'+req.params.Text,
+        headers: {
+          'Accept':'application/json'
+        },
+        form: {confidence:'0.35'}
+      }, function (error, response, body) {
+        if (!error && response.statusCode == 200)
+          console.log("res @ "+body)
+        else
+          console.log("error @ "+error+" : "+ JSON.stringify(response)+" : "+ body)
+      })
   });
 
   //var day = 24 * 60 * 60 * 1000;
@@ -65,6 +85,22 @@ module.exports = function (app) {
       res.json({count: rows.length, data: rows});
     })
   });
+
+
+  router.post('/stream/save', function (req, res) {
+    console.log("POST");
+    console.log(req.body.row+" "+req.body.result_1+" "+req.body.result_2+" "+req.body.result_3)
+
+    models.analysis.create({
+         row:req.body.row,
+         result_1: req.body.result_1,
+         result_2: req.body.result_2,
+         result_3:req.body.result_3,
+      }).then(function (results) {
+         res.json({success: true, data: results});
+      });
+  });
+
 
 }
 
