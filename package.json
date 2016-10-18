@@ -19,6 +19,7 @@
   },
   "homepage": "https://cromsom.nl:8080",
   "dependencies": {
+    "angular-moment": "^1.0.0",
     "angular-smart-table": "^2.1.8",
     "body-parser": "~1.3.1",
     "consolidate": "^0.14.1",
@@ -29,7 +30,7 @@
     "express-session": "^1.13.0",
     "geopostcodes-sequelize-import": "^1.1.3",
     "jsonfile": "^2.3.1",
-    "moment": "~2.7.0",
+    "moment": "^2.15.1",
     "moment-timezone": "^0.5.3",
     "morgan": "~1.7.0",
     "multer": "^1.1.0",

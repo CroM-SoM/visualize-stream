@@ -30,7 +30,6 @@
         vm.checkUserData = function() {
             for (var i = 0; i < vm.userObject.length; i++) {
                 // Fix substring only take first 5 characters to compare.
-                //
                 var cityvalue = vm.include(vm.citiesList, vm.userObject[i].user.location);
                 var language = vm.include(vm.languageList, vm.userObject[i].user.lang);
                 var timezone = vm.include(vm.timezoneList, vm.userObject[i].user.time_zone);
@@ -47,11 +46,19 @@
 
         // Returns user history.
         vm.checkUserHistory = function(user) {
-            vm.checkTouristOne(user)
+            // Only check users that don't live in The Netherlands.
+            if (user.tourist.cityval === true) {
+                $log.log("this should be true:" + user.tourist.cityval);
+                return;
+            } 
+            else{
+                $log.log("this should be false:" + user.tourist.cityval);
+                vm.checkTouristOne(user)
                 .then(function(history) {
                     $log.log(history);
                     return user.tourist_history = history;
                 })
+            }
         }
 
         // Compares the passed in object with passed in array.
@@ -60,20 +67,15 @@
                 return;
             }
             for (var i = 0; i < arr.length; i++) {
-                if (arr[i] == obj) return true;
+                var sub = obj.slice(0, 7);
+                if (arr[i].indexOf(sub) != -1) return true;
             }
             return false;
         }
 
         // Checks database for tweets from users.
         vm.checkTouristOne = function(userData) {
-            // Only check users that don't live in The Netherlands.
-            if (userData.tourist.cityval === "true") {
-                return false;
-            } else {
-                return vm.apiMethod('data/user/' + userData.user.id);
-
-            }
+            return vm.apiMethod('data/user/' + userData.user.id);
         }
 
         // API method retrieves data from database

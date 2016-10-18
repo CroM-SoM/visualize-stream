@@ -64,7 +64,7 @@ function initialize() {
             });
 
             // Log json object.
-            console.log(data);
+            // console.log(data);
 
             // Create html string.
             function create(htmlStr) {
