@@ -10,9 +10,6 @@
         var vm = this;
 
         vm.awesomeThings = [];
-
-        vm.userCheck = [];
-
         getData();
 
         function getData() {
@@ -21,8 +18,6 @@
                     vm.awesomeThings = dataService.createUser(response);
                     $log.log(vm.awesomeThings);
                 })
-
         }
-        
     }
 })();

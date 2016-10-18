@@ -47,12 +47,10 @@
         // Returns user history.
         vm.checkUserHistory = function(user) {
             // Only check users that don't live in The Netherlands.
-            if (user.tourist.cityval === true) {
-                $log.log("this should be true:" + user.tourist.cityval);
+            if (user.tourist.cityval === true && user.tourist.cityval !== null) {
                 return;
             } 
             else{
-                $log.log("this should be false:" + user.tourist.cityval);
                 vm.checkTouristOne(user)
                 .then(function(history) {
                     $log.log(history);
