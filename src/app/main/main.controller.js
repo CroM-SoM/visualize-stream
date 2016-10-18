@@ -10,18 +10,17 @@
         var vm = this;
 
         vm.awesomeThings = [];
-        vm.cityCheck = [];
+
         vm.userCheck = [];
 
         getData();
 
         function getData() {
-            vm.awesomeThings = dataService.apiMethod('between/1/50')
+            vm.awesomeThings = dataService.apiMethod('between/100/200')
                 .then(function(response) {
-                    vm.awesomeThings = dataService.checkUserData(response);
+                    vm.awesomeThings = dataService.createUser(response);
                     $log.log(vm.awesomeThings);
                 })
-
 
         }
         
