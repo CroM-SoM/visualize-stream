@@ -45,21 +45,28 @@ module.exports = function (app) {
   });
 
   router.get('/stream/spotlight/:Text', function (req, res) {
-
-    request(
+    console.log("Spotlight "+req.params.Text)
+    request.post(
+      'http://spotlight.sztaki.hu:2222/rest/annotate/',
       {
-        method: 'POST',
-        url: 'http://spotlight.sztaki.hu:2222/rest/annotate/'+req.params.Text,
         headers: {
-          'Accept':'application/json'
+          'Accept': 'application/json'
         },
-        form: {confidence:'0.35'}
-      }, function (error, response, body) {
-        if (!error && response.statusCode == 200)
-          console.log("res @ "+body)
+        form:{
+          text:req.params.Text,
+          confidence:0.35
+        }
+      },
+      function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+          //console.log("res @ " + body);
+          res.json({Spotlight: JSON.parse(body)});
+        }
         else
-          console.log("error @ "+error+" : "+ JSON.stringify(response)+" : "+ body)
-      })
+          console.log("error @ " + error + " : " + JSON.stringify(response) + " : " + body)
+      }
+    );
+
   });
 
   //var day = 24 * 60 * 60 * 1000;
@@ -89,16 +96,16 @@ module.exports = function (app) {
 
   router.post('/stream/save', function (req, res) {
     console.log("POST");
-    console.log(req.body.row+" "+req.body.result_1+" "+req.body.result_2+" "+req.body.result_3)
+    console.log(req.body.row + " " + req.body.result_1 + " " + req.body.result_2 + " " + req.body.result_3)
 
     models.analysis.create({
-         row:req.body.row,
-         result_1: req.body.result_1,
-         result_2: req.body.result_2,
-         result_3:req.body.result_3,
-      }).then(function (results) {
-         res.json({success: true, data: results});
-      });
+      row: req.body.row,
+      result_1: req.body.result_1,
+      result_2: req.body.result_2,
+      result_3: req.body.result_3,
+    }).then(function (results) {
+      res.json({success: true, data: results});
+    });
   });
 
 
