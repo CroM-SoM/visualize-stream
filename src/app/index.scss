@@ -23,15 +23,31 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
 }
 
 .tweetBox {
-    width: calc(40% - 5px);
+    width: 40%;
     height: auto;
     background: white;
     padding: 5px;
+    float: left;
 }
-#boxes{
-  display: inline-block;
-  
+
+.detection {
+    width: 30%;
+    height: auto;
+    background: white;
+    padding: 5px;
+    float: left;
 }
+
+.clear {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#boxes {
+    display: inline-block;
+}
+
 .box {
     float: left;
     display: inline-block;
@@ -46,8 +62,9 @@ $icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
 .true {
     background: lightgreen;
 }
-.clear{
-  clear:both;
+
+.clear {
+    clear: both;
 }
 
 
