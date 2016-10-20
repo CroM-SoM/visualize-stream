@@ -69,6 +69,22 @@ module.exports = function (app) {
 
   });
 
+router.get('/stream/wiki/:Text', function (req, res) {
+    console.log("Spotlight "+req.params.Text)
+    request.get(
+      'https://en.wikipedia.org/w/api.php?action=opensearch&search='+req.params.Text+'&limit=5&namespace=0&format=json',
+      function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+          //console.log("res @ " + body);
+          res.json({Spotlight: JSON.parse(body)});
+        }
+        else
+          console.log("error @ " + error + " : " + JSON.stringify(response) + " : " + body)
+      }
+    );
+
+  });
+
   //var day = 24 * 60 * 60 * 1000;
   //var week = day*7;
   router.get('/stream/days/:Days', function (req, res) {

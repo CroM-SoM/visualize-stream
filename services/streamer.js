@@ -18,13 +18,26 @@ var service = module.exports = {
   },
 
   startStream: function () {
-
     twit.stream('statuses/filter', {'locations': '4.734421,52.290423,4.975433,52.431065'}, function (s) {
       stream = s;
       stream.on('data', function (data) {
         // Does the JSON result have coordinates
-        console.log("Data coming :" + JSON.stringify(data));
+        //console.log("Data coming :" + JSON.stringify(data));
+        console.log(data.text);
         //logger.Stream('info', JSON.stringify(data));
+        var statusObj = {status: "Hi @" + data.user.screen_name + ", Welcome to CroMSoM!"}
+
+        //call the post function to tweet something
+       /* twit.post('statuses/update', statusObj,  function(error, tweetReply, response){
+          //if we get an error print it out
+          if(error){
+            console.log(error);
+          }
+
+          //print the text of the tweet we sent out
+          console.log(tweetReply.text);
+        });
+        */
 
         models.sequelize.transaction(function (t) {
           if (data.coordinates != null) {
@@ -37,27 +50,27 @@ var service = module.exports = {
             logger.Stream('info', stream.id_str);
           });
         });
-
-        stream.on('limit', function (limitMessage) {
-          console.log("Limit 420 API :P");
-          return console.log(limitMessage);
-        });
-
-        stream.on('warning', function (warning) {
-          return console.log(warning);
-        });
-
-        stream.on('disconnect', function (disconnectMessage) {
-          return console.log(disconnectMessage);
-        });
-
-        stream.on('error', function (error) {
-          console.log("Limit 420 API :@:");
-          return console.log(error);
-        });
-
-
       });
+
+      stream.on('limit', function (limitMessage) {
+        console.log("Limit 420 API :P");
+        return console.log(limitMessage);
+      });
+
+      stream.on('warning', function (warning) {
+        return console.log(warning);
+      });
+
+      stream.on('disconnect', function (disconnectMessage) {
+        return console.log(disconnectMessage);
+      });
+
+      stream.on('error', function (error) {
+        console.log("Limit 420 API :@:");
+        return console.log(error);
+      });
+
+
     });
 
   }
