@@ -45,16 +45,16 @@ module.exports = function (app) {
   });
 
   router.get('/stream/spotlight/:Text', function (req, res) {
-    console.log("Spotlight "+req.params.Text)
+    console.log("Spotlight " + req.params.Text)
     request.post(
       'http://spotlight.sztaki.hu:2222/rest/annotate/',
       {
         headers: {
           'Accept': 'application/json'
         },
-        form:{
-          text:req.params.Text,
-          confidence:0.35
+        form: {
+          text: req.params.Text,
+          confidence: 0.35
         }
       },
       function (error, response, body) {
@@ -69,10 +69,10 @@ module.exports = function (app) {
 
   });
 
-router.get('/stream/wiki/:Text', function (req, res) {
-    console.log("Spotlight "+req.params.Text)
+  router.get('/stream/wiki/:Text', function (req, res) {
+    console.log("Spotlight " + req.params.Text)
     request.get(
-      'https://en.wikipedia.org/w/api.php?action=opensearch&search='+req.params.Text+'&limit=5&namespace=0&format=json',
+      'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + req.params.Text + '&limit=5&namespace=0&format=json',
       function (error, response, body) {
         if (!error && response.statusCode == 200) {
           //console.log("res @ " + body);
@@ -108,6 +108,25 @@ router.get('/stream/wiki/:Text', function (req, res) {
       res.json({count: rows.length, data: rows});
     })
   });
+
+  router.get('/stream/api/user/:userID/:Ntimes', function (req, res) {
+
+    streamService.twitterAPI.get('statuses/user_timeline', {user_id:req.params.userID,count:req.params.Ntimes}, function (error, tweets, response) {
+      if (!error) {
+        res.json({count: tweets.length, data: tweets});
+      }
+    });
+  });
+
+  router.get('/stream/api/user/:userID', function (req, res) {
+
+    streamService.twitterAPI.get('statuses/user_timeline', {user_id:req.params.userID}, function (error, tweets, response) {
+      if (!error) {
+        res.json({count: tweets.length, data: tweets});
+      }
+    });
+  });
+
 
 
   router.post('/stream/save', function (req, res) {

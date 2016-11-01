@@ -13,6 +13,8 @@ var twit = new twitter({
 
 var service = module.exports = {
 
+  twitterAPI:twit,
+
   streamUser:function(id){
 
   },
