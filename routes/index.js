@@ -69,7 +69,7 @@ module.exports = function (app) {
 
   });
 
-  router.get('/stream/wiki/:Text', function (req, res) {
+    router.get('/stream/wiki/:Text', function (req, res) {
     console.log("Spotlight " + req.params.Text)
     request.get(
       'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + req.params.Text + '&limit=5&namespace=0&format=json',
