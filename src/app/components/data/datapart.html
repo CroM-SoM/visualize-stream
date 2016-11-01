@@ -9,16 +9,16 @@
                     <div class="box {{ c.tourist.timeval }}">{{ c.user.time_zone }}</div>
                     <div class="box {{ c.tourist.langval }}">{{ c.user.lang }}</div>
                     <div class="box {{ c.tourist.cityval }}">{{ c.user.location }}</div>
-                    <div class="box">{{ c.tourist_history.count }}</div>
+                    <div class="box {{c.tourist_history.dateCheck}}">{{ c.tourist_history.history.count }}</div>
                     <div class="clear"></div>
                     <hr>
                 </div>
             </div>
             <div class="detection">
                 <div class="{{ c.tourist.cityval }}">one: {{ c.tourist.cityval }}</div>
-                <div>two: location, short time period
+                <div id="amount" class="{{c.tourist_history.dateCheck}}"> amount of tweets in database: {{c.tourist_history.dateCheck}}
                 </div>
-                <div>three: whats the tweet about
+                <div>two: location, short time period
                 </div>
             </div>
             <div class="clear"></div>

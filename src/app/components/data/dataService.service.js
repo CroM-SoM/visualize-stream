@@ -7,7 +7,7 @@
 
     /** @ngInject */
     // function dtservice($http, appConfig, $log) {
-    function dtservice($http, $log, moment) {
+    function dtservice($http, $log, moment, appConfig) {
 
         var vm = this;
 
@@ -53,23 +53,42 @@
                 // Checks database for tweets from users.
                 vm.apiMethod('data/user/' + user.user.id)
                     .then(function(history) {
-                        vm.dates(history);
-                        return user.tourist_history = history;
+                        var dateCheck = vm.dates(history, user);
+                        return user.tourist_history = {
+                            'history': history,
+                            'dateCheck': dateCheck
+                        };
                     })
             }
         }
 
-        vm.dates = function(history) {
-            if (history.data > 20) {
-                return;
+        // checks te length of the users history array
+        vm.dates = function(history, user) {
+            if (history.data.length > 20) {
+                return true;
             } else {
-                for (var i = 0; i < history.data.length; i++) {
-                    var now = moment(history.data[i].createdAt);
-                    $log.log(now);
+                if (history.data.length > 1) {
+                    vm.compareDates(history, user);
                 }
+                return false;
             }
         }
 
+        //should return an array of the time between compared dates and calculate the average time.
+        vm.compareDates = function(history, user) {
+            for (var i = 0; i < history.data.length; i++) {
+                var now = history.data[i].createdAt;
+                $log.log("for " + user.id);
+                i++;
+                var then = history.data[i].createdAt;
+                $log.log("between " + now + " and " + then);
+                var ms = moment(now, "DD/MM/YYYY HH:mm:ss").diff(moment(then, "DD/MM/YYYY HH:mm:ss"));
+                var d = moment.duration(ms);
+                var s = Math.floor(d.asHours()) + moment.utc(ms).format(":mm:ss");
+                $log.log("this is the difference:  " + s);
+                return s;
+            }
+        }
 
         // Compares the passed in object with passed in array.
         vm.include = function(arr, obj) {
@@ -87,7 +106,7 @@
         vm.apiMethod = function(request) {
             return $http({
                 method: 'GET',
-                url: '/stream/' + request
+                url: appConfig.baseUrl + '/stream/' + request
             }).then(function successCallback(response) {
                 // return vm.checkUserData(response.data);
                 return response.data;
