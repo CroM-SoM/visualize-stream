@@ -2,6 +2,9 @@
  * Created by a.kabakibi on 8/1/2016.
  */
 
+var fs = require('fs');
+
+
 var express = require('express');
 var path = require('path'),
   rootPath = path.normalize(__dirname + '/../'),
@@ -45,7 +48,7 @@ module.exports = function (app) {
   });
 
   router.get('/stream/spotlight/:Text', function (req, res) {
-    console.log("Spotlight " + req.params.Text)
+  //  console.log("Spotlight " + req.params.Text)
     request.post(
       'http://spotlight.sztaki.hu:2222/rest/annotate/',
       {
@@ -54,7 +57,7 @@ module.exports = function (app) {
         },
         form: {
           text: req.params.Text,
-          confidence: 0.35
+          confidence: 0.5
         }
       },
       function (error, response, body) {
@@ -69,8 +72,134 @@ module.exports = function (app) {
 
   });
 
+
+// TODO: below is Hannes' mess
+
+function getStuff(spotlightObj) {
+ var resources = []
+ var classes = []
+
+  if (!spotlightObj.Spotlight.Resources) {
+    console.warn('no resources in ', spotlightObj)
+    return({resources: resources, classes: classes})
+  }
+
+  spotlightObj.Spotlight.Resources.map(function(e) {
+    if (resources.indexOf(e['@URI']) < 0) {
+      resources.push(e['@URI'])
+
+    }
+    var typeArr = e['@types'].split(',').map(function(t) {
+  if (t.trim() != '' && classes.indexOf(t) < 0) {
+      classes.push(t)
+    }
+    })
+
+  });
+return({resources: resources, classes: classes})
+}
+
+
+function intersect_safe(a, b)
+{
+  var ai=0, bi=0;
+  var result = [];
+
+  while( ai < a.length && bi < b.length )
+  {
+     if      (a[ai] < b[bi] ){ ai++; }
+     else if (a[ai] > b[bi] ){ bi++; }
+     else /* they're equal */
+     {
+       result.push(a[ai]);
+       ai++;
+       bi++;
+     }
+  }
+
+  return result.length;
+}
+
+// TODO:  0.5 is a guess
+function similarity(stuffa, stuffb) {
+  return intersect_safe(stuffa.resources, stuffb.resources) + 0.5 * intersect_safe(stuffa.classes, stuffb.classes)
+}
+
+var events = JSON.parse(fs.readFileSync('events.JSON', 'utf8'));
+
+var events2 = []
+
+// TODO: this could be cached in a DB table but does not have to be
+
+events.items.concept.map(function(concept) {
+ // console.log(concept)
+  if (!concept.tours) {
+    return;
+  }
+  concept.tours.map(function(tour) {
+    if (!tour.events) {
+      return;
+    }
+    tour.events.map(function(event) {
+
+var eventstr = concept.desc + ' ' + concept.short_text + ' ' + tour.desc +  ' ' + event.long_desc;
+
+request.get(
+      'http://localhost:8080/stream/spotlight/' + encodeURIComponent(eventstr),
+      function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+
+        events2.push({event: event, sets : getStuff(JSON.parse(body))})
+
+        }
+        else
+          console.log("error @ " + error + " : " + JSON.stringify(response) + " : " + body)
+      }
+    );
+    });
+  });
+});
+
+
+//var mstuff = {'gouda' : getStuff(}
+
+
+// tweet text goes in here returns events plus rankings
+
+   router.get('/stream/similarity/:Text', function (req, res) {
+
+    // var mstuff = {'gouda' : getStuff(JSON.parse(fs.readFileSync('/Users/hannes/Desktop/gouda.json', 'utf8')))}
+
+     request.get(
+      'http://localhost:8080/stream/spotlight/' + encodeURIComponent(req.params.Text),
+      function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+          var ret = [];
+          var thisreq_sets = getStuff(JSON.parse(body));
+      events2.map(function(event) { 
+        event.similarity = similarity(thisreq_sets, event.sets)
+        if (event.similarity > 0 ) {
+          ret.push(event);
+        }
+        console.log(event);
+      })
+
+        res.json({text: req.params.Text, similar_events: ret});
+
+        }
+        else
+          console.log("error @ " + error + " : " + JSON.stringify(response) + " : " + body)
+      }
+    );
+
+
+
+  });
+
+   // End of Hannes' mess
+
     router.get('/stream/wiki/:Text', function (req, res) {
-    console.log("Spotlight " + req.params.Text)
+   // console.log("Spotlight " + req.params.Text)
     request.get(
       'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + req.params.Text + '&limit=5&namespace=0&format=json',
       function (error, response, body) {

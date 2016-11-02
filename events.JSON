@@ -1,0 +1,131 @@
+{
+    "items": {
+            "concept": [
+            	{
+            		"place": "old Amsterdam Holland, ",
+            		"desc": "Step back in time to Old Holland Traditionally Dutch",
+            		"short_text": "With its countless windmills, churches and old-fashioned farmhouses, stepping out into Old Holland can feel like being in a Golden Age painting Old Holland towns such as Volendam, Zaandam and Alkmaar hark back to times of more honest crafts, showcasing the traditional skills the region was famous for: shipbuilding, fishing and cheese making. Alongside such classic industries, you can also experience the heritage of the industrial revolution – a time when smoking chimney stacks and spinning sails enabled the mass production of chocolate and biscuits",
+            	
+            		"tours":[
+            		{
+            			"tour": "cheese tours",
+            			"desc": "capital of cheese Out of all the ‘typically Dutch’ items, cheese is probably our favourite – and certainly the most delicious! And with its markets, cheese dairies and tasting rooms, Old Holland is a must-see for all cheese lovers. Here’s why: Old Holland takes cheese really seriously Cheese is made (and consumed!) all over the Netherlands, but in Old Holland, they are really sticking to the traditions. Old-fashioned cheese dairies, tasting rooms, strange cheese-related customs – you’ll find all of that and more. And of course, Edamer cheese comes from the town of Edam, right in the heart of Old Holland. The region is also the place to be for cheese shopping, because… Old Holland has whole markets dedicated to cheeseThe Netherlands still has five traditional cheese markets in Alkmaar, Edam, Hoorn, Gouda and Woerden. The markets in Gouda and Woerden are functioning trading centres, but the others put on impressive demonstrations with people decked out in old-fashioned garb – white suits! Straw hats! – transporting huge wheels of cheese on wooden barrows, en route to the cheese weighing ceremony. Yes, there is an actual ceremony for it, because… There are weird, age-old rituals for buying cheese  The workers at the cheese markets are still organised in guilds. One of the traditional rituals you’ll witness at a cheese market is the sampling of the cheeses on offer, followed by the negotiation of the price, during which buyers and sellers clap each others’ hands while shouting the proposed amounts until an agreement is reached. Thankfully, as a regular visitor you will feel much less pressure. And, best of all… You can try as much as you like There are plenty of tasting rooms in Old Holland, where you can munch yourself through a wide variety of cheeses to make sure you buy the best of the best. Proper cheese shops also usually let customers sample the goods on offer. This is handy, as… There is a LOT of choice As every cheese lover knows, cheese doesn’t only come in many types, brands and regional varieties, but it’s also the age of a cheese that determines its taste. Young cheese is milder, while mature cheese is generally more pungent and often nuttier in taste. In the Netherlands, cheese (for example Gouda) is categorised by how long it has been aged: jong (1 month), belegen (4 months), oud (10 months) and overjarig (1 year or more). Would you like to know more about the cheese-making process? No problem, because… They love to show you how it’s made As well as markets, tasting rooms and specialised shops, Old Holland has plenty of cheese dairies that you can visit to find out how cheese is made. Some, like the De Simonehoeve cheese farm, keep all kinds of traditional, artisan crafts alive, so you can learn how clogs are made, too! You can’t really get more Dutch than that. ",
+            			"events":[{
+			            			"place": "Kaasmarkt Alkmaar - cheese market",
+			             			"tag_words": "ATTRACTIONS  MARKET  METROPOLITAN AREA  OLD HOLLAND  OLD HOLLAND SIGHTS AND ACTIVITIES  TYPICALLY DUTCH",
+			             			"desc":"Much more than simply an outdoor cheese shop, the Alkmaar Cheese Market is a morning out in itself.",
+			             			"long_desc": "Much more than simply an outdoor cheese shop, the Alkmaar Cheese Market is a morning out in itself. The largest of its kind anywhere in the world, this cheese market turns a square in central Alkmaar into a hive of activity, as the cheese carriers dart about, slaloming between thousands of Gouda cheese wheels lined up on the ground.",
+			             			"location": "Alkmaar cheese market,Waagplein ,1811 JP ALKMAAR",
+			             			"link": "http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/places-of-interest/alkmaar-cheese-market"
+		             			},{
+			             			"place": "Kaasmarkt Hoorn - cheese market",
+			             			"tag_words": "ATTRACTIONS  MARKET  METROPOLITAN AREA  OLD HOLLAND  TYPICALLY DUTCH",
+			             			"desc":"In cooperation with Beemsterkaas, cheese market of Hoorn shows the history of the market with a market supervisor, cheese carriers, traders, cheese girls, farmers with horses and wagons.",
+			             			"long_desc": "In cooperation with Beemsterkaas, cheese market of Hoorn shows the history of the market with a market supervisor, cheese carriers, traders, cheese girls, farmers with horses and wagons. From 16 June up to 1 September every Thursday at Hoorn (except on 4 and 11 August there will be no market).",
+			             			"location": "Kaasmarkt Hoorn, Roode Steen 1, 1621 CV HOORN NH",
+			             			"link": "http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/places-of-interest/kaasmarkt-hoorn"
+		             			},{
+			             			"place":"Kaasmarkt Edam - cheese market",
+			             			"tag_words": "DAYTRIPS  METROPOLITAN AREA  TYPICALLY DUTCH",
+			             			"desc":"This small town, which sits on the bank of the Markermeer, north of Amsterdam, produces a brand of cheese that’s beloved by food fans from around the world.",
+			             			"long_desc": "Cheese is the first thing that springs to mind when most people think of Edam. This small town, which sits on the bank of the Markermeer, north of Amsterdam, produces a brand of cheese that’s beloved by food fans from around the world.",
+									"location": "Edam",
+									"link": "http://www.iamsterdam.com/en/visiting/areas/city-escapes/old-holland/smalltown-harbours/edam"
+		             			},{
+			             			"place": "Kaasboerderij Simonehoeve - cheese farm",
+			             			"tag_words": "ATTRACTIONS  FOOD STORE  METROPOLITAN AREA  OLD HOLLAND  OLD HOLLAND SIGHTS AND ACTIVITIES  TYPICALLY DUTCH  WATERLAND",
+			             			"desc":"For an old-time Dutch experience visit De Simonehoeve, a traditional cheese farm and clog maker in the town of Volendam. ",
+			             			"long_desc": "For an old-time Dutch experience visit De Simonehoeve, a traditional cheese farm and clog maker in the town of Volendam. The Klomp family and their professional staff keep alive these Dutch crafts, dressing in traditional costumes throughout the year and demonstrating their artisan skills. Cheese, clogs and living Dutch history Be it a family day trip or a larger group tour, the farm specialises in sharing knowledge, firstly through cheese tastings and providing visitors the opportunity to try on wooden clogs. But it also hosts workshops and tours, for example, clog painting, tours of Volendam, high teas or an afternoon of old Dutch games. There’s also a cosy restaurant on the property (for breakfast, lunch, dinner or buffets) and a shop offering lots of local produce, Delftware and food and drink that you can sample for free.",
+			             			"location": "Kaasboerderij Simonehoeve - cheese farm, Wagenweg 2, 1145 PW KATWOUDE",
+			             			"link": "http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/overview-of-attractions/kaasboerderij-simonehoeve--cheese-farm"
+		             			},{
+			             			"place":"Kaasboerderij de Jacobs Hoeve - cheese farm",
+			             			"tag_words":"ATTRACTIONS  FAMILY/KIDS  GUIDED TOURS  METROPOLITAN AREA  MONUMENT  OLD HOLLAND  OLD HOLLAND SIGHTS AND ACTIVITIES  TYPICALLY DUTCH  WATERLAND",
+									"desc": "The Jacobs Hoeve is an authentic Dutch cheese farm situated near Volendam (only 20 minutes north of Amsterdam by road). The farm is surrounded by lush green meadows and sits at the foot of a dyke, offering a true taste of the renowned Dutch polder landscape. Ofcourse you can taste much more than that, as it's a fantastic opportunity to not only learn about traditional cheese-making processes but also to try the products too",
+			             			"long_desc":" The Jacobs Hoeve is an authentic Dutch cheese farm situated near Volendam (only 20 minutes north of Amsterdam by road). The farm is surrounded by lush green meadows and sits at the foot of a dyke, offering a true taste of the renowned Dutch polder landscape. Ofcourse you can taste much more than that, as it's a fantastic opportunity to not only learn about traditional cheese-making processes but also to try the products too. The farm's friendly staff add to the occasion, dressing in traditional Dutch costume and demonstrating the old cheese-making techniques. Entrance is free, there's free par",
+			             			"location":" Kaasboerderij de Jacobs Hoeve, Hoogedijk 8, 1145 PM KATWOUDE",
+			             			"link":"http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/overview-of-attractions/kaasboerderij-de-jacobs-hoeve"
+			             		},{
+			             			"place":"Alida Hoeve cheese farm & De Vriendschap",
+			             			"tag_words":"ATTRACTIONS  FAMILY/KIDS  GUIDED TOURS  METROPOLITAN AREA  MONUMENT  OLD HOLLAND  OLD HOLLAND SIGHTS AND ACTIVITIES  TYPICALLY DUTCH  WATERLAND",
+			             			"desc":"The Alida Hoeve cheese farm and De Vriendschap wooden shoe factory are located in Volendam, just 20 minutes north of Amsterdam by road. The Alida Hoeve is a typical Noord-Holland farmhouse with a 'cheese cover' roof. Where cows once grazed, there now stands a shop with cheese for sale. Visitors are welcomed by staff wearing traditional Volendam costume and who offer a comprehensive explanation about the preparation of the cheese.",
+			             			"long_desc":"The Alida Hoeve cheese farm and De Vriendschap wooden shoe factory are located in Volendam, just 20 minutes north of Amsterdam by road. The Alida Hoeve is a typical Noord-Holland farmhouse with a 'cheese cover' roof. Where cows once grazed, there now stands a shop with cheese for sale. Visitors are welcomed by staff wearing traditional Volendam costume and who offer a comprehensive explanation about the preparation of the cheese. The wooden shoe factory De Vriendschap is situated next to the Alida Hoeve cheese farm. Here you can enjoy a free wooden shoe-making demonstration, learning all about the many facets of real Dutch clogs. Wooden shoes are available in all sizes and with many different decorations – fun to wear or as a memorable souvenir of your trip! Entrance and parking is free, plus demonstrations are available in multiple languages.",
+			             			"location":"Alida Hoeve cheese farm & De Vriendschap,Zeddeweg 1, 1131 CW VOLENDAM",
+			             			"link":"http://www.iamsterdam.com/en/visiting/what-to-do/activities-and-excursions/overview/alida-hoeve-cheese-farm--de-vriendschap"
+			             		}
+            			]},
+            		{
+            			"tour": "bicycle_tours",
+            			"tag_words":"Amsterdam Waterland",
+            			"desc": "",
+            			"events":[{
+		            				"place":"The Golden Triangle",
+		             				"desc":"Want to ‘do’ three UNESCO World Heritage monuments in one day? Then this is the trail for you! A spectacular cycle trail which takes you from Amsterdam city centre and its famous canals (no. 1 check!) to the Beemster (no. 2, check!) polder. On the way, stop and visit a couple of forts and the Stelling van Amsterdam (Defense line of Amsterdam) (no. 3, check!).",
+		             				"long_desc": "Want to ‘do’ three UNESCO World Heritage monuments in one day? Then this is the trail for you! A spectacular cycle trail which takes you from Amsterdam city centre and its famous canals (no. 1 check!) to the Beemster (no. 2, check!) polder. On the way, stop and visit a couple of forts and the Stelling van Amsterdam (Defense line of Amsterdam) (no. 3, check!). Apart from those three cultural high points, there are actually many more beautiful sights to see as you cycle along this Golden Triangle Trail. There are the endless panoramas in Waterland with its high arching skies, or the stately farmhouses in the Beemster that were built by the rich merchants from Amsterdam (like farmhouse De Eenhoorn in Middenbeemster with a façade that resembles a canal town house). But this trail will also take you past the Zaan with its old warehouses and the Zaanse Schans where mills, barns, dwellings and museums create a picture of what life was like in the eighteenth century. In the Beemster itself you can see how the sharp geometric lines of the polder contrast with the crotchety winding patterns of the old peat meadows. Occasionally you pass a fort that was once part of the defense works that protected the Defense Line of Amsterdam, the capital, from enemy troups. To sum up: a beautiful, varied trail with lots to see, but you have to pedal briskly!",
+		             				"link": "http://cycleamsterdam.com/the-golden-triangle-trail/"
+	            				},{
+		            				"place": "Water Trail",
+				             		"desc":"Starting from Amsterdam, you will be surprised at how suddenly the city becomes countryside. Don’t worry about cycling too many kilometers through unattractive suburbs, enjoy a delightful ferry boat ride then linger enjoyably in an increasingly trendy Amsterdam North.",
+				             		"long_desc":"Starting from Amsterdam, you will be surprised at how suddenly the city becomes countryside. Don’t worry about cycling too many kilometers through unattractive suburbs, enjoy a delightful ferry boat ride then linger enjoyably in an increasingly trendy Amsterdam North. After just half an hour you can already see the vast horizons of Waterland looming. Travel clockwise from the junction 36, and be immediately awestruck by the natural wonders of the Ilperveld. Hundreds of islands, ditches, lakes, reed beds and fields of grazing cows and sheep give you the feeling you have travelled not only in distance but also back in time. Because the Ilperveld looks the same now as it did a century ago. Travel anticlockwise, through Broek in Waterland and explore the banks of the Gouwzee and enjoy the view of Marken. For a long time, the inhabitants of this former island had to defend themselves against a whimsical Zuiderzee. Yards were raised and houses built on stilts. With the coming of the Afsluitdijk things became much calmer here. Luckily, the characteristic dwellings and traditional costumes have remained. Monnickendam town centre has not changed much since the eighteenth century. The beautiful historical town has numerous monuments with elaborate plaques that are a direct reference to the booming trade that once brought prosperity to the city. Look up and check out the tower of the Waterlands museum De Speeltoren. This former town hall tower is home to the world’s oldest working Carillon.",
+				             		"link":"http://cycleamsterdam.com/water-trail/"
+		            			},{
+		            				"place": "Twiske Trail",
+				             		"desc":"This trail to the Twiske is not without risk since you will be cycling across a recreational area that offers all sorts of temptation. Beaches, endless playing fields and a delightful lake for swimming and sailing.",
+				             		"long_desc":"This trail to the Twiske is not without risk since you will be cycling across a recreational area that offers all sorts of temptation. Beaches, endless playing fields and a delightful lake for swimming and sailing.",
+				             		"link": "http://cycleamsterdam.com/twiske-trail/"
+		            			},{
+		            				"place":"De Beemster",
+			             			"tag_words": "DAYTRIPS  METROPOLITAN AREA  OLD HOLLAND  TYPICALLY DUTCH",
+			             			"desc": "The Beemster is a Unesco World Heritage site that’s an oasis of scenic polders, waterways, dikes, restored mills and charming, traditional farmhouses. Some visitors explore the area on foot or by boat, but bicycles are the preferred method of transportation around these parts.",
+			             			"long_desc": "A spectacular example of history and beauty A round trip by bike will take you past De Eenhoorn, one of the grandest of the area’s 350 ‘stolpboerderijen’ – traditional Dutch farmhouses with roofs in the shape of a cheese cover. A former vicarage nearby contains the Betje Wolff Museum, which is devoted to the 18th century Dutch author of novels including ‘The History of Miss Sara Burgerhart’. There’s also De Rijp, which has been called ’Holland’s most beautiful village’. Whether you reach it by land or water, you’re sure to agree after a relaxing stroll along its lovely lanes.",
+			             			"link":"http://www.iamsterdam.com/en/visiting/areas/city-escapes/old-holland/amsterdam-waterland/de-beemster" 
+		            			},{
+		            				"place":"Muiden",
+		            				"tag_words":"CASTLES & GARDENS  DAYTRIPS  METROPOLITAN AREA  TYPICALLY DUTCH",
+		            				"desc":"The fortified town of Muiden sits near the IJmeer, just east of Amsterdam. It dates back to the 10th century and is now known for its peaceful streets, small cafés, historic landmarks and picturesque harbour. ",
+		            				"long_desc": "The fortified town of Muiden sits near the IJmeer, just east of Amsterdam. It dates back to the 10th century and is now known for its peaceful streets, small cafés, historic landmarks and picturesque harbour. The town is a key link in the Defence Line of Amsterdam, a 135 km-long fortification that once protected the city from invaders. Pass through Muiden’s centuries-old walls and prepare for a stroll through one of the country’s oldest communities. Muiden combines the best of the past, present and future. One of its main attractions is the medieval Amsterdam Castle Muiderslot. Over the years, it’s been used as a location in various TV shows set in the Middle Ages. It’s a sight to behold. The castle has a drawbridge, five towers, battlements and other features worthy of King Arthur. If you’re looking for an even greater adventure, take the ferry from Muiden to the fortress island of Pampus. This man-made stronghold once helped protect the harbour of Amsterdam. It’s open to the public from April to October. Back on the mainland, be sure to check out Muiden’s cosy cafés or more elegant restaurants.",
+		            				"link":"http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/places-of-interest/muiden"
+		            			}
+            			]}
+            	]},
+			{
+				"place": "flowers of Amsterdam",
+				"desc": "",
+				"short_text":"",
+				"tours":[
+            		{"events":[{}]
+            	}]
+			},{
+				"place": "Haarlem",
+				"desc": "",
+				"short_text": "",
+				"tours":[
+            		{"events":[{}]
+            	}]
+
+			},{
+				"place": "Castles and gardens of Amsterdam",
+				"desc": "",
+				"short_text": "",
+				"tours":[
+            		{"events":[{}]
+            	}]
+
+			},{
+				"place": "New Land",
+				"desc": "Castles & Gardens History meets nature",
+            	"short_text": "Both north west of Amsterdam and south east on the banks of the River Amstel and River Vecht you can still bike and boat past these historic houses.Some are open to the public while others leave you dreaming of an aristocratic life by the water Although famous for its historic city centrethe Amsterdam region is always evolving as new immigrants and diverse cultures make their mark on many neighbourhoods. But probably the most dramatic changes have taken place in the province of Flevoland",
+            	"tours":[
+            		{"events":[{}]
+            	}]
+			}
+
+            ]
+		}
+}
+           
+            
+
+             	
+             	
+     
