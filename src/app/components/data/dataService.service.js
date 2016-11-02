@@ -7,7 +7,7 @@
 
   /** @ngInject */
   // function dtservice($http, appConfig, $log) {
-  function dtservice($http, $log, moment, appConfig,$q) {
+  function dtservice($http, $log, moment, appConfig, $q) {
 
     var vm = this;
 
@@ -57,8 +57,13 @@
         vm.apiMethod('data/user/' + user.user.id)
           .then(function (history) {
             var dateCheck = vm.dates(history, user);
-            vm.spotlight(history).then(function(txt){
-              $log.log("this is the stream text ready for spotlight :  " + txt.replace(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi,' '));
+            vm.spotlight(history).then(function (txt) {
+              /*$log.log("this is the stream text ready for spotlight :  " + txt.replace(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi,' '));*/
+              vm.apiMethod('similarity/' + txt.replace(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi, ' '))
+                .then(function (similarities) {
+                  $log.log("similarities : " + JSON.stringify(similarities));
+                })
+
             })
             return user.tourist_history = {
               'history': history,
@@ -104,14 +109,14 @@
     vm.compareDates = function (history, user) {
       for (var i = 0; i < history.data.length; i++) {
         var now = history.data[i].createdAt;
-        $log.log("for " + user.id);
+        //$log.log("for " + user.id);
         i++;
         var then = history.data[i].createdAt;
-        $log.log("between " + now + " and " + then);
+        //$log.log("between " + now + " and " + then);
         var ms = moment(now, "DD/MM/YYYY HH:mm:ss").diff(moment(then, "DD/MM/YYYY HH:mm:ss"));
         var d = moment.duration(ms);
         var s = Math.floor(d.asHours()) + moment.utc(ms).format(":mm:ss");
-        $log.log("this is the difference:  " + s);
+        //$log.log("this is the difference:  " + s);
         avg.push(Math.abs(Math.floor(d.asHours()) + moment.utc(ms)));
         return s;
       }
@@ -119,24 +124,15 @@
 
     vm.spotlight = function (history) {
       //collect all stream text and send it back to spotlight api
-      var txtStream="";
+      var txtStream = "";
       var q = $q.defer();
       for (var i = 0; i < history.data.length; i++) {
         txtStream += history.data[i].row.text;
-        if(i==history.data.length-1){
+        if (i == history.data.length - 1) {
           q.resolve(txtStream);
         }
       }
       return q.promise;
-      /*
-       vm.apiMethod('spotlight/' + txtStream)
-       .then(function (history) {
-       var dateCheck = vm.dates(history, user);
-       return user.tourist_history = {
-       'history': history,
-       'dateCheck': dateCheck
-       };
-       })*/
     }
 
     // Compares the passed in object with passed in array.
