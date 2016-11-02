@@ -91,7 +91,7 @@
       } else {
         if (history.data.length > 1) {
           vm.compareDates(history, user);
-          return true;
+          //return true;
         }
         return false;
       }
