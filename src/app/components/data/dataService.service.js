@@ -27,7 +27,7 @@
     vm.timezoneList = ["Amsterdam", "amsterdam", "Europe/Amsterdam"];
 
     //avg array average time difference for each user stream
-    var avg=[];
+    var avg = [];
 
     // Updates user object.
     vm.checkUserData = function () {
@@ -85,21 +85,13 @@
 
     // checks te length of the users history array
     vm.dates = function (history, user) {
-
       // calculate the average here for all time difference based on history.data.length but it should return form checkUserHistoryStream which it user stream return form API
       if (history.data.length > 20) {
         return true;
       } else {
         if (history.data.length > 1) {
-          vm.compareDates(history, user).then(function(){
-            var avgTime;
-            for ( var i = 0; i < avg.length; i ++){
-              avgTime += avg[i];
-            }
-            $log.log("average time span :  " + avgTime/avg.length);
-            avg=[];
-            return true;
-          });
+          vm.compareDates(history, user);
+          return true;
         }
         return false;
       }
@@ -117,7 +109,7 @@
         var d = moment.duration(ms);
         var s = Math.floor(d.asHours()) + moment.utc(ms).format(":mm:ss");
         $log.log("this is the difference:  " + s);
-        avg.push (Math.abs(Math.floor(d.asHours()) + moment.utc(ms)));
+        avg.push(Math.abs(Math.floor(d.asHours()) + moment.utc(ms)));
         return s;
       }
     }
