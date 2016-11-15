@@ -1,131 +1,314 @@
 {
     "items": {
-            "concept": [
-            	{
-            		"place": "old Amsterdam Holland, ",
-            		"desc": "Step back in time to Old Holland Traditionally Dutch",
-            		"short_text": "With its countless windmills, churches and old-fashioned farmhouses, stepping out into Old Holland can feel like being in a Golden Age painting Old Holland towns such as Volendam, Zaandam and Alkmaar hark back to times of more honest crafts, showcasing the traditional skills the region was famous for: shipbuilding, fishing and cheese making. Alongside such classic industries, you can also experience the heritage of the industrial revolution – a time when smoking chimney stacks and spinning sails enabled the mass production of chocolate and biscuits",
-            	
-            		"tours":[
-            		{
-            			"tour": "cheese tours",
-            			"desc": "capital of cheese Out of all the ‘typically Dutch’ items, cheese is probably our favourite – and certainly the most delicious! And with its markets, cheese dairies and tasting rooms, Old Holland is a must-see for all cheese lovers. Here’s why: Old Holland takes cheese really seriously Cheese is made (and consumed!) all over the Netherlands, but in Old Holland, they are really sticking to the traditions. Old-fashioned cheese dairies, tasting rooms, strange cheese-related customs – you’ll find all of that and more. And of course, Edamer cheese comes from the town of Edam, right in the heart of Old Holland. The region is also the place to be for cheese shopping, because… Old Holland has whole markets dedicated to cheeseThe Netherlands still has five traditional cheese markets in Alkmaar, Edam, Hoorn, Gouda and Woerden. The markets in Gouda and Woerden are functioning trading centres, but the others put on impressive demonstrations with people decked out in old-fashioned garb – white suits! Straw hats! – transporting huge wheels of cheese on wooden barrows, en route to the cheese weighing ceremony. Yes, there is an actual ceremony for it, because… There are weird, age-old rituals for buying cheese  The workers at the cheese markets are still organised in guilds. One of the traditional rituals you’ll witness at a cheese market is the sampling of the cheeses on offer, followed by the negotiation of the price, during which buyers and sellers clap each others’ hands while shouting the proposed amounts until an agreement is reached. Thankfully, as a regular visitor you will feel much less pressure. And, best of all… You can try as much as you like There are plenty of tasting rooms in Old Holland, where you can munch yourself through a wide variety of cheeses to make sure you buy the best of the best. Proper cheese shops also usually let customers sample the goods on offer. This is handy, as… There is a LOT of choice As every cheese lover knows, cheese doesn’t only come in many types, brands and regional varieties, but it’s also the age of a cheese that determines its taste. Young cheese is milder, while mature cheese is generally more pungent and often nuttier in taste. In the Netherlands, cheese (for example Gouda) is categorised by how long it has been aged: jong (1 month), belegen (4 months), oud (10 months) and overjarig (1 year or more). Would you like to know more about the cheese-making process? No problem, because… They love to show you how it’s made As well as markets, tasting rooms and specialised shops, Old Holland has plenty of cheese dairies that you can visit to find out how cheese is made. Some, like the De Simonehoeve cheese farm, keep all kinds of traditional, artisan crafts alive, so you can learn how clogs are made, too! You can’t really get more Dutch than that. ",
-            			"events":[{
-			            			"place": "Kaasmarkt Alkmaar - cheese market",
-			             			"tag_words": "ATTRACTIONS  MARKET  METROPOLITAN AREA  OLD HOLLAND  OLD HOLLAND SIGHTS AND ACTIVITIES  TYPICALLY DUTCH",
-			             			"desc":"Much more than simply an outdoor cheese shop, the Alkmaar Cheese Market is a morning out in itself.",
-			             			"long_desc": "Much more than simply an outdoor cheese shop, the Alkmaar Cheese Market is a morning out in itself. The largest of its kind anywhere in the world, this cheese market turns a square in central Alkmaar into a hive of activity, as the cheese carriers dart about, slaloming between thousands of Gouda cheese wheels lined up on the ground.",
-			             			"location": "Alkmaar cheese market,Waagplein ,1811 JP ALKMAAR",
-			             			"link": "http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/places-of-interest/alkmaar-cheese-market"
-		             			},{
-			             			"place": "Kaasmarkt Hoorn - cheese market",
-			             			"tag_words": "ATTRACTIONS  MARKET  METROPOLITAN AREA  OLD HOLLAND  TYPICALLY DUTCH",
-			             			"desc":"In cooperation with Beemsterkaas, cheese market of Hoorn shows the history of the market with a market supervisor, cheese carriers, traders, cheese girls, farmers with horses and wagons.",
-			             			"long_desc": "In cooperation with Beemsterkaas, cheese market of Hoorn shows the history of the market with a market supervisor, cheese carriers, traders, cheese girls, farmers with horses and wagons. From 16 June up to 1 September every Thursday at Hoorn (except on 4 and 11 August there will be no market).",
-			             			"location": "Kaasmarkt Hoorn, Roode Steen 1, 1621 CV HOORN NH",
-			             			"link": "http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/places-of-interest/kaasmarkt-hoorn"
-		             			},{
-			             			"place":"Kaasmarkt Edam - cheese market",
-			             			"tag_words": "DAYTRIPS  METROPOLITAN AREA  TYPICALLY DUTCH",
-			             			"desc":"This small town, which sits on the bank of the Markermeer, north of Amsterdam, produces a brand of cheese that’s beloved by food fans from around the world.",
-			             			"long_desc": "Cheese is the first thing that springs to mind when most people think of Edam. This small town, which sits on the bank of the Markermeer, north of Amsterdam, produces a brand of cheese that’s beloved by food fans from around the world.",
-									"location": "Edam",
-									"link": "http://www.iamsterdam.com/en/visiting/areas/city-escapes/old-holland/smalltown-harbours/edam"
-		             			},{
-			             			"place": "Kaasboerderij Simonehoeve - cheese farm",
-			             			"tag_words": "ATTRACTIONS  FOOD STORE  METROPOLITAN AREA  OLD HOLLAND  OLD HOLLAND SIGHTS AND ACTIVITIES  TYPICALLY DUTCH  WATERLAND",
-			             			"desc":"For an old-time Dutch experience visit De Simonehoeve, a traditional cheese farm and clog maker in the town of Volendam. ",
-			             			"long_desc": "For an old-time Dutch experience visit De Simonehoeve, a traditional cheese farm and clog maker in the town of Volendam. The Klomp family and their professional staff keep alive these Dutch crafts, dressing in traditional costumes throughout the year and demonstrating their artisan skills. Cheese, clogs and living Dutch history Be it a family day trip or a larger group tour, the farm specialises in sharing knowledge, firstly through cheese tastings and providing visitors the opportunity to try on wooden clogs. But it also hosts workshops and tours, for example, clog painting, tours of Volendam, high teas or an afternoon of old Dutch games. There’s also a cosy restaurant on the property (for breakfast, lunch, dinner or buffets) and a shop offering lots of local produce, Delftware and food and drink that you can sample for free.",
-			             			"location": "Kaasboerderij Simonehoeve - cheese farm, Wagenweg 2, 1145 PW KATWOUDE",
-			             			"link": "http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/overview-of-attractions/kaasboerderij-simonehoeve--cheese-farm"
-		             			},{
-			             			"place":"Kaasboerderij de Jacobs Hoeve - cheese farm",
-			             			"tag_words":"ATTRACTIONS  FAMILY/KIDS  GUIDED TOURS  METROPOLITAN AREA  MONUMENT  OLD HOLLAND  OLD HOLLAND SIGHTS AND ACTIVITIES  TYPICALLY DUTCH  WATERLAND",
-									"desc": "The Jacobs Hoeve is an authentic Dutch cheese farm situated near Volendam (only 20 minutes north of Amsterdam by road). The farm is surrounded by lush green meadows and sits at the foot of a dyke, offering a true taste of the renowned Dutch polder landscape. Ofcourse you can taste much more than that, as it's a fantastic opportunity to not only learn about traditional cheese-making processes but also to try the products too",
-			             			"long_desc":" The Jacobs Hoeve is an authentic Dutch cheese farm situated near Volendam (only 20 minutes north of Amsterdam by road). The farm is surrounded by lush green meadows and sits at the foot of a dyke, offering a true taste of the renowned Dutch polder landscape. Ofcourse you can taste much more than that, as it's a fantastic opportunity to not only learn about traditional cheese-making processes but also to try the products too. The farm's friendly staff add to the occasion, dressing in traditional Dutch costume and demonstrating the old cheese-making techniques. Entrance is free, there's free par",
-			             			"location":" Kaasboerderij de Jacobs Hoeve, Hoogedijk 8, 1145 PM KATWOUDE",
-			             			"link":"http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/overview-of-attractions/kaasboerderij-de-jacobs-hoeve"
-			             		},{
-			             			"place":"Alida Hoeve cheese farm & De Vriendschap",
-			             			"tag_words":"ATTRACTIONS  FAMILY/KIDS  GUIDED TOURS  METROPOLITAN AREA  MONUMENT  OLD HOLLAND  OLD HOLLAND SIGHTS AND ACTIVITIES  TYPICALLY DUTCH  WATERLAND",
-			             			"desc":"The Alida Hoeve cheese farm and De Vriendschap wooden shoe factory are located in Volendam, just 20 minutes north of Amsterdam by road. The Alida Hoeve is a typical Noord-Holland farmhouse with a 'cheese cover' roof. Where cows once grazed, there now stands a shop with cheese for sale. Visitors are welcomed by staff wearing traditional Volendam costume and who offer a comprehensive explanation about the preparation of the cheese.",
-			             			"long_desc":"The Alida Hoeve cheese farm and De Vriendschap wooden shoe factory are located in Volendam, just 20 minutes north of Amsterdam by road. The Alida Hoeve is a typical Noord-Holland farmhouse with a 'cheese cover' roof. Where cows once grazed, there now stands a shop with cheese for sale. Visitors are welcomed by staff wearing traditional Volendam costume and who offer a comprehensive explanation about the preparation of the cheese. The wooden shoe factory De Vriendschap is situated next to the Alida Hoeve cheese farm. Here you can enjoy a free wooden shoe-making demonstration, learning all about the many facets of real Dutch clogs. Wooden shoes are available in all sizes and with many different decorations – fun to wear or as a memorable souvenir of your trip! Entrance and parking is free, plus demonstrations are available in multiple languages.",
-			             			"location":"Alida Hoeve cheese farm & De Vriendschap,Zeddeweg 1, 1131 CW VOLENDAM",
-			             			"link":"http://www.iamsterdam.com/en/visiting/what-to-do/activities-and-excursions/overview/alida-hoeve-cheese-farm--de-vriendschap"
-			             		}
-            			]},
-            		{
-            			"tour": "bicycle_tours",
-            			"tag_words":"Amsterdam Waterland",
-            			"desc": "",
-            			"events":[{
-		            				"place":"The Golden Triangle",
-		             				"desc":"Want to ‘do’ three UNESCO World Heritage monuments in one day? Then this is the trail for you! A spectacular cycle trail which takes you from Amsterdam city centre and its famous canals (no. 1 check!) to the Beemster (no. 2, check!) polder. On the way, stop and visit a couple of forts and the Stelling van Amsterdam (Defense line of Amsterdam) (no. 3, check!).",
-		             				"long_desc": "Want to ‘do’ three UNESCO World Heritage monuments in one day? Then this is the trail for you! A spectacular cycle trail which takes you from Amsterdam city centre and its famous canals (no. 1 check!) to the Beemster (no. 2, check!) polder. On the way, stop and visit a couple of forts and the Stelling van Amsterdam (Defense line of Amsterdam) (no. 3, check!). Apart from those three cultural high points, there are actually many more beautiful sights to see as you cycle along this Golden Triangle Trail. There are the endless panoramas in Waterland with its high arching skies, or the stately farmhouses in the Beemster that were built by the rich merchants from Amsterdam (like farmhouse De Eenhoorn in Middenbeemster with a façade that resembles a canal town house). But this trail will also take you past the Zaan with its old warehouses and the Zaanse Schans where mills, barns, dwellings and museums create a picture of what life was like in the eighteenth century. In the Beemster itself you can see how the sharp geometric lines of the polder contrast with the crotchety winding patterns of the old peat meadows. Occasionally you pass a fort that was once part of the defense works that protected the Defense Line of Amsterdam, the capital, from enemy troups. To sum up: a beautiful, varied trail with lots to see, but you have to pedal briskly!",
-		             				"link": "http://cycleamsterdam.com/the-golden-triangle-trail/"
-	            				},{
-		            				"place": "Water Trail",
-				             		"desc":"Starting from Amsterdam, you will be surprised at how suddenly the city becomes countryside. Don’t worry about cycling too many kilometers through unattractive suburbs, enjoy a delightful ferry boat ride then linger enjoyably in an increasingly trendy Amsterdam North.",
-				             		"long_desc":"Starting from Amsterdam, you will be surprised at how suddenly the city becomes countryside. Don’t worry about cycling too many kilometers through unattractive suburbs, enjoy a delightful ferry boat ride then linger enjoyably in an increasingly trendy Amsterdam North. After just half an hour you can already see the vast horizons of Waterland looming. Travel clockwise from the junction 36, and be immediately awestruck by the natural wonders of the Ilperveld. Hundreds of islands, ditches, lakes, reed beds and fields of grazing cows and sheep give you the feeling you have travelled not only in distance but also back in time. Because the Ilperveld looks the same now as it did a century ago. Travel anticlockwise, through Broek in Waterland and explore the banks of the Gouwzee and enjoy the view of Marken. For a long time, the inhabitants of this former island had to defend themselves against a whimsical Zuiderzee. Yards were raised and houses built on stilts. With the coming of the Afsluitdijk things became much calmer here. Luckily, the characteristic dwellings and traditional costumes have remained. Monnickendam town centre has not changed much since the eighteenth century. The beautiful historical town has numerous monuments with elaborate plaques that are a direct reference to the booming trade that once brought prosperity to the city. Look up and check out the tower of the Waterlands museum De Speeltoren. This former town hall tower is home to the world’s oldest working Carillon.",
-				             		"link":"http://cycleamsterdam.com/water-trail/"
-		            			},{
-		            				"place": "Twiske Trail",
-				             		"desc":"This trail to the Twiske is not without risk since you will be cycling across a recreational area that offers all sorts of temptation. Beaches, endless playing fields and a delightful lake for swimming and sailing.",
-				             		"long_desc":"This trail to the Twiske is not without risk since you will be cycling across a recreational area that offers all sorts of temptation. Beaches, endless playing fields and a delightful lake for swimming and sailing.",
-				             		"link": "http://cycleamsterdam.com/twiske-trail/"
-		            			},{
-		            				"place":"De Beemster",
-			             			"tag_words": "DAYTRIPS  METROPOLITAN AREA  OLD HOLLAND  TYPICALLY DUTCH",
-			             			"desc": "The Beemster is a Unesco World Heritage site that’s an oasis of scenic polders, waterways, dikes, restored mills and charming, traditional farmhouses. Some visitors explore the area on foot or by boat, but bicycles are the preferred method of transportation around these parts.",
-			             			"long_desc": "A spectacular example of history and beauty A round trip by bike will take you past De Eenhoorn, one of the grandest of the area’s 350 ‘stolpboerderijen’ – traditional Dutch farmhouses with roofs in the shape of a cheese cover. A former vicarage nearby contains the Betje Wolff Museum, which is devoted to the 18th century Dutch author of novels including ‘The History of Miss Sara Burgerhart’. There’s also De Rijp, which has been called ’Holland’s most beautiful village’. Whether you reach it by land or water, you’re sure to agree after a relaxing stroll along its lovely lanes.",
-			             			"link":"http://www.iamsterdam.com/en/visiting/areas/city-escapes/old-holland/amsterdam-waterland/de-beemster" 
-		            			},{
-		            				"place":"Muiden",
-		            				"tag_words":"CASTLES & GARDENS  DAYTRIPS  METROPOLITAN AREA  TYPICALLY DUTCH",
-		            				"desc":"The fortified town of Muiden sits near the IJmeer, just east of Amsterdam. It dates back to the 10th century and is now known for its peaceful streets, small cafés, historic landmarks and picturesque harbour. ",
-		            				"long_desc": "The fortified town of Muiden sits near the IJmeer, just east of Amsterdam. It dates back to the 10th century and is now known for its peaceful streets, small cafés, historic landmarks and picturesque harbour. The town is a key link in the Defence Line of Amsterdam, a 135 km-long fortification that once protected the city from invaders. Pass through Muiden’s centuries-old walls and prepare for a stroll through one of the country’s oldest communities. Muiden combines the best of the past, present and future. One of its main attractions is the medieval Amsterdam Castle Muiderslot. Over the years, it’s been used as a location in various TV shows set in the Middle Ages. It’s a sight to behold. The castle has a drawbridge, five towers, battlements and other features worthy of King Arthur. If you’re looking for an even greater adventure, take the ferry from Muiden to the fortress island of Pampus. This man-made stronghold once helped protect the harbour of Amsterdam. It’s open to the public from April to October. Back on the mainland, be sure to check out Muiden’s cosy cafés or more elegant restaurants.",
-		            				"link":"http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/places-of-interest/muiden"
-		            			}
-            			]}
-            	]},
-			{
-				"place": "flowers of Amsterdam",
-				"desc": "",
-				"short_text":"",
-				"tours":[
-            		{"events":[{}]
-            	}]
-			},{
-				"place": "Haarlem",
-				"desc": "",
-				"short_text": "",
-				"tours":[
-            		{"events":[{}]
-            	}]
+        "concept": [{
+                "place": "old Amsterdam Holland, ",
+                "desc": "Step back in time to Old Holland Traditionally Dutch",
+                "short_text": "With its countless windmills, churches and old-fashioned farmhouses, stepping out into Old Holland can feel like being in a Golden Age painting Old Holland towns such as Volendam, Zaandam and Alkmaar hark back to times of more honest crafts, showcasing the traditional skills the region was famous for: shipbuilding, fishing and cheese making. Alongside such classic industries, you can also experience the heritage of the industrial revolution – a time when smoking chimney stacks and spinning sails enabled the mass production of chocolate and biscuits",
 
-			},{
-				"place": "Castles and gardens of Amsterdam",
-				"desc": "",
-				"short_text": "",
-				"tours":[
-            		{"events":[{}]
-            	}]
+                "tours": [{
+                    "tour": "cheese tours",
+                    "desc": "capital of cheese Out of all the ‘typically Dutch’ items, cheese is probably our favourite – and certainly the most delicious! And with its markets, cheese dairies and tasting rooms, Old Holland is a must-see for all cheese lovers. Here’s why: Old Holland takes cheese really seriously Cheese is made (and consumed!) all over the Netherlands, but in Old Holland, they are really sticking to the traditions. Old-fashioned cheese dairies, tasting rooms, strange cheese-related customs – you’ll find all of that and more. And of course, Edamer cheese comes from the town of Edam, right in the heart of Old Holland. The region is also the place to be for cheese shopping, because… Old Holland has whole markets dedicated to cheeseThe Netherlands still has five traditional cheese markets in Alkmaar, Edam, Hoorn, Gouda and Woerden. The markets in Gouda and Woerden are functioning trading centres, but the others put on impressive demonstrations with people decked out in old-fashioned garb – white suits! Straw hats! – transporting huge wheels of cheese on wooden barrows, en route to the cheese weighing ceremony. Yes, there is an actual ceremony for it, because… There are weird, age-old rituals for buying cheese  The workers at the cheese markets are still organised in guilds. One of the traditional rituals you’ll witness at a cheese market is the sampling of the cheeses on offer, followed by the negotiation of the price, during which buyers and sellers clap each others’ hands while shouting the proposed amounts until an agreement is reached. Thankfully, as a regular visitor you will feel much less pressure. And, best of all… You can try as much as you like There are plenty of tasting rooms in Old Holland, where you can munch yourself through a wide variety of cheeses to make sure you buy the best of the best. Proper cheese shops also usually let customers sample the goods on offer. This is handy, as… There is a LOT of choice As every cheese lover knows, cheese doesn’t only come in many types, brands and regional varieties, but it’s also the age of a cheese that determines its taste. Young cheese is milder, while mature cheese is generally more pungent and often nuttier in taste. In the Netherlands, cheese (for example Gouda) is categorised by how long it has been aged: jong (1 month), belegen (4 months), oud (10 months) and overjarig (1 year or more). Would you like to know more about the cheese-making process? No problem, because… They love to show you how it’s made As well as markets, tasting rooms and specialised shops, Old Holland has plenty of cheese dairies that you can visit to find out how cheese is made. Some, like the De Simonehoeve cheese farm, keep all kinds of traditional, artisan crafts alive, so you can learn how clogs are made, too! You can’t really get more Dutch than that. ",
+                    "events": [{
+                        "place": "Kaasmarkt Alkmaar - cheese market",
+                        "tag_words": "ATTRACTIONS  MARKET  METROPOLITAN AREA  OLD HOLLAND  OLD HOLLAND SIGHTS AND ACTIVITIES  TYPICALLY DUTCH",
+                        "desc": "Much more than simply an outdoor cheese shop, the Alkmaar Cheese Market is a morning out in itself.",
+                        "long_desc": "Much more than simply an outdoor cheese shop, the Alkmaar Cheese Market is a morning out in itself. The largest of its kind anywhere in the world, this cheese market turns a square in central Alkmaar into a hive of activity, as the cheese carriers dart about, slaloming between thousands of Gouda cheese wheels lined up on the ground.",
+                        "location": "Alkmaar cheese market,Waagplein ,1811 JP ALKMAAR",
+                        "link": "http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/places-of-interest/alkmaar-cheese-market"
+                    }, {
+                        "place": "Kaasmarkt Hoorn - cheese market",
+                        "tag_words": "ATTRACTIONS  MARKET  METROPOLITAN AREA  OLD HOLLAND  TYPICALLY DUTCH",
+                        "desc": "In cooperation with Beemsterkaas, cheese market of Hoorn shows the history of the market with a market supervisor, cheese carriers, traders, cheese girls, farmers with horses and wagons.",
+                        "long_desc": "In cooperation with Beemsterkaas, cheese market of Hoorn shows the history of the market with a market supervisor, cheese carriers, traders, cheese girls, farmers with horses and wagons. From 16 June up to 1 September every Thursday at Hoorn (except on 4 and 11 August there will be no market).",
+                        "location": "Kaasmarkt Hoorn, Roode Steen 1, 1621 CV HOORN NH",
+                        "link": "http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/places-of-interest/kaasmarkt-hoorn"
+                    }, {
+                        "place": "Kaasmarkt Edam - cheese market",
+                        "tag_words": "DAYTRIPS  METROPOLITAN AREA  TYPICALLY DUTCH",
+                        "desc": "This small town, which sits on the bank of the Markermeer, north of Amsterdam, produces a brand of cheese that’s beloved by food fans from around the world.",
+                        "long_desc": "Cheese is the first thing that springs to mind when most people think of Edam. This small town, which sits on the bank of the Markermeer, north of Amsterdam, produces a brand of cheese that’s beloved by food fans from around the world.",
+                        "location": "Edam",
+                        "link": "http://www.iamsterdam.com/en/visiting/areas/city-escapes/old-holland/smalltown-harbours/edam"
+                    }, {
+                        "place": "Kaasboerderij Simonehoeve - cheese farm",
+                        "tag_words": "ATTRACTIONS  FOOD STORE  METROPOLITAN AREA  OLD HOLLAND  OLD HOLLAND SIGHTS AND ACTIVITIES  TYPICALLY DUTCH  WATERLAND",
+                        "desc": "For an old-time Dutch experience visit De Simonehoeve, a traditional cheese farm and clog maker in the town of Volendam. ",
+                        "long_desc": "For an old-time Dutch experience visit De Simonehoeve, a traditional cheese farm and clog maker in the town of Volendam. The Klomp family and their professional staff keep alive these Dutch crafts, dressing in traditional costumes throughout the year and demonstrating their artisan skills. Cheese, clogs and living Dutch history Be it a family day trip or a larger group tour, the farm specialises in sharing knowledge, firstly through cheese tastings and providing visitors the opportunity to try on wooden clogs. But it also hosts workshops and tours, for example, clog painting, tours of Volendam, high teas or an afternoon of old Dutch games. There’s also a cosy restaurant on the property (for breakfast, lunch, dinner or buffets) and a shop offering lots of local produce, Delftware and food and drink that you can sample for free.",
+                        "location": "Kaasboerderij Simonehoeve - cheese farm, Wagenweg 2, 1145 PW KATWOUDE",
+                        "link": "http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/overview-of-attractions/kaasboerderij-simonehoeve--cheese-farm"
+                    }, {
+                        "place": "Kaasboerderij de Jacobs Hoeve - cheese farm",
+                        "tag_words": "ATTRACTIONS  FAMILY/KIDS  GUIDED TOURS  METROPOLITAN AREA  MONUMENT  OLD HOLLAND  OLD HOLLAND SIGHTS AND ACTIVITIES  TYPICALLY DUTCH  WATERLAND",
+                        "desc": "The Jacobs Hoeve is an authentic Dutch cheese farm situated near Volendam (only 20 minutes north of Amsterdam by road). The farm is surrounded by lush green meadows and sits at the foot of a dyke, offering a true taste of the renowned Dutch polder landscape. Ofcourse you can taste much more than that, as it's a fantastic opportunity to not only learn about traditional cheese-making processes but also to try the products too",
+                        "long_desc": " The Jacobs Hoeve is an authentic Dutch cheese farm situated near Volendam (only 20 minutes north of Amsterdam by road). The farm is surrounded by lush green meadows and sits at the foot of a dyke, offering a true taste of the renowned Dutch polder landscape. Ofcourse you can taste much more than that, as it's a fantastic opportunity to not only learn about traditional cheese-making processes but also to try the products too. The farm's friendly staff add to the occasion, dressing in traditional Dutch costume and demonstrating the old cheese-making techniques. Entrance is free, there's free par",
+                        "location": " Kaasboerderij de Jacobs Hoeve, Hoogedijk 8, 1145 PM KATWOUDE",
+                        "link": "http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/overview-of-attractions/kaasboerderij-de-jacobs-hoeve"
+                    }, {
+                        "place": "Alida Hoeve cheese farm & De Vriendschap",
+                        "tag_words": "ATTRACTIONS  FAMILY/KIDS  GUIDED TOURS  METROPOLITAN AREA  MONUMENT  OLD HOLLAND  OLD HOLLAND SIGHTS AND ACTIVITIES  TYPICALLY DUTCH  WATERLAND",
+                        "desc": "The Alida Hoeve cheese farm and De Vriendschap wooden shoe factory are located in Volendam, just 20 minutes north of Amsterdam by road. The Alida Hoeve is a typical Noord-Holland farmhouse with a 'cheese cover' roof. Where cows once grazed, there now stands a shop with cheese for sale. Visitors are welcomed by staff wearing traditional Volendam costume and who offer a comprehensive explanation about the preparation of the cheese.",
+                        "long_desc": "The Alida Hoeve cheese farm and De Vriendschap wooden shoe factory are located in Volendam, just 20 minutes north of Amsterdam by road. The Alida Hoeve is a typical Noord-Holland farmhouse with a 'cheese cover' roof. Where cows once grazed, there now stands a shop with cheese for sale. Visitors are welcomed by staff wearing traditional Volendam costume and who offer a comprehensive explanation about the preparation of the cheese. The wooden shoe factory De Vriendschap is situated next to the Alida Hoeve cheese farm. Here you can enjoy a free wooden shoe-making demonstration, learning all about the many facets of real Dutch clogs. Wooden shoes are available in all sizes and with many different decorations – fun to wear or as a memorable souvenir of your trip! Entrance and parking is free, plus demonstrations are available in multiple languages.",
+                        "location": "Alida Hoeve cheese farm & De Vriendschap,Zeddeweg 1, 1131 CW VOLENDAM",
+                        "link": "http://www.iamsterdam.com/en/visiting/what-to-do/activities-and-excursions/overview/alida-hoeve-cheese-farm--de-vriendschap"
+                    }]
+                }, {
+                    "tour": "bicycle_tours",
+                    "tag_words": "Amsterdam Waterland",
+                    "desc": "",
+                    "events": [{
+                        "place": "The Golden Triangle",
+                        "desc": "Want to ‘do’ three UNESCO World Heritage monuments in one day? Then this is the trail for you! A spectacular cycle trail which takes you from Amsterdam city centre and its famous canals (no. 1 check!) to the Beemster (no. 2, check!) polder. On the way, stop and visit a couple of forts and the Stelling van Amsterdam (Defense line of Amsterdam) (no. 3, check!).",
+                        "long_desc": "Want to ‘do’ three UNESCO World Heritage monuments in one day? Then this is the trail for you! A spectacular cycle trail which takes you from Amsterdam city centre and its famous canals (no. 1 check!) to the Beemster (no. 2, check!) polder. On the way, stop and visit a couple of forts and the Stelling van Amsterdam (Defense line of Amsterdam) (no. 3, check!). Apart from those three cultural high points, there are actually many more beautiful sights to see as you cycle along this Golden Triangle Trail. There are the endless panoramas in Waterland with its high arching skies, or the stately farmhouses in the Beemster that were built by the rich merchants from Amsterdam (like farmhouse De Eenhoorn in Middenbeemster with a façade that resembles a canal town house). But this trail will also take you past the Zaan with its old warehouses and the Zaanse Schans where mills, barns, dwellings and museums create a picture of what life was like in the eighteenth century. In the Beemster itself you can see how the sharp geometric lines of the polder contrast with the crotchety winding patterns of the old peat meadows. Occasionally you pass a fort that was once part of the defense works that protected the Defense Line of Amsterdam, the capital, from enemy troups. To sum up: a beautiful, varied trail with lots to see, but you have to pedal briskly!",
+                        "link": "http://cycleamsterdam.com/the-golden-triangle-trail/"
+                    }, {
+                        "place": "Water Trail",
+                        "desc": "Starting from Amsterdam, you will be surprised at how suddenly the city becomes countryside. Don’t worry about cycling too many kilometers through unattractive suburbs, enjoy a delightful ferry boat ride then linger enjoyably in an increasingly trendy Amsterdam North.",
+                        "long_desc": "Starting from Amsterdam, you will be surprised at how suddenly the city becomes countryside. Don’t worry about cycling too many kilometers through unattractive suburbs, enjoy a delightful ferry boat ride then linger enjoyably in an increasingly trendy Amsterdam North. After just half an hour you can already see the vast horizons of Waterland looming. Travel clockwise from the junction 36, and be immediately awestruck by the natural wonders of the Ilperveld. Hundreds of islands, ditches, lakes, reed beds and fields of grazing cows and sheep give you the feeling you have travelled not only in distance but also back in time. Because the Ilperveld looks the same now as it did a century ago. Travel anticlockwise, through Broek in Waterland and explore the banks of the Gouwzee and enjoy the view of Marken. For a long time, the inhabitants of this former island had to defend themselves against a whimsical Zuiderzee. Yards were raised and houses built on stilts. With the coming of the Afsluitdijk things became much calmer here. Luckily, the characteristic dwellings and traditional costumes have remained. Monnickendam town centre has not changed much since the eighteenth century. The beautiful historical town has numerous monuments with elaborate plaques that are a direct reference to the booming trade that once brought prosperity to the city. Look up and check out the tower of the Waterlands museum De Speeltoren. This former town hall tower is home to the world’s oldest working Carillon.",
+                        "link": "http://cycleamsterdam.com/water-trail/"
+                    }, {
+                        "place": "Twiske Trail",
+                        "desc": "This trail to the Twiske is not without risk since you will be cycling across a recreational area that offers all sorts of temptation. Beaches, endless playing fields and a delightful lake for swimming and sailing.",
+                        "long_desc": "This trail to the Twiske is not without risk since you will be cycling across a recreational area that offers all sorts of temptation. Beaches, endless playing fields and a delightful lake for swimming and sailing.",
+                        "link": "http://cycleamsterdam.com/twiske-trail/"
+                    }, {
+                        "place": "De Beemster",
+                        "tag_words": "DAYTRIPS  METROPOLITAN AREA  OLD HOLLAND  TYPICALLY DUTCH",
+                        "desc": "The Beemster is a Unesco World Heritage site that’s an oasis of scenic polders, waterways, dikes, restored mills and charming, traditional farmhouses. Some visitors explore the area on foot or by boat, but bicycles are the preferred method of transportation around these parts.",
+                        "long_desc": "A spectacular example of history and beauty A round trip by bike will take you past De Eenhoorn, one of the grandest of the area’s 350 ‘stolpboerderijen’ – traditional Dutch farmhouses with roofs in the shape of a cheese cover. A former vicarage nearby contains the Betje Wolff Museum, which is devoted to the 18th century Dutch author of novels including ‘The History of Miss Sara Burgerhart’. There’s also De Rijp, which has been called ’Holland’s most beautiful village’. Whether you reach it by land or water, you’re sure to agree after a relaxing stroll along its lovely lanes.",
+                        "link": "http://www.iamsterdam.com/en/visiting/areas/city-escapes/old-holland/amsterdam-waterland/de-beemster"
+                    }, {
+                        "place": "Muiden",
+                        "tag_words": "CASTLES & GARDENS  DAYTRIPS  METROPOLITAN AREA  TYPICALLY DUTCH",
+                        "desc": "The fortified town of Muiden sits near the IJmeer, just east of Amsterdam. It dates back to the 10th century and is now known for its peaceful streets, small cafés, historic landmarks and picturesque harbour. ",
+                        "long_desc": "The fortified town of Muiden sits near the IJmeer, just east of Amsterdam. It dates back to the 10th century and is now known for its peaceful streets, small cafés, historic landmarks and picturesque harbour. The town is a key link in the Defence Line of Amsterdam, a 135 km-long fortification that once protected the city from invaders. Pass through Muiden’s centuries-old walls and prepare for a stroll through one of the country’s oldest communities. Muiden combines the best of the past, present and future. One of its main attractions is the medieval Amsterdam Castle Muiderslot. Over the years, it’s been used as a location in various TV shows set in the Middle Ages. It’s a sight to behold. The castle has a drawbridge, five towers, battlements and other features worthy of King Arthur. If you’re looking for an even greater adventure, take the ferry from Muiden to the fortress island of Pampus. This man-made stronghold once helped protect the harbour of Amsterdam. It’s open to the public from April to October. Back on the mainland, be sure to check out Muiden’s cosy cafés or more elegant restaurants.",
+                        "link": "http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/places-of-interest/muiden"
+                    }]
+                }]
+            }, {
+                "place": "flowers of Amsterdam",
+                "desc": "The Flower Strip or 'Bollenstreek' is one of the most popular and unique sights in the Netherlands. Every spring the entire region bursts into vivid colour as bulbs shoot and millions of flowers blossom. Visit the Flower Strip in Holland The Netherlands produces a staggering 70 per cent of the world’s commercial flower output. For a colourful glimpse into this contemporary Dutch flower power, you need go no further than the so-called ‘Flower Strip’, just an hour from Amsterdam. With Holland’s famous bulb fields in full bloom, you’ll be surrounded on all sides by a rainbow of flowers: purple hyacinths, pink crocuses, countless varieties of tulips and bright yellow daffodils. Don’t miss one of the world’s most photogenic attractions, the Keukenhof flower gardens, which opens for just eight short weeks each year. Or find out how the Dutch flower trade engendered a unique economic system at the FloraHolland auction, housed in the world’s biggest trading building and open all year round. Put things into perspective with a trip to the Black Tulip Museum or the Historical Garden at Aalsmeer, and you’ll see that tulip mania never really ended here...",
+                "short_text": "The Flower Strip or 'Bollenstreek' is one of the most popular and unique sights in the Netherlands. Every spring the entire region bursts into vivid colour as bulbs shoot and millions of flowers blossom.",
+                "tours": [{
+                    "tour": "Flower strip activities",
+                    "desc": "The flower strip is one of Holland's most beautiful regions, and there are plenty of active ways to experience it. From cycling and hiking through the tulip fields to visiting museums and even attending the world's largest flower auction, you'll always find something to see, do and enjoy at the world famous 'Bollenstreek'.",
+                    "events": [{
+                            "place": "Keukenhof Gardens",
+                            "location": "Keukenhof Gardens,Stationsweg 166a, 2161 AM LISSE",
+                            "tag_words": "ATTRACTIONS  FLOWERS OF AMSTERDAM  LISSE  METROPOLITAN AREA",
+                            "desc": "Each spring, the Keukenhof Gardens in Lisse come alive with blooming flowers in every colour of the rainbow. Come tip-toe through the tulips at the world’s largest flower gardens.",
+                            "long_desc": "Each spring, the Keukenhof Gardens in Lisse come alive with blooming flowers in every colour of the rainbow. Come tip-toe through the tulips at the world’s largest flower gardens. An international attraction near AmsterdamThe Keukenhof Gardens provide visitors with a feast for the senses! As 7 million flower bulbs bloom over 32 hectares, the park is awash with the sight and scent of blossoming flowers. See the flower shows, experience this year’s theme pavilion and delight in the statues dotted around the park. Take the kids on a treasure hunt or explore the playground, petting zoo or hedge maze. Leave some time to explore the surrounding area with its fields of flowers by hiring a bike or taking a boat cruise. Experience the Golden Age The special theme for the Keukenhof in 2016 is 'The Golden Age'. This is the 17th century period in which the Netherlands went through a flourishing era in the fields of trade, arts and sciences. It was also the period in which the tulip trade thrived, making it a perfect fit for these special gardens. Look out for special flower presentations inspired by the Golden Age, as well as exhibitions and events. Events at the Keukenhof The musical entertainment and beautifully decorated floats at the flower parade are one of the highlights of the Keukenhof events calendar, but there's always plenty more in store. Throughout the flower season you'll find a host of special activities, shows and performances – especially on the weekend or public holidays. And be sure to check the events schedule for the traditional costume show, the fabulous annual flower parade and plenty of special events during the Easter weekend.",
+                            "link": "http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/overview-of-attractions/keukenhof-gardens"
+                        }, {
+                            "place": "Aalsmeer Historical Gardens",
+                            "location": "Aalsmeer Historical Gardens, Praamplein 1, 1431 CW AALSMEER",
+                            "tag_words": "AALSMEER  ATTRACTIONS  CASTLES & GARDENS  FLOWER STRIP ACTIVITIES  FLOWERS OF AMSTERDAM  METROPOLITAN AREA  NATURE",
+                            "desc": "Stroll around the Aalsmeer Historical Gardens and find yourself on a colourful journey back through time – all the way back to 1650!",
+                            "long_desc": "Stroll around the Aalsmeer Historical Gardens and find yourself on a colourful journey back through time – all the way back to 1650! Horticultural history Explore the greenhouses of yesteryear, dotted with tools from a bygone era. The garden is home to a large selection of long-forgotten strains of plants and varieties of fruit. Every last Saturday of the month from April to September, the garden’s impressive auction house plays host to a special flower and plant auction.",
+                            "link": "http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/overview-of-attractions/aalsmeer-historical-gardens"
+                        }, {
+                            "place": "FloraHolland flower auction",
+                            "location": "FloraHolland flower auction",
+                            "tag_words": "AALSMEER  ATTRACTIONS  FAMILY/KIDS  FLOWER STRIP ACTIVITIES  FLOWERS  FLOWERS OF AMSTERDAM  METROPOLITAN AREA  TYPICALLY DUTCH",
+                            "desc": "FloraHolland in Aalsmeer is the world's largest flower auction, and visitors are invited in to watch the buzzing activity of this impressive auction.",
+                            "long_desc": "FloraHolland in Aalsmeer is the world's largest flower auction, and visitors are invited in to watch the buzzing activity of this impressive auction. For an unforgettable experience, take a behind-the-scenes look at the trading centre and the auction process, while admiring the thousands of carts bursting with flowers.Set out early on a self-guided tour and catch the auction at its busiest. Set your own pace as you follow signs explaining all aspects of FloraHolland (in various languages). Professional groups can contact FloraHolland for an organised tour in Dutch, English, German or French (reservations required).",
+                            "link": "http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/overview-of-attractions/floraholland-flower-auction"
+                        }, {
+                            "place": "Museum 'De Zwarte Tulp'",
+                            "location": "Museum 'De Zwarte Tulp', Heereweg 219, 2161 BG LISSE",
+                            "tag_words": "FLOWER STRIP ACTIVITIES  FLOWERS OF AMSTERDAM  LISSE  METROPOLITAN AREA  MUSEUM",
+                            "desc": "With the emphasis on tulips, the bulb cultivation and development of both the past and present, are vividly displayed in the museum.",
+                            "long_desc": "With the emphasis on tulips, the bulb cultivation and development of both the past and present, are vividly displayed in the museum. Museum “de Zwarte Tulp” is situated in a restored, old building at the town centre of Lisse. It shows the history of the Bulb District as well as the origins and the development of bulb culture. The museum paints an enthralling picture of the remarkable ‘bulb-to-flower-to-bulb’ cycle by means of: pictures, photos and videos on the working of soil; bulb culture artifacts; shed interiors; and a small specialized library.A visitor's guide is available in 6 languages. Next to the permanent exhibition the museum has a number of special exhibitions throughout the year. A visit to the museum can be easily combined with a visit to Keukenhof flower gardens, also situated in Lisse.",
+                            "link": "http://www.iamsterdam.com/en/visiting/what-to-do/museums-and-galleries/museums/museum-de-zwarte-tulp"
+                        }, {
+                            "place": "Annemieke’s Picking Garden",
+                            "location": "Annemieke’s Picking Garden, Haarlemmerstraat 15a, 2182 HA HILLEGOM",
+                            "tag_words": "ACTIVE  DAYTRIPS  EXCURSIONS  FLOWER STRIP ACTIVITIES  FLOWERS  FLOWERS OF AMSTERDAM  METROPOLITAN AREA",
+                            "desc": "Located a short trip from Amsterdam in Hillegom, Annemieke’s Picking Garden is a nursery specialising in cultivating tulips using organic horticultural techniques. The garden boasts more than 300 varieties of flowers and is open to the public. Learn how the blooms are prepared for sale, wander through the tulip fields and pick your own vibrant bunch to take home!",
+                            "long_desc": "Located a short trip from Amsterdam in Hillegom, Annemieke’s Picking Garden is a nursery specialising in cultivating tulips using organic horticultural techniques. The garden boasts more than 300 varieties of flowers and is open to the public. Learn how the blooms are prepared for sale, wander through the tulip fields and pick your own vibrant bunch to take home! Tulip garden Thanks to its fertile sandy soil, the Netherlands’ famous flower strip has been the leading producer of unique flowers for centuries – with the tulip topping the list. From July to October, visitors to Annemieke’s Picking Garden are also welcome to pick beautiful bouquets of summer flowers. Bus line 50 from Haarlem stops directly in front of the garden. ",
+                            "link": "http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/overview-of-attractions/annemiekes-picking-garden"
+                        }, {
+                            "place": "Westeinderplassen",
+                            "location": "Westeinderplassen,Kudelstaartseweg ,1431 GA AALSMEER",
+                            "tag_words": "ACTIVE  CASTLES & GARDENS  FLOWER STRIP ACTIVITIES  METROPOLITAN AREA  NATURE  WATER",
+                            "desc": "Take to the water and enjoy an adventure boating on the lakes and through the network of channels that link the Westeinderplassen.",
+                            "long_desc": "Take to the water and enjoy an adventure boating on the lakes and through the network of channels that link the Westeinderplassen. These lakes are home to dozens of tiny islands and while most of them are privately owned, everyone is welcome to moor their boat at the Starteiland (Start Island) – a popular spot for a picnic or barbeque! If you don’t fancy bringing your own supplies, stop off at one of the 50 marinas lining the banks, many of them with restaurants, cafés and sun-drenched terraces.",
+                            "link": "http://www.iamsterdam.com/en/visiting/what-to-do/nature/overview/westeinderplassen"
+                        }
 
-			},{
-				"place": "New Land",
-				"desc": "Castles & Gardens History meets nature",
-            	"short_text": "Both north west of Amsterdam and south east on the banks of the River Amstel and River Vecht you can still bike and boat past these historic houses.Some are open to the public while others leave you dreaming of an aristocratic life by the water Although famous for its historic city centrethe Amsterdam region is always evolving as new immigrants and diverse cultures make their mark on many neighbourhoods. But probably the most dramatic changes have taken place in the province of Flevoland",
-            	"tours":[
-            		{"events":[{}]
-            	}]
-			}
 
-            ]
-		}
+                    ]
+                }]
+            }, {
+                "place": "Haarlem",
+                "desc": "A city of remarkable history and culture, Haarlem is just a short hop from Amsterdam but packs a unique punch. With spectacular monuments dating back almost 800 years, such as the Amsterdamse Poort and Sint-Bavokerk, it’s no wonder that so many great artists of the Golden Age wanted to capture its beauty and atmosphere. Frans Hals, one of the Netherlands’ greatest painters, is celebrated in the Frans Hals Museum (alongside paintings by his peers). Of course, Haarlem has made an impact in more recent times too. Its Jugendstil train station is one of the most beautiful in the country and the city is a bustling hub of great cafés, shops and restaurants.",
+                "short_text": "A city of remarkable history and culture, Haarlem is just a short hop from Amsterdam but packs a unique punch. With spectacular monuments dating back almost 800 years, such as the Amsterdamse Poort and Sint-Bavokerk, it’s no wonder that so many great artists of the Golden Age wanted to capture its beauty and atmosphere.",
+                "tours": [{
+                	"tour": "Hotels and restaurants",
+                	"desc": "I amsterdam's selection of places to eat, drink and sleep in the historic city of Haarlem, including hotels, B&Bs and hostels.",
+                    "events": [{
+                        "place": "Mogador",
+                        "location": "Gasthuisstraat 48, 2011 XP HAARLEM",
+                        "tag_words": "cafe",
+                        "desc": "Mogador can be found on the lovely Botermarkt (butter market) in Haarlem",
+                        "long_desc": "Loved by true coffee connoisseurs, Mogador can be found on the lovely Botermarkt (butter market) in Haarlem. As well as coffee it serves cakes, pastries and lunch options.",
+                        "link": "http://www.iamsterdam.com/en/visiting/areas/city-escapes/haarlem/highlights/haarlem-hotels-and-restaurants#--d6aed1cd_c11d_4379_b837_b76b2e1a5cac"
+                    }, {
+                        "place": "Staal",
+                        "location":"Gedempte Oude Gracht 46, 2011 GS HAARLEM",
+                        "tag_words": "cafe",
+                        "desc": "Organic and locally-sourced produce inspires the ever-changing menu" ,
+                        "long_desc": "Homemade soups, salads, cakes and freshly baked apple pie are just a few reasons to head to Staal. Organic and locally-sourced produce inspires the ever-changing menu.",
+                        "link": "http://www.iamsterdam.com/en/visiting/areas/city-escapes/haarlem/highlights/haarlem-hotels-and-restaurants#--444140f1_bd22_4a57_9c7f_d51feba54d2f"
+                    }, {
+                        "place": "Hello I’m Local",
+                        "location":"Spiegelstraat 4, 2011 BP HAARLEM",
+                        "tag_words":"hostel",
+                        "desc": "Hello I’m Local is located in the Burgwal neighbourhood of central Haarlem",
+                        "long_desc": "Hello I’m Local is located in the Burgwal neighbourhood of central Haarlem, across the water from the Teylers Museum and the Grote Markt. This boutique hostel is perfect for groups of friends, lone travellers and romantic couples on a weekend break. All of the hostel’s rooms have their own shower, with some sharing a toilet. Larger groups of holidaymakers can even rent out the entire hostel!",
+                        "link": "http://www.iamsterdam.com/en/visiting/areas/city-escapes/haarlem/highlights/haarlem-hotels-and-restaurants#--5cd7c036_2633_49e1_b7d1_4f42942ae5b5"
+                    }, {
+                        "place": "Stempels",
+                        "location": "Klokhuisplein 9, 2011 HK HAARLEM",
+                        "tag_words": "Hotel",
+                        "desc": "Spend the night in the convivial, historic centre of Haarlem",
+                        "long_desc": "Spend the night in the convivial, historic centre of Haarlem, in the spot where for many years our money and stamps were printed. The Stempels Hotel exudes the atmosphere of the past but in a modern, stylish and comfortable setting.",
+                        "link": "http://www.iamsterdam.com/en/visiting/areas/city-escapes/haarlem/highlights/haarlem-hotels-and-restaurants#--26d90925_4375_4bf2_b2f3_8c41a5330d62"
+                    }, {
+                        "location": "Ambassador City Centre Hotel",
+                        "place": "Oude Groenmarkt 20-22, 2011 HL HAARLEM",
+                        "tag_words": "Hotel" ,
+                        "desc": "Ambassador City Centre Hotel and Joops City Centre Hotel are both located in the city centre of Haarlem.",
+                        "long_desc": "Ambassador City Centre Hotel and Joops City Centre Hotel are both located in the city centre of Haarlem.",
+                        "link": "http://www.iamsterdam.com/en/visiting/areas/city-escapes/haarlem/highlights/haarlem-hotels-and-restaurants#--26a027e4_a701_4d1f_96a6_f60750a603c9"
+                    }]
+                }, { 
+                	"tour": "Here’s our selection of 10 unmissable Haarlem highlights.",
+               		"desc": "With an abundance of historical sights, cultural attractions and hidden gems crammed into a relatively small city, Haarlem truly is a sightseers’ paradise. There’s plenty to keep the visitor entertained, but thanks to its compact size, it’s easy to get a good introduction to the city even if you only have one day to explore it. With its ancient buildings, cobbled streets and winding waterways, the medieval city of Haarlem is one of the most photogenic destinations in the Netherlands. Easily reachable by train (just fifteen minutes from Amsterdam Central Station) Haarlem is often referred to as a scaled-down version of its more famous neighbour. But to think of it in such terms does a disservice to a city that beats with its own vibrant pulse and overflows with a rich history, epoch-spanning architecture and a thriving cultural scene all of its own.",
+                	"events": [{
+                		"place": "the Grote Markt",
+                        "location": "the Grote Markt 1 2011 RD HAARLEM",
+                        "tag_words":"DAYTRIPS  HAARLEM  HAARLEM ACTIVITIES" ,
+                        "desc": "Get to the heart of things at the Grote Markt",
+                        "long_desc": "At the historic heart of Haarlem, this vast square is located underneath the imposing Grote Kerk, and is the image of the city that many people will recognise. Hosting regular festivals, concerts and markets, the Grote Markt is the hub of daily life in Haarlem and just happens to be one of the prettiest city squares in the country. Go there on a Saturday when the Netherlands’ finest street market rolls out its wares.",
+                        "link": "http://www.iamsterdam.com/en/visiting/areas/city-escapes/haarlem/haarlem-top-10"
+                    }, {
+                        "place": "Grote Markt 22  HAARLEM",
+                        "location": "De Grote Kerk, Grote Markt 22, 2011 RD HAARLEM",
+                        "tag_words": "DAYTRIPS  HAARLEM  HAARLEM ACTIVITIES CHURCH OR PLACE OF WORSHIP METROPOLITAN AREA",
+                        "desc": "Marvel at the historic Grote Kerk",
+                        "long_desc": "Famous church bells If you’re in the area around 21:00, listen out for the church’s characteristic bells. Known as ‘The Damiaatjes’, these two bells ring every evening in commemoration of the conquest of the Egyptian city of Damietta in 1219. The chiming traditionally heralds the closing of the city gates, but these are long gone – so there’s no need to worry about being locked in (or out). Historical monument Dating to 1738, the church organ was constructed by acclaimed organ builder Christian Müller and was played by no-one less than (a young) Mozart! Inside the church, you’ll also find the tombstones of major figures from Dutch history including Frans Hals, Pieter Teyler and Pieter Jansz. Saenredam. Also known as the St. Bavokerk, the cross-shaped, Gothic Grote Kerk dominates the Grote Markt in the centre of the city. Work on Haarlem’s largest church started around 1400, but the 75-metre tall spire wasn’t completed until 1520. A number of years later, in 1911, Anthony Fokker’s Spin 3 aircraft flew around the spire as part of that year’s Queen’s Day celebrations. Don’t leave the Grote Markt without taking a look inside Haarlem’s magnificent cathedral, which dates back to the 14th century. The building’s turbulent history has seen it passed between different faiths, damaged by fire and struck by lightning, yet still the beautiful giant towers high above Haarlem’s rooftops, dominating its skyline as it has done for centuries. Inside, the gothic interior is nothing short of breathtaking and is the final resting place of several famous Haarlemmers including Frans Hals and Willem Bilderdijk. Grote Kerk, Grote Markt 22  ",
+                        "link": "http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/overview-of-attractions/de-grote-kerk"
+                    }, {
+                        "place": "Molen de Adriaan",
+                        "location": "Molen de Adriaan Papentorenvest 1A, 2011 AV HAARLEM",
+                        "tag_words":"DAYTRIPS  HAARLEM  HAARLEM ACTIVITIES METROPOLITAN AREA  WINDMILL",
+                        "desc": "Climb a landmark windmill",
+                        "long_desc": "There are few sights more quintessentially Dutch than that of a windmill looming over a river, and the Molen (windmill) de Adriaan is one of the finest examples in the region. The imposing wooden tower has been a definitive feature on Haarlem’s skyline since the 18th century, although the existing windmill is actually a reconstruction (the original sadly burnt down in 1932). The mill is open for guided tours that include spectacular views across Haarlem’s rooftops from its riverside platform. Molen de Adriaan, Papentorenvest 1A Dominating Haarlem’s skyline The windmill was ravaged by fire in 1932 and it wasn’t until 2002 that this unique monument was restored to its former glory, once again taking its place as a distinctive feature on the Haarlem cityscape. The windmill is now home to a small museum offering guided tours, using models and visual installations to give visitors the low-down on the history of Molen de Adriaan and other Dutch windmills. The decked area outside the windmill offers fantastic views over the city.",
+                        "link": "http://www.iamsterdam.com/en/visiting/what-to-do/attractions-and-sights/overview-of-attractions/molen-de-adriaan"
+                    }, {
+                        "place": "Frans Hals Museum",
+                        "location": "Frans Hals Museum, Groot Heiligland 62, 2011 ES HAARLEM" ,
+                        "tag_words": "DAYTRIPS  HAARLEM  HAARLEM ACTIVITIES DUTCH MASTERS  FREE WITH I AMSTERDAM CITY CARD  HAARLEM METROPOLITAN AREA  MUSEUM",
+                        "desc": "Look into the eyes of Haarlem’s former residents at the Frans Hals Museum",
+                        "long_desc": "Golden Age portrait painter Frans Hals is one of Haarlem’s most famous sons, and his legacy can be seen all over the city. Nowhere more so than at the Frans Hals museum, a large gallery dedicated to Golden Age art and Hals’ portraiture, and home to the largest collection of Frans Hals portraits in the world. Frans Hals Museum, Groot Heiligland 62 Frans Hals Frans Hals, the most famous Haarlem painter of the Golden Age, specialised in portraits. He painted in a very assured and deft style. Unlike most of his contemporaries, Hals chose not to give his paintings a smooth finish, aiming instead to keep a sense of ‘life’ in them. Motion implies life, and Hals took care to create a sense of motion in his subjects. With his typically loose brushwork, he managed to create a vivid likeness of those who commissioned him. Collection In addition to paintings by Hals, the museum has works by his predecessors and his contemporaries. Furniture, ceramics, glass and silver are also on display. The earliest paintings date from the 16th century. They are primarily biblical depictions. Around 1590 Haarlem became the middle point of a new style: Mannerism. Typical of this were masterfully painted figures in contorted poses. In the 17th century, Haarlem was a powerful and prosperous city and a centre of art and culture. The painters of the Golden Age concentrated on everyday subjects: landscapes, genre scenes, portraits, still lifes and city views.",
+                        "link": "http://www.iamsterdam.com/en/visiting/what-to-do/museums-and-galleries/museums/frans-hals-museum"
+                    }, {
+                    	 "place": "De Jopenkerk",
+                        "location": "De Jopenkerk, Gedempte Voldersgracht 2, 2011 WD HAARLEM",
+                        "tag_words": "CAFÉ/BAR  DISCOUNT WITH I AMSTERDAM CITY CARD  HAARLEM  HAARLEM HOTELS AND RESTAURANTS  METROPOLITAN AREA  RESTAURANTS",
+                        "desc": "Go beer tasting in a former church",
+                        "long_desc": "All that sightseeing and shopping is thirsty work, so be sure to drop by this former church to worship at the altar of beer. Now converted into a brewery, grand café and tasting room, the beautiful church building is home to Haarlem’s famous Jopen beer, which is created using medieval local recipes. De Jopenkerk, Gedempte Voldersgracht 2 De Jopenkerk (Jopen Church) is a renovated former church which now houses a grand café, restaurant and microbrewery. Head to the charming venue for delicious food and drinks, and naturally for a taste of the famous Jopen beer! De Jopenkerk’s parsonage is a unique location for meetings, while the restaurant itself is also available for hire.",
+                        "link": "http://www.iamsterdam.com/en/visiting/what-to-do/eating-and-drinking/dining-out-amsterdam/restaurant-listing/de-jopenkerk"
+                      
+                    }, {
+                    	 "place": "Corrie ten Boomhuis",
+                        "location": "Corrie ten Boomhuis, Barteljorisstraat 19, 2011 RA HAARLEM",
+                        "tag_words":"ATTRACTIONS  HAARLEM  HAARLEM ACTIVITIES  METROPOLITAN AREA" ,
+                        "desc": "Visit the Corrie ten Boom House ",
+                        "long_desc": " During World War II, the ten Boom family provided a hiding place for Jewish people and members of the resistance in their home on Haarlem’s Barteljorisstraat. The family was betrayed, imprisoned and deported to concentration camps – only Corrie survived the ordeal. Her house is now a poignant museum, the majority of which recreates how it would have looked in the 1940s. Visitors to the Corrie ten Boomhuis can view the hiding place located behind a fake wall in her bedroom, used to conceal Jewish people in hiding and others on the run from the Nazi occupying forces. Corrie ten Boomhuis, Barteljorisstraat 19 Reliving history Visitors to the Corrie ten Boomhuis can view the hiding place located behind a fake wall in her bedroom, used to conceal Jewish people in hiding and others on the run from the Nazi occupying forces. A range of books and DVDs about Corrie and her family is available in the museum shop.",
+                        "link": "http://www.iamsterdam.com/en/visiting/what-to-do/museums-and-galleries/museums/corrie-ten-boomhuis"
+                     
+                	}]
+                }]
+
+            }, {
+                "place": "Castles and gardens of Amsterdam",
+                "desc": "The countryside of Noord-Holland was always a popular region for the rich merchants of the Golden Age. Each summer they would leave their primary residence in the heart of Amsterdam, retreating to extravagant castles and estates with acres of beautifully manicured gardens. Both north west of Amsterdam, and south east, on the banks of the River Amstel and River Vecht, you can still bike and boat past these historic houses. Some are open to the public while others leave you dreaming of an aristocratic life by the water.",
+                "short_text": "The countryside of Noord-Holland was always a popular region for the rich merchants of the Golden Age. Each summer they would leave their primary residence in the heart of Amsterdam, retreating to extravagant castles and estates with acres of beautifully manicured gardens.",
+                "tours": [{
+                	"tour": "Five Dutch fortresses straight out of a fairy tale",
+               		"desc": "Just a hop, skip and a jump away from Amsterdam, you’ll find a land of historical fortresses, chivalric castles and country estates. Take a look at some of these impressive locations at which to unleash your inner Knight, Damsel or fairy tale villain.",
+                    "events": [{
+                        "place": "Amsterdam Castle Muiderslot",
+                        "location": "Amsterdam Castle Muiderslot, Herengracht 1, 1398 AA MUIDEN",
+                        "tag_words": "ATTRACTIONS  CASTLES & GARDENS  FREE WITH I AMSTERDAM CITY CARD  METROPOLITAN AREA" ,
+                        "desc": "The happy ever after: Muiderslot ",
+                        "long_desc": "Located in Muiden to the east of Amsterdam, Amsterdam Castle Muiderslot’s legacy dates all the way back to 1280 when Count Floris V commissioned the construction of a stone fortress on the grounds. Part of the UNESCO-listed Defence Line of Amsterdam, the enchanting castle and gardens are a sure-fire hit with visitors of all ages. Fairy tale castle & gardens Given its drawbridge, five towers, moat and battlements, it will probably come as no surprise that the castle and grounds have been used in several TV shows set in the Middle Ages. Many of the castles chambers have been restored to reflect the splendour that its owners enjoyed during the Dutch Golden Age. Medieval family fun A guided tour of the castle is included in the entrance price, introducing visitors to the castle’s rich history. Several walking routes are laid out around the grounds and the castle regularly organises special activities for younger visitors, including a special guided tour on Wednesday afternoons. Also look out for the falconer and his birds of prey, on the grounds daily between April and the end of October.",
+                        "link": "http://www.iamsterdam.com/en/visiting/what-to-do/museums-and-galleries/museums/amsterdam-castle-muiderslot"
+                    }, {
+                        "place": "Fort Pampus",
+                        "location": "Fort Pampus, Postbus 90, 1398 ZH MUIDEN",
+                        "tag_words": "ATTRACTIONS  CASTLES & GARDENS  FAMILY/KIDS  METROPOLITAN AREA  MUIDEN" ,
+                        "desc": "Raise the flags and man the guns! For a family-friendly and historical day trip from Amsterdam, hop on a ferry and discover Fort Pampus, a UNESCO World Heritage site.",
+                        "long_desc": "Seen across the water, the small island of Pampus looks like any other island. But take a closer look and you’ll see this is no natural land mass at all, but a submerged sea fort built in the 1890s to protect Amsterdam from enemies. After a restoration in 2007, you can now visit Fort Pampus by boat and explore its secret tunnels - and it’s also a popular location for events. Discover Fort Pampus The island fort on an artificial island was once part of the Defence Line of Amsterdam, a 135-kilometer-long system of fortifications that defended the city by means of flooding. The island and now dismantled fort have a mysterious air and make for an interesting day out for visitors of all ages, with historical artefacts to discover all over the island. 400 years of Dutch history Even before the island Pampus was built as part of the Defence Line, the shallows – then known as Pampus sandbank – held a significant place in Dutch life. Trading ships from the Dutch East Indies loaded with spices, tea and silk would anchor off Pampus, because they often were too heavily loaded to sail over the shallows into the port of Amsterdam. Here the crew would wait until either the goods would be landed or the ship would be lifted higher out of the water by so-called ‘ship camels’ – flotation tanks – so she could sail into port. Defence line When the Defence Line of Amsterdam was built at the end of the 19th century, the fortress island Pampus was constructed. With two gigantic cannon on the ramparts invaders could be held at bay. Aerial warfare made the fortress obsolete; still, the world wars did not go by unnoticed. Natural history Pampus Island lies in the middle of the IJmeer and is an oasis of peace and relaxation. Sun, wind and water are inseparable features of the island. They are also a source of energy: Pampus is developing the use of these natural resources and is holding a special presentation about this. Visit Pampus An audio tour for international visitors is available (languages: English and German). The tour lasts approximately 45 minutes and can be used with a simple headset or a smartphone app, which can be downloaded using free Wi-Fi in the Pampus Pavilion. There is also a shop, which offers printed tour guides in English and German. Events on Pampus Pampus has an extensive events calendar: there is a ‘Pirate Week’ in May and a kite festival in June, the whole of August is dedicated to culture, and in October there is a Light Festival. Pavilion and shop In the Pavilion visitors can enjoy coffee and cake, lunch and drinks. The terrace offers a wonderful view out over the IJmeer and the passing parade of boats. Visitors coming with their own boat are welcome in the Pavilion (free admission). The shop has a wide selection of souvenirs.",
+                        "link": "http://www.iamsterdam.com/en/visiting/what-to-do/museums-and-galleries/museums/fort-pampus"
+                    }]
+                }]
+
+            }, {
+                "place": "Amsterdam Beach",
+                "desc": "When the temperatures soar in Amsterdam, sun-seekers flock to the beaches at Bloemendaal and Zandvoort to bask on the sands and soak up the vibrant nightlife. Hit the beach in Holland Sandy shores and sunbathers may not be the first things that spring to mind when you think of Amsterdam, but a short distance away from the canals and cobbles of Amsterdam city centre lies one of the most unspoilt coastlines in Northern Europe. Summer months see the towns of Zandvoort and Bloemendaal buzz with throngs of party goers and sun-worshippers who come to enjoy themselves at the many vibrant beach clubs, which range from chic restaurants to colourful bohemian bars with DJs and campfires. Check out our insider guide to some of the best beach hotspots in Zandvoort and Bloemendaal if you’re in need of tips for your next trip to the beach! Sun, sea and surfing near Amsterdam The Amsterdam coast is also a haven of wind water sports, and thrill seekers flock from far and wide to enjoy everything from kite surfing to blokarting on the vast expanses of sand and sea. You can find out more about the sports on offer at Amsterdam beach in this wind water sports top five. Away from the shore you’ll find even more ways to get active in the protected dunes, which are a haven for nature lovers and offer the perfect terrain for an invigorating bike ride or hike through the ever-changing landscape.",
+                "short_text": "When the temperatures soar in Amsterdam, sun-seekers flock to the beaches at Bloemendaal and Zandvoort to bask on the sands and soak up the vibrant nightlife.",
+                "tours": [{
+                    "events": [{
+                        "place": "Zandvoort aan Zee, Zandvoort",
+                        "desc": "Zandvoort is a popular beach destination located near to Amsterdam, with clean sandy beaches, trendy beach bars and family activities.",
+                        "long_desc": "Zandvoort is a popular beach destination located near to Amsterdam, with clean sandy beaches, trendy beach bars and family activities. Popular with tourists and families, Zandvoort boasts wide, sandy beaches and a good choice of funky beach bars for food and drinks overlooking the sea. Locals and visitors from all around Europe flock there during the warmer months for long lazy days of sun bathing and seaside fun. The water can feel pretty cold (that's the North Sea for you), but it does warm up on hotter days. The sea at Zandvoort is very clean, so if you're bold enough to brave the cold it's a lovely place to swim and splash about. ",
+                        "link": "http://www.iamsterdam.com/en/visiting/areas/city-escapes/amsterdam-beach/zandvoort"
+                    }, {
+                        "place": "Bloemendaal aan Zee",
+                        "desc": "Colourful hippy hangouts, regular beach parties and a trendy young sun-worshipping crowd make this coastal gem one of Amsterdam's most popular summertime destinations.",
+                        "long_desc": "Colourful hippy hangouts, regular beach parties and a trendy young sun-worshipping crowd make this coastal gem one of Amsterdam's most popular summertime destinations. With more of a party atmosphere than its neighbour Zandvoort, Bloemendaal is a great place to dip your toes in the North Sea or to hit a dance floor once the sun goes down. Characterised by its fantastic selection of cool beach bars and clubs, Bloemendaal has regular live bands and DJs creating open air parties that go on well into the night. For the more adventurous, there’s an area for nude sunbathing that can be found further north up the shore. Between the regular town and the sea and sand, you can enjoy the wild dune landscape.",
+                        "link": ""
+                    }, {
+                        "place": "Woodstock 69, Bloemendaal",
+                        "location": "Woodstock 69,Zeeweg 94, tent 7, 2051 EC OVERVEEN",
+                        "tag_words": "beach hotspots AMSTERDAM BEACH  AMSTERDAM BEACH RESTAURANTS AND HOTELS  BLOEMENDAAL  DJ  OUTDOOR  TERRACE",
+                        "desc": "Flower power comes to Amsterdam beach at this colourful beach bar and club in Bloemendaal.",
+                        "long_desc": "Flower power comes to Amsterdam beach at this colourful beach bar and club in Bloemendaal. Dancing around the bonfire Woodstock 69’s eastern infused décor, complete with palm trees, attracts a colourful mix of clubbers and laid-back hippy types. Its packed party agenda is a force to be reckoned with, as the club regularly hosts big-name DJs (and partygoers get to dance around a bonfire!). But chilled-out evenings with live music and barbecues are an equally big draw. Good to know for sporty people: there is also a kitesurf school on location, named Zeestock",
+                        "link": "http://www.iamsterdam.com/en/visiting/what-to-do/eating-and-drinking/dining-out-amsterdam/amsterdam-beach-clubs/woodstock-69"
+                    }, {
+                        "place": "Bloomingdale, Bloemendaal",
+                        "location": "Bloomingdale, Zeeweg ,2051 EC OVERVEEN",
+                        "tag_words": "AMSTERDAM BEACH  AMSTERDAM BEACH RESTAURANTS AND HOTELS  BLOEMENDAAL  DJ  OUTDOOR  TERRACE",
+                        "desc": "Bringing a little bit of Ibiza to Amsterdam beach, Bloomingdale is a great spot for everything from sophisticated lounging through fine dining to wild parties.",
+                        "long_desc": "Bringing a little bit of Ibiza to Amsterdam beach, Bloomingdale is a great spot for everything from sophisticated lounging through fine dining to wild parties",
+                        "link": "http://www.iamsterdam.com/en/visiting/what-to-do/eating-and-drinking/dining-out-amsterdam/amsterdam-beach-clubs/bloomingdale"
+                    }, {
+                        "place": "Fuel, Bloomingdaal",
+                        "location": "Fuel,Zeeweg 84,2051 EC OVERVEEN",
+                        "tag_words": "AMSTERDAM BEACH  AMSTERDAM BEACH RESTAURANTS AND HOTELS  BLOEMENDAAL  DJ  OUTDOOR  TERRACE",
+                        "desc": "This beach bar, restaurant and club in Bloemendaal offers breakfast, lunch, dinner and club nights for locals and daytrippers from Amsterdam alike.",
+                        "long_desc": "This beach bar, restaurant and club in Bloemendaal offers breakfast, lunch, dinner and club nights for locals and daytrippers from Amsterdam alike. Fuel’s modern interior and extensive deck on the sea are the perfect backdrop for tasting lovely maritime delicacies – unsurprisingly, the menu is heavy on fish and seafood – while wistfully staring at the waves. After, make sure to put on those dancing shoes for the club nights with their usually house-heavy line-up.",
+                        "link": "http://www.iamsterdam.com/en/visiting/what-to-do/eating-and-drinking/dining-out-amsterdam/amsterdam-beach-clubs/fuel"
+                    }, {
+                        "place": "Dutch Dunes",
+                        "location": "Dutch Dunes",
+                        "tag_words": "ACTIVE  AMSTERDAM BEACH  METROPOLITAN AREA  OUTDOOR  WALKING",
+                        "desc": "The Dutch Dunes are an ever-changing landscape full of opportunities. This exceptional ‘no man’s land’ between the flat expanses inland and the North Sea provides a wide variety of experiences that alter from moment to moment – be it tranquil hiking through sheltered inlets as you admire wild flowers and rare wildlife, or the windswept hilltops that offer amazing views out over the coastline.",
+                        "long_desc": "The Dutch Dunes are an ever-changing landscape full of opportunities. This exceptional ‘no man’s land’ between the flat expanses inland and the North Sea provides a wide variety of experiences that alter from moment to moment – be it tranquil hiking through sheltered inlets as you admire wild flowers and rare wildlife, or the windswept hilltops that offer amazing views out over the coastline. Enjoy a casual stroll, a lengthy hike or even a challenging bike ride across the undulating sands – there are experiences for all ages and desires within these protected landscapes. And on either side of the dunes, you’ll fine luxurious stretches of beach or green forests and peaceful lakes that are perfect for a daytime paddle.",
+                        "link": "http://www.iamsterdam.com/en/visiting/areas/city-escapes/amsterdam-beach/dutch-dunes"
+                    }, {
+                        "place": "The Spot",
+                        "location": "The Spot,Strandafgang Barnaart 23a,2041 KB ZANDVOORT",
+                        "tag_words": "AMSTERDAM BEACH  AMSTERDAM BEACH ACTIVITIES  AMSTERDAM BEACH RESTAURANTS AND HOTELS  BEACH  ZANDVOORT",
+                        "desc": "The Spot in Zandvoort is an all-inclusive beach location that offers a club with a water sports centre and hosts a multitude of activities.",
+                        "long_desc": "The Spot in Zandvoort is an all-inclusive beach location that offers a club with a water sports centre and hosts a multitude of activities.",
+                        "link": "http://www.iamsterdam.com/en/visiting/what-to-do/eating-and-drinking/dining-out-amsterdam/amsterdam-beach-clubs/the-spot"
+                    } ]
+                }]
+            }
+
+        ]
+    }
 }
-           
-            
-
-             	
-             	
-     
