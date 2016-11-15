@@ -269,7 +269,7 @@
                         "place": "Bloemendaal aan Zee",
                         "desc": "Colourful hippy hangouts, regular beach parties and a trendy young sun-worshipping crowd make this coastal gem one of Amsterdam's most popular summertime destinations.",
                         "long_desc": "Colourful hippy hangouts, regular beach parties and a trendy young sun-worshipping crowd make this coastal gem one of Amsterdam's most popular summertime destinations. With more of a party atmosphere than its neighbour Zandvoort, Bloemendaal is a great place to dip your toes in the North Sea or to hit a dance floor once the sun goes down. Characterised by its fantastic selection of cool beach bars and clubs, Bloemendaal has regular live bands and DJs creating open air parties that go on well into the night. For the more adventurous, there’s an area for nude sunbathing that can be found further north up the shore. Between the regular town and the sea and sand, you can enjoy the wild dune landscape.",
-                        "link": ""
+                        "link": "http://www.iamsterdam.com/en/visiting/areas/city-escapes/amsterdam-beach/bloemendaal"
                     }, {
                         "place": "Woodstock 69, Bloemendaal",
                         "location": "Woodstock 69,Zeeweg 94, tent 7, 2051 EC OVERVEEN",
@@ -308,7 +308,6 @@
                     } ]
                 }]
             }
-
         ]
     }
 }
