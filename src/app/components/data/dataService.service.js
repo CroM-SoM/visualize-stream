@@ -59,36 +59,12 @@
             var dateCheck = vm.dates(history, user);
             vm.spotlight(history).then(function (txt) {
               /*$log.log("this is the stream text ready for spotlight :  " + txt.replace(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi,' '));*/
-              vm.apiMethod('similarity/' + txt.replace(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi, ' '))
-                .then(function (similarities) {
-
-                  if (similarities.similar_events.length > 0 && similarities != undefined) {
-                    // Checks database for tweets from users.
-                    vm.apiMethodPost('/suggestion', {
-                        user_id: user.user.id,
-                        tourist: user.tourist,
-                        event: similarities
-                      })
-                      .then(function () {
-                      })
-
-                    vm.apiMethodPost('/api/user/suggestion', {
-                        event: similarities.similar_events[0].event.place
-                      })
-                      .then(function () {
-                        $log.log("suggestion bot has been tweeting ..");
-                      })
-
-                    $log.log("similarities : " + similarities.similar_events[0].event.place);
-                  } else {
-                    vm.apiMethodPost('/suggestion', {
-                        user_id: user.user.id,
-                        tourist: user.tourist,
-                        event: {text: similarities.text, similar_events: 'NoNMatch'}
-                      })
-                      .then(function () {
-                      })
-                  }
+              vm.apiMethodPost('similarity/' + txt.replace(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi, ' '),{
+                  user_id: user.user.id,
+                  tourist: user.tourist
+                })
+                .then(function (similarities){
+                  $log.log("similarities : " + similarities.similar_events[0].event.place);
                 })
 
             })

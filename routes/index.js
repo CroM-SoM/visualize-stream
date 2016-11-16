@@ -168,7 +168,7 @@ module.exports = function (app) {
 
 // tweet text goes in here returns events plus rankings
 
-  router.get('/stream/similarity/:Text', function (req, res) {
+  router.post('/stream/similarity/:Text', function (req, res) {
 
     // var mstuff = {'gouda' : getStuff(JSON.parse(fs.readFileSync('/Users/hannes/Desktop/gouda.json', 'utf8')))}
 
@@ -185,6 +185,33 @@ module.exports = function (app) {
             }
             console.log(event);
           })
+
+          if(ret.length>0){
+
+            var statusObj = {status:ret[0].event.place}
+            //call the post function to tweet something
+            streamService.twitterAPI.post('statuses/update', statusObj, function (error, tweetReply, response) {
+              if (!error) {
+                console.log("##"+{response: response, tweetReply: tweetReply});
+                //res.json({response: response, tweetReply: tweetReply});
+              }
+            })
+
+            models.suggestions.create({
+              user_id: req.body.user_id,
+              tourist: req.body.tourist,
+              event: ret
+            }).then(function (results) {
+            })
+
+          }else{
+            models.suggestions.create({
+              user_id: req.body.user_id,
+              tourist: req.body.tourist,
+              event: ret
+            }).then(function (results) {
+            })
+          }
 
           res.json({text: req.params.Text, similar_events: ret});
 
@@ -298,7 +325,7 @@ module.exports = function (app) {
       event: req.body.event
     }).then(function (results) {
       res.json({success: true, data: results});
-    });
+    })
   });
 
 
