@@ -61,7 +61,34 @@
               /*$log.log("this is the stream text ready for spotlight :  " + txt.replace(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi,' '));*/
               vm.apiMethod('similarity/' + txt.replace(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi, ' '))
                 .then(function (similarities) {
-                  $log.log("similarities : " + JSON.stringify(similarities));
+
+                  if (similarities.similar_events.length > 0 && similarities != undefined) {
+                    // Checks database for tweets from users.
+                    vm.apiMethodPost('/suggestion', {
+                        user_id: user.user.id,
+                        tourist: user.tourist,
+                        event: similarities
+                      })
+                      .then(function () {
+                      })
+
+                    vm.apiMethodPost('/api/user/suggestion', {
+                        event: similarities.similar_events[0].event.place
+                      })
+                      .then(function () {
+                        $log.log("suggestion bot has been tweeting ..");
+                      })
+
+                    $log.log("similarities : " + similarities.similar_events[0].event.place);
+                  } else {
+                    vm.apiMethodPost('/suggestion', {
+                        user_id: user.user.id,
+                        tourist: user.tourist,
+                        event: {text: similarities.text, similar_events: 'NoNMatch'}
+                      })
+                      .then(function () {
+                      })
+                  }
                 })
 
             })
@@ -106,7 +133,7 @@
     }
 
     //should return an array of the time between compared dates and calculate the average time.
-    vm.compareDates = function (history, user) {
+    vm.compareDates = function (history) {
       for (var i = 0; i < history.data.length; i++) {
         var now = history.data[i].createdAt;
         //$log.log("for " + user.id);
@@ -163,6 +190,25 @@
         // or server returns response with an error status.
       });
     }
+
+    // API method POST retrieves data from database
+    vm.apiMethodPost = function (request, params) {
+      return $http({
+        method: 'POSt',
+        data: params,
+        url: appConfig.baseUrl + '/stream/' + request
+      }).then(function successCallback(response) {
+        // return vm.checkUserData(response.data);
+        return response.data;
+        // This callback will be called asynchronously
+        // when the response is available.
+      }, function errorCallback(response) {
+        return response;
+        // Called asynchronously if an error occurs
+        // or server returns response with an error status.
+      });
+    }
+
 
   }
 

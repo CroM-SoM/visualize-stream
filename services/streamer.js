@@ -4,10 +4,14 @@ var models = require('../models');
 //Setup twitter stream api
 var twitter = require('twitter')
 var twit = new twitter({
-    consumer_key: 'aIiEO0MSjEMBcOr7oicfaGFyQ',
-    consumer_secret: 'BEGDT8LGgsctelJkf3RuRxPdDbj5AHV8IbZC2c3dtcGCW9MPWP',
-    access_token_key: '519395465-7R4UKVRCi2MuIJVX2ECW8rttVReXg1XGlwuWAcWo',
-    access_token_secret: 'Tp3g7sOwnNxbvBYdq8reQMVKpIR0DXtCltMFl9dpkLQ0c'
+    //consumer_key: 'aIiEO0MSjEMBcOr7oicfaGFyQ',
+    consumer_key: 'BAn0qUAl2b2WImKCoGU2xqKcF',
+    //consumer_secret: 'BEGDT8LGgsctelJkf3RuRxPdDbj5AHV8IbZC2c3dtcGCW9MPWP',
+    consumer_secret: 'Rv0LEawxjwl8rgwdgB7i3XtA1FVRqQrg8ctylSMRKUZ0DCDj3s',
+    //access_token_key: '519395465-7R4UKVRCi2MuIJVX2ECW8rttVReXg1XGlwuWAcWo',
+    access_token_key: '798829381632151552-4JOT3cUL7geoUFY2GbIKGAzz521aywp',
+    //access_token_secret: 'Tp3g7sOwnNxbvBYdq8reQMVKpIR0DXtCltMFl9dpkLQ0c'
+    access_token_secret: 'U2q23sEz9NXl1eqNyJS3Rn6RhmKG9CUbiigp2xtLg5x79'
   }),
   stream = null;
 

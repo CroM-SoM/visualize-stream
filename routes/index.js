@@ -48,7 +48,7 @@ module.exports = function (app) {
   });
 
   router.get('/stream/spotlight/:Text', function (req, res) {
-  //  console.log("Spotlight " + req.params.Text)
+    //  console.log("Spotlight " + req.params.Text)
     request.post(
       'http://cromsom.nl:2222/rest/annotate/',
       {
@@ -75,90 +75,92 @@ module.exports = function (app) {
 
 // TODO: below is Hannes' mess
 
-function getStuff(spotlightObj) {
- var resources = []
- var classes = []
+  function getStuff(spotlightObj) {
+    var resources = []
+    var classes = []
 
-  if (!spotlightObj.Spotlight.Resources) {
-    console.warn('no resources in ', spotlightObj)
-    return({resources: resources, classes: classes})
+    if (!spotlightObj.Spotlight.Resources) {
+      console.warn('no resources in ', spotlightObj)
+      return ({resources: resources, classes: classes})
+    }
+
+    spotlightObj.Spotlight.Resources.map(function (e) {
+      if (resources.indexOf(e['@URI']) < 0) {
+        resources.push(e['@URI'])
+
+      }
+      var typeArr = e['@types'].split(',').map(function (t) {
+        if (t.trim() != '' && classes.indexOf(t) < 0) {
+          classes.push(t)
+        }
+      })
+
+    });
+    return ({resources: resources, classes: classes})
   }
 
-  spotlightObj.Spotlight.Resources.map(function(e) {
-    if (resources.indexOf(e['@URI']) < 0) {
-      resources.push(e['@URI'])
 
+  function intersect_safe(a, b) {
+    var ai = 0, bi = 0;
+    var result = [];
+
+    while (ai < a.length && bi < b.length) {
+      if (a[ai] < b[bi]) {
+        ai++;
+      }
+      else if (a[ai] > b[bi]) {
+        bi++;
+      }
+      else /* they're equal */
+      {
+        result.push(a[ai]);
+        ai++;
+        bi++;
+      }
     }
-    var typeArr = e['@types'].split(',').map(function(t) {
-  if (t.trim() != '' && classes.indexOf(t) < 0) {
-      classes.push(t)
-    }
-    })
 
-  });
-return({resources: resources, classes: classes})
-}
-
-
-function intersect_safe(a, b)
-{
-  var ai=0, bi=0;
-  var result = [];
-
-  while( ai < a.length && bi < b.length )
-  {
-     if      (a[ai] < b[bi] ){ ai++; }
-     else if (a[ai] > b[bi] ){ bi++; }
-     else /* they're equal */
-     {
-       result.push(a[ai]);
-       ai++;
-       bi++;
-     }
+    return result.length;
   }
-
-  return result.length;
-}
 
 // TODO:  0.5 is a guess
-function similarity(stuffa, stuffb) {
-  return intersect_safe(stuffa.resources, stuffb.resources) + 0.5 * intersect_safe(stuffa.classes, stuffb.classes)
-}
+  function similarity(stuffa, stuffb) {
+    return intersect_safe(stuffa.resources, stuffb.resources) + 0.5 * intersect_safe(stuffa.classes, stuffb.classes)
+  }
 
-var events = JSON.parse(fs.readFileSync('events.JSON', 'utf8'));
+  var events = JSON.parse(fs.readFileSync('events.JSON', 'utf8'));
 
-var events2 = []
+  var events2 = []
 
 // TODO: this could be cached in a DB table but does not have to be
 
-events.items.concept.map(function(concept) {
- // console.log(concept)
-  if (!concept.tours) {
-    return;
-  }
-  concept.tours.map(function(tour) {
-    if (!tour.events) {
+  events.items.concept.map(function (concept) {
+    // console.log(concept)
+    if (!concept.tours) {
       return;
     }
-    tour.events.map(function(event) {
-
-var eventstr = concept.desc + ' ' + concept.short_text + ' ' + tour.desc +  ' ' + event.long_desc;
-
-request.get(
-      'http://localhost:8080/stream/spotlight/' + encodeURIComponent(eventstr),
-      function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-
-        events2.push({event: event, sets : getStuff(JSON.parse(body))})
-
-        }
-        else
-          console.log("error @ " + error + " : " + JSON.stringify(response) + " : " + body)
+    concept.tours.map(function (tour) {
+      if (!tour.events) {
+        return;
       }
-    );
+      tour.events.map(function (event) {
+
+        var eventstr = concept.desc + ' ' + concept.short_text + ' ' + tour.desc + ' ' + event.long_desc;
+
+        request.get(
+          'http://localhost:8080/stream/spotlight/' + encodeURIComponent(eventstr),
+          function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+
+              events2.push({event: event, sets: getStuff(JSON.parse(body))})
+
+            }
+            else
+              console.log("error @ " + error + " : " + JSON.stringify(response) + " : " + body)
+          }
+        );
+      });
     });
   });
-});
 
 
 //var mstuff = {'gouda' : getStuff(}
@@ -166,40 +168,41 @@ request.get(
 
 // tweet text goes in here returns events plus rankings
 
-   router.get('/stream/similarity/:Text', function (req, res) {
+  router.get('/stream/similarity/:Text', function (req, res) {
 
     // var mstuff = {'gouda' : getStuff(JSON.parse(fs.readFileSync('/Users/hannes/Desktop/gouda.json', 'utf8')))}
 
-     request.get(
+    request.get(
       'http://localhost:8080/stream/spotlight/' + encodeURIComponent(req.params.Text),
       function (error, response, body) {
         if (!error && response.statusCode == 200) {
           var ret = [];
           var thisreq_sets = getStuff(JSON.parse(body));
-      events2.map(function(event) { 
-        event.similarity = similarity(thisreq_sets, event.sets)
-        if (event.similarity > 0 ) {
-          ret.push(event);
-        }
-        console.log(event);
-      })
+          events2.map(function (event) {
+            event.similarity = similarity(thisreq_sets, event.sets)
+            if (event.similarity > 0) {
+              ret.push(event);
+            }
+            console.log(event);
+          })
 
-        res.json({text: req.params.Text, similar_events: ret});
+          res.json({text: req.params.Text, similar_events: ret});
 
         }
-        else
+        else {
           console.log("error @ " + error + " : " + JSON.stringify(response) + " : " + body)
+          res.json(response);
+        }
       }
     );
 
 
-
   });
 
-   // End of Hannes' mess
+  // End of Hannes' mess
 
-    router.get('/stream/wiki/:Text', function (req, res) {
-   // console.log("Spotlight " + req.params.Text)
+  router.get('/stream/wiki/:Text', function (req, res) {
+    // console.log("Spotlight " + req.params.Text)
     request.get(
       'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + req.params.Text + '&limit=5&namespace=0&format=json',
       function (error, response, body) {
@@ -240,7 +243,10 @@ request.get(
 
   router.get('/stream/api/user/:userID/:Ntimes', function (req, res) {
 
-    streamService.twitterAPI.get('statuses/user_timeline', {user_id:req.params.userID,count:req.params.Ntimes}, function (error, tweets, response) {
+    streamService.twitterAPI.get('statuses/user_timeline', {
+      user_id: req.params.userID,
+      count: req.params.Ntimes
+    }, function (error, tweets, response) {
       if (!error) {
         res.json({count: tweets.length, data: tweets});
       }
@@ -249,13 +255,25 @@ request.get(
 
   router.get('/stream/api/user/:userID', function (req, res) {
 
-    streamService.twitterAPI.get('statuses/user_timeline', {user_id:req.params.userID}, function (error, tweets, response) {
+    streamService.twitterAPI.get('statuses/user_timeline', {user_id: req.params.userID}, function (error, tweets, response) {
       if (!error) {
         res.json({count: tweets.length, data: tweets});
       }
     });
   });
 
+  router.post('/stream/api/user/suggestion', function (req, res) {
+
+    var statusObj = {status: req.body.event}
+    //call the post function to tweet something
+    streamService.twitterAPI.post('statuses/update', statusObj, function (error, tweetReply, response) {
+      if (!error) {
+        console.log({response: response, tweetReply: tweetReply});
+        res.json({response: response, tweetReply: tweetReply});
+      }
+    });
+
+  });
 
 
   router.post('/stream/save', function (req, res) {
@@ -267,6 +285,17 @@ request.get(
       result_1: req.body.result_1,
       result_2: req.body.result_2,
       result_3: req.body.result_3,
+    }).then(function (results) {
+      res.json({success: true, data: results});
+    });
+  });
+
+  router.post('/stream/suggestion', function (req, res) {
+    console.log("POST");
+    models.suggestions.create({
+      user_id: req.body.user_id,
+      tourist: req.body.tourist,
+      event: req.body.event
     }).then(function (results) {
       res.json({success: true, data: results});
     });
