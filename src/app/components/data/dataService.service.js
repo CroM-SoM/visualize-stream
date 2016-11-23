@@ -61,6 +61,7 @@
               /*$log.log("this is the stream text ready for spotlight :  " + txt.replace(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi,' '));*/
               vm.apiMethodPost('similarity/' + txt.replace(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi, ' '),{
                   user_id: user.user.id,
+                  user_name:user.user.name,
                   tourist: user.tourist
                 })
                 .then(function (similarities){
