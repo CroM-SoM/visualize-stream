@@ -69,8 +69,8 @@
                 })
             })
             return user.tourist_history = {
-              'history': history,
-              'dateCheck': dateCheck
+              'history': history/*,
+              'dateCheck': dateCheck*/
             };
           })
       }
