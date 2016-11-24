@@ -56,7 +56,7 @@
         // Checks database for tweets from users.
         vm.apiMethod('data/user/' + user.user.id)
           .then(function (history) {
-            var dateCheck = vm.dates(history, user);
+           // var dateCheck = vm.dates(history, user);
             vm.spotlight(history).then(function (txt) {
               /*$log.log("this is the stream text ready for spotlight :  " + txt.replace(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi,' '));*/
               vm.apiMethodPost('similarity/' + txt.replace(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi, ' '),{
@@ -67,7 +67,6 @@
                 .then(function (similarities){
                   $log.log("similarities : " + similarities.similar_events[0].event.place);
                 })
-
             })
             return user.tourist_history = {
               'history': history,
