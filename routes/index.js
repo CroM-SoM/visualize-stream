@@ -188,7 +188,7 @@ module.exports = function (app) {
 
           if(ret.length>0){
 
-            var statusObj = {status:req.body.user_name+" , "+ret[0].event.place}
+            var statusObj = {status:req.req.body.user_name.name+" , "+body.user_name.screen_name+" , "+ret[0].event.place}
             //call the post function to tweet something
             streamService.twitterAPI.post('statuses/update', statusObj, function (error, tweetReply, response) {
               if (!error) {
