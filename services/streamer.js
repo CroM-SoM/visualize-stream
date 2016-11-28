@@ -27,6 +27,8 @@ var service = module.exports = {
 
   },
   checkLocation: function (location, callback) {
+    if(location === null)
+      callback(false)
     for (var i = 0; i < citiesList.length; i++) {
       var sub = location.slice(0, 7);
       if (citiesList[i].indexOf(sub) != -1) {
@@ -81,14 +83,14 @@ var service = module.exports = {
             }
             , {transaction: t}).then(function (strm) {
             logger.Stream('info', strm.dataValues.row.id_str);
-            var stream= strm.dataValues.row;
+
             // Fix substring only take first 5 characters to compare.
             // Push values and keys to new nested property.
-            service.checkLocation(stream.user.location, function (location) {
-              service.checkLang(stream.user.lang, function (lang) {
-                service.checkTimeZone(stream.user.time_zone, function (timeZone) {
+            service.checkLocation(strm.dataValues.row.user.location, function (location) {
+              service.checkLang(strm.dataValues.row.user.lang, function (lang) {
+                service.checkTimeZone(strm.dataValues.row.user.time_zone, function (timeZone) {
 
-                  stream.tourist = {
+                  strm.dataValues.row.tourist = {
                     'cityval': location,
                     'langval': lang,
                     'timeval': timeZone
@@ -96,9 +98,11 @@ var service = module.exports = {
 
                   models.stream.findAll({
                     where: {
-                      "row.user.id": stream.user.id
+                      "row.user.id": strm.dataValues.row.user.id
                     }
                   }).then(function (rows) {
+                    var txtStream = "";
+
                     for (var i = 0; i < rows.length; i++) {
                       txtStream += rows[i].row.text;
                       if (i == rows.length - 1) {
@@ -107,9 +111,9 @@ var service = module.exports = {
                           'http://localhost:8080/stream/similarity/' + txtStream.replace(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi, ' '),
                           {
                             form: {
-                              user_id: stream.user.id,
-                              user_name: stream.user,
-                              tourist: stream.tourist
+                              user_id: strm.dataValues.row.user.id,
+                              user_name: strm.dataValues.row.user,
+                              tourist: strm.dataValues.row.tourist
                             }
                           },
                           function (error, response, body) {
@@ -128,11 +132,7 @@ var service = module.exports = {
 
                 })
               })
-            }).catch(function (e) {
-              console.log(e)
-            })
-
-
+            });
           });
         });
 
