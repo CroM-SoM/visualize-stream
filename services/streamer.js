@@ -1,7 +1,7 @@
 var logger = require('../services/logger.js')
 var models = require('../models');
 
-
+var http = require('http');
 var request = require('request');
 
 
@@ -27,29 +27,29 @@ var service = module.exports = {
 
   },
   checkLocation: function (location, callback) {
-    if(location === null)
-      callback(false)
+    if (location === null)
+      return callback(false)
     for (var i = 0; i < citiesList.length; i++) {
       var sub = location.slice(0, 7);
       if (citiesList[i].indexOf(sub) != -1) {
-        callback(true)
+        return callback(true)
       } else {
-          callback(false)
+        return callback(false)
       }
     }
   },
   checkLang: function (lang, callback) {
     if (lang == "nl" || lang == "NL") {
-      callback(true)
+      return callback(true)
     } else {
-      callback(false)
+      return callback(false)
     }
   },
   checkTimeZone: function (timeZone, callback) {
     if (timeZone == "Amsterdam" || timeZone == "amsterdam" || timeZone == "Europe/Amsterdam") {
-      callback(true)
+      return callback(true)
     } else {
-      callback(false)
+      return callback(false)
     }
   },
   startStream: function () {
@@ -82,7 +82,7 @@ var service = module.exports = {
               row: data
             }
             , {transaction: t}).then(function (strm) {
-            logger.Stream('info', strm.dataValues.row.id_str);
+            logger.Stream(strm.dataValues.row.id_str);
 
             // Fix substring only take first 5 characters to compare.
             // Push values and keys to new nested property.
@@ -121,8 +121,9 @@ var service = module.exports = {
                               //console.log("res @ " + body);
                               logger.info(body);
                             }
-                            else
-                              console.log("error @ " + error + " : " + JSON.stringify(response) + " : " + body)
+                            else if (error) {
+                              console.log("similarity error @ " + error)
+                            }
                           }
                         )
 

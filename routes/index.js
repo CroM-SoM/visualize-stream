@@ -51,8 +51,9 @@ module.exports = function (app) {
 
   router.get('/stream/spotlight/:Text', function (req, res) {
     //  console.log("Spotlight " + req.params.Text)
+
     request.post(
-      'http://localhost:2222/rest/annotate/',
+      'http://spotlight.sztaki.hu:2222/rest/annotate/',
       {
         headers: {
           'Accept': 'application/json'
@@ -67,8 +68,9 @@ module.exports = function (app) {
           //console.log("res @ " + body);
           res.json({Spotlight: JSON.parse(body)});
         }
-        else
-          console.log("error @ " + error + " : " + JSON.stringify(response) + " : " + body)
+        else if (error) {
+          console.log("error @ " + error)
+        }
       }
     );
 
@@ -188,14 +190,14 @@ module.exports = function (app) {
             console.log(event);
           })
 
-          if(ret.length>0){
+          if (ret.length > 0) {
 
-            var statusObj = {status:req.body.user_name.screen_name+" , "+ret[0].event.place}
+            var statusObj = {status: req.body.user_name.screen_name + " , " + ret[0].event.place}
             //call the post function to tweet something
             streamService.twitterAPI.post('statuses/update', statusObj, function (error, tweetReply, response) {
               if (!error) {
-                console.log("##"+{response: response, tweetReply: tweetReply});
-                logger.debug("##"+{response: response, tweetReply: tweetReply});
+                console.log("##" + {response: response, tweetReply: tweetReply});
+                logger.debug("##" + {response: response, tweetReply: tweetReply});
                 //res.json({response: response, tweetReply: tweetReply});
               }
             })
@@ -207,7 +209,7 @@ module.exports = function (app) {
             }).then(function (results) {
             })
 
-          }else{
+          } else {
             models.suggestions.create({
               user_id: req.body.user_id,
               tourist: req.body.tourist,
