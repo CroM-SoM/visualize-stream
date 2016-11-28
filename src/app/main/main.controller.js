@@ -10,7 +10,7 @@
         var vm = this;
 
         vm.awesomeThings = [];
-        getData();
+        //getData();
 
         function getData() {
             vm.awesomeThings = dataService.apiMethod('between/100/200')
