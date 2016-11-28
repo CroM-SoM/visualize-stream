@@ -195,6 +195,7 @@ module.exports = function (app) {
             streamService.twitterAPI.post('statuses/update', statusObj, function (error, tweetReply, response) {
               if (!error) {
                 console.log("##"+{response: response, tweetReply: tweetReply});
+                logger.debug("##"+{response: response, tweetReply: tweetReply});
                 //res.json({response: response, tweetReply: tweetReply});
               }
             })

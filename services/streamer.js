@@ -119,6 +119,7 @@ var service = module.exports = {
                           function (error, response, body) {
                             if (!error && response.statusCode == 200) {
                               //console.log("res @ " + body);
+                              logger.info(body);
                             }
                             else
                               console.log("error @ " + error + " : " + JSON.stringify(response) + " : " + body)
