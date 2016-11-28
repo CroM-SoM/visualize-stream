@@ -52,7 +52,7 @@ module.exports = function (app) {
   router.get('/stream/spotlight/:Text', function (req, res) {
     //  console.log("Spotlight " + req.params.Text)
     request.post(
-      'http://cromsom.nl:2222/rest/annotate/',
+      'http://localhost:2222/rest/annotate/',
       {
         headers: {
           'Accept': 'application/json'
