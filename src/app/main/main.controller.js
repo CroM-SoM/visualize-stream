@@ -12,12 +12,12 @@
         vm.awesomeThings = [];
         //getData();
 
-        function getData() {
+        /*function getData() {
             vm.awesomeThings = dataService.apiMethod('between/100/200')
                 .then(function(response) {
                     vm.awesomeThings = dataService.createUser(response);
                     $log.log(vm.awesomeThings);
                 })
-        }
+        }*/
     }
 })();
