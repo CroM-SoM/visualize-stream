@@ -6,7 +6,7 @@
         .controller('MainController', MainController);
 
     /** @ngInject */
-    function MainController($timeout, $log, dataService) {
+    function MainController($timeout, $log) {
         var vm = this;
 
         vm.awesomeThings = [];
@@ -19,5 +19,6 @@
                     $log.log(vm.awesomeThings);
                 })
         }*/
+
     }
 })();

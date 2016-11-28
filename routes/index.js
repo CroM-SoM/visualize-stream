@@ -16,6 +16,8 @@ var logger = require('../services/logger.js')
 var models = require('../models');
 
 var request = require('request');
+var http = require('http');
+var url = require('url');
 
 //API
 module.exports = function (app) {

@@ -32,7 +32,7 @@ var service = module.exports = {
       if (citiesList[i].indexOf(sub) != -1) {
         callback(true)
       } else {
-        callback(false)
+          callback(false)
       }
     }
   },
@@ -56,7 +56,7 @@ var service = module.exports = {
       stream.on('data', function (data) {
         // Does the JSON result have coordinates
         //console.log("Data coming :" + JSON.stringify(data));
-        console.log(data.text);
+        //console.log(data.text);
         //logger.Stream('info', JSON.stringify(data));
         var statusObj = {status: "Hi @" + data.user.screen_name + ", Welcome to CroMSoM!"}
 
@@ -79,53 +79,42 @@ var service = module.exports = {
           return models.stream.create({
               row: data
             }
-            , {transaction: t}).then(function (stream) {
-            logger.Stream('info', stream.id_str);
-          });
-        });
+            , {transaction: t}).then(function (strm) {
+            logger.Stream('info', strm.dataValues.row.id_str);
+            var stream= strm.dataValues.row;
+            // Fix substring only take first 5 characters to compare.
+            // Push values and keys to new nested property.
+            service.checkLocation(stream.user.location, function (location) {
+              service.checkLang(stream.user.lang, function (lang) {
+                service.checkTimeZone(stream.user.time_zone, function (timeZone) {
 
+                  stream.tourist = {
+                    'cityval': location,
+                    'langval': lang,
+                    'timeval': timeZone
+                  }
 
-        // Fix substring only take first 5 characters to compare.
-        // Push values and keys to new nested property.
-        service.checkLocation(data.user.location, function (location) {
-          data.tourist = {
-            'cityval': location
-          }
-          service.checkLang(data.user.lang, function (lang) {
-            data.tourist = {
-              'langval': lang
-            }
-            service.checkLang(data.user.time_zone, function (timeZone) {
-              data.tourist = {
-                'timeval': timeZone
-              }
-
-              request.get(
-                'http://localhost:8080/stream/data/user/' + user.user.id,
-                function (error, response, body) {
-                  if (!error && response.statusCode == 200) {
-                    //res.json({Spotlight: JSON.parse(body)});
-
-                    for (var i = 0; i < body.data.length; i++) {
-                      txtStream += body.data[i].row.text;
-                      if (i == body.data.length - 1) {
-                        //q.resolve(txtStream);
-
+                  models.stream.findAll({
+                    where: {
+                      "row.user.id": stream.user.id
+                    }
+                  }).then(function (rows) {
+                    for (var i = 0; i < rows.length; i++) {
+                      txtStream += rows[i].row.text;
+                      if (i == rows.length - 1) {
                         //make a call to POST: stream/similarity/
-
                         request.post(
                           'http://localhost:8080/stream/similarity/' + txtStream.replace(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi, ' '),
                           {
                             form: {
-                              user_id: data.user.id,
-                              user_name: data.user,
-                              tourist: data.tourist
+                              user_id: stream.user.id,
+                              user_name: stream.user,
+                              tourist: stream.tourist
                             }
                           },
                           function (error, response, body) {
                             if (!error && response.statusCode == 200) {
                               //console.log("res @ " + body);
-                              res.json({Spotlight: JSON.parse(body)});
                             }
                             else
                               console.log("error @ " + error + " : " + JSON.stringify(response) + " : " + body)
@@ -135,19 +124,17 @@ var service = module.exports = {
                       }
                     }
 
-                  }
-                  else
-                    console.log("error @ " + error + " : " + JSON.stringify(response) + " : " + body)
-                }
-              );
+                  })
 
+                })
+              })
+            }).catch(function (e) {
+              console.log(e)
             })
-          })
-        }).catch(function (e) {
-          console.log(e)
-        })
 
 
+          });
+        });
 
       });
 
