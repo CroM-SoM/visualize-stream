@@ -53,7 +53,7 @@ module.exports = function (app) {
     //  console.log("Spotlight " + req.params.Text)
 
     request.post(
-      'http://spotlight.sztaki.hu:2222/rest/annotate/',
+      'http://cromsom.nl:2222/rest/annotate/',
       {
         headers: {
           'Accept': 'application/json'
