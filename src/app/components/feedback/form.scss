@@ -1,6 +1,23 @@
+
+.sug{
+    margin-top:15%;
+}
+
 #wrapper {
     width: 80%;
     margin: 0 auto;
+}
+
+
+#logoWrap{
+    width: 240px;
+    margin: 0 auto;
+}
+
+#footWrap{
+    width: 317px;
+    margin: 0 auto;
+
 }
 
 .jumbotron h2 {
@@ -68,6 +85,7 @@ a:-webkit-any-link {
     float: left;
     height: 60px;
     width: 60px;
+    margin-right: 10px;
     background-repeat: no-repeat;
 }
 
@@ -112,13 +130,14 @@ a:-webkit-any-link {
 /* style.css */
 /* ANIMATION STYLINGS
 ============================================================================= */
-.form          { position:relative; min-height:300px; overflow:hidden; }
+.form          { position:relative; width: 100%;min-height:300px; overflow:hidden; }
 /*#form-views             {  }*/
 
 /* basic styling for entering and leaving */
 /* left and right added to ensure full width */
 #form-views.ng-enter,
-#form-views.ng-leave      { position:absolute;
+#form-views.ng-leave      { position:absolute; width: 100%;
+
     transition:0.5s all ease; -moz-transition:0.5s all ease; -webkit-transition:0.5s all ease; 
 }
     
@@ -161,5 +180,30 @@ a:-webkit-any-link {
 @-webkit-keyframes slideInRight {
     from    { -webkit-transform:translateX(200%); }
     to      { -webkit-transform: translateX(0); }
+}
+
+
+@media screen and (min-width: 768px){
+
+.container.sug{
+    margin-top:15%;
+    width: 60%;
+}
+}
+
+@media screen and (min-width: 1200px){
+
+.container.sug{
+    margin-top:10%;
+    width: 40%;
+}
+}
+
+@media screen and (min-width: 1440px){
+
+.container.sug{
+    margin-top:5%;
+    width: 40%;
+}
 }
 

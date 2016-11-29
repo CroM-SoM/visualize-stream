@@ -6,6 +6,10 @@ a {
   color: #c0c0c0;
 }
 
+
+.navbar-static-top{
+	margin-top:2%;
+}
 h1 {
   font-size: 2em;
   margin: 0;
@@ -14,4 +18,14 @@ h1 {
 
 a:hover, a:focus {
   color: #1e6e87;
+}
+
+ul.nav.navbar-nav{
+	width: 220px;
+	background: white;
+	margin: 0;
+}
+
+.navbar-nav > li > a {
+	padding: 0;
 }
