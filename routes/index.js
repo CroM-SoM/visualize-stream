@@ -205,7 +205,7 @@ module.exports = function (app) {
             models.suggestions.create({
               user_id: req.body.user_id,
               tourist: req.body.tourist,
-              event: {similar_events: ret}
+              event: {similar_events: ret[0].event.place}
             }).then(function (results) {
             })
 
@@ -213,7 +213,7 @@ module.exports = function (app) {
             models.suggestions.create({
               user_id: req.body.user_id,
               tourist: req.body.tourist,
-              event: {similar_events: ret}
+              event: {similar_events: ret[0].event.place}
             }).then(function (results) {
             })
           }
