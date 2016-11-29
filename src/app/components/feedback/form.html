@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="jumbotron text-center one">
+        <div id="logo"></div>
+        <h2 id="header">AMS Suggestions</h2>
+        <div class="clear"></div>
+    </div>
+    <div id="status-buttons" class="jumbotron text-center one">
+        <div id="butWrap">
+            <a class="nav" ui-sref-active="active" ui-sref=".site"><span>1</span> </a>
+            <a class="nav" ui-sref-active="active" ui-sref=".link"><span>2</span> </a>
+            <a class="nav" ui-sref-active="active" ui-sref=".explanation"><span>3</span> </a>
+            <div class="clear"></div>
+        </div>
+    </div>
+     <!-- use ng-submit to catch the form submission and use our Angular function -->
+        <div class="form" ng-submit="processForm()">
+            <!-- our nested state views will be injected here -->
+            <div id="form-views" ui-view></div>
+        </div>
+    <div class="jumbotron text-center one" id="footer">
+        <h5>Check <a ui-sref-active="active" ui-sref="home">CroM-SoM</a> for more info about the project</h5>
+    </div>
+</div>

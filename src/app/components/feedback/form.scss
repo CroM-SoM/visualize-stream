@@ -1,0 +1,165 @@
+#wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.jumbotron h2 {
+    font-size: 1.4em;
+    text-align: center;
+}
+
+#footer{
+    bottom: 5px;
+    position: fixed;
+
+}
+
+#butWrap a:hover, a:focus {
+    color: white;
+}
+
+.nav.active{
+    background: lightgreen;
+}
+button {
+    border: 0px;
+    padding: 10px;
+    margin: 5px;
+}
+.small{
+     width: 115px;
+      border-radius: 45%;
+       height: 55px;
+}
+.multi{
+     width: 90%;
+     height: 100%;
+}
+.wr {
+    padding: 20px;
+    margin: 2%;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+}
+
+.but {
+    width: 175px;
+    margin: 0 auto;
+    background: white;
+
+}
+
+.nav{
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 45%;
+     padding: 15px;
+    margin: 5px;
+    float: left;
+    background: #eeeeee;
+
+}
+
+#logo {
+    background-image: url('/app/components/feedback/logo.JPEG');
+    float: left;
+    height: 60px;
+    width: 60px;
+    background-repeat: no-repeat;
+}
+
+#header {
+    float: left;
+}
+
+
+#butWrap{
+    width: 180px;
+    margin: 0 auto;
+}
+.one {
+     
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background: white;
+    padding: 0px;
+
+   
+}
+
+.quest {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.false {
+    background: #ef3d47;
+}
+
+.true {
+    background: lightgreen;
+}
+
+.clear {
+    clear: both;
+}
+
+
+
+/* style.css */
+/* ANIMATION STYLINGS
+============================================================================= */
+.form          { position:relative; min-height:300px; overflow:hidden; }
+/*#form-views             {  }*/
+
+/* basic styling for entering and leaving */
+/* left and right added to ensure full width */
+#form-views.ng-enter,
+#form-views.ng-leave      { position:absolute;
+    transition:0.5s all ease; -moz-transition:0.5s all ease; -webkit-transition:0.5s all ease; 
+}
+    
+/* enter animation */
+#form-views.ng-enter            { 
+    -webkit-animation:slideInRight 0.5s both ease;
+    -moz-animation:slideInRight 0.5s both ease;
+    animation:slideInRight 0.5s both ease; 
+}
+
+/* leave animation */
+#form-views.ng-leave            { 
+    -webkit-animation:slideOutLeft 0.5s both ease;
+    -moz-animation:slideOutLeft 0.5s both ease;
+    animation:slideOutLeft 0.5s both ease;   
+}
+
+/* ANIMATIONS
+============================================================================= */
+/* slide out to the left */
+@keyframes slideOutLeft {
+    to      { transform: translateX(-200%); }
+}
+@-moz-keyframes slideOutLeft {  
+    to      { -moz-transform: translateX(-200%); }
+}
+@-webkit-keyframes slideOutLeft {
+    to      { -webkit-transform: translateX(-200%); }
+}
+
+/* slide in from the right */
+@keyframes slideInRight {
+    from    { transform:translateX(200%); }
+    to      { transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+    from    { -moz-transform:translateX(200%); }
+    to      { -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInRight {
+    from    { -webkit-transform:translateX(200%); }
+    to      { -webkit-transform: translateX(0); }
+}
+
