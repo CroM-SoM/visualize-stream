@@ -13,6 +13,20 @@
         vm.awesomeThings = [];
         //getData();
 
+        // vm.value = 1;
+
+
+        // CheckValue(vm.value);
+
+        // function CheckValue(value) {
+        //     if (value === 1){
+        //         return ".explanation";
+        //     }
+        //     else{
+        //         return ".explanation1";
+        //     }
+
+        // }
         /*function getData() {
             vm.awesomeThings = dataService.apiMethod('between/100/200')
                 .then(function(response) {

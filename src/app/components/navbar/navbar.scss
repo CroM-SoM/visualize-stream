@@ -1,15 +1,10 @@
-.acme-navbar-text{
-  color: white;
-}
+
+
 
 a {
   color: #c0c0c0;
 }
 
-
-.navbar-static-top{
-	margin-top:2%;
-}
 h1 {
   font-size: 2em;
   margin: 0;
@@ -20,12 +15,29 @@ a:hover, a:focus {
   color: #1e6e87;
 }
 
-ul.nav.navbar-nav{
-	width: 220px;
-	background: white;
-	margin: 0;
+
+.fa.fa-commenting-o{
+  padding: 5px;
+  padding-top: 0px;
+  top: 10px;
+
+
+}
+.acme-navbar-text{
+  color: white;
 }
 
-.navbar-nav > li > a {
-	padding: 0;
+.navbar-header{
+  width:120px;
+  float: left;
+}
+
+.navbar-static-top{
+	margin-top:2%;
+}
+
+.fl{
+  float: left;
+  padding: 15px;
+
 }

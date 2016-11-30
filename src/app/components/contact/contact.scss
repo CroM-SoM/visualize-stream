@@ -1,0 +1,19 @@
+.col-centered {
+    float: none;
+    margin: 15px auto;
+}
+
+.jumbotron p {
+    font-size: 18px;
+}
+
+@media screen and (min-width: 768px) {
+    .col-centered {
+        float: left;
+    }
+    .row-centered {
+        float: none;
+        margin: 15px auto;
+        width: 470px;
+    }
+}
