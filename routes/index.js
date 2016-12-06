@@ -3,15 +3,12 @@
  */
 
 var fs = require('fs');
-
-
 var express = require('express');
 var path = require('path'),
   rootPath = path.normalize(__dirname + '/../'),
   router = express.Router();
 
 var streamService = require('../services/streamer.js')
-
 var logger = require('../services/logger.js')
 var models = require('../models');
 
@@ -19,7 +16,7 @@ var request = require('request');
 var http = require('http');
 var url = require('url');
 
-//API
+// API
 module.exports = function (app) {
 
   app.use('/', router);
@@ -104,6 +101,20 @@ module.exports = function (app) {
   }
 
 
+  /* finds the intersection of 
+   * two arrays in a simple fashion.  
+   *
+   * PARAMS
+   *  a - first array, must already be sorted
+   *  b - second array, must already be sorted
+   *
+   * NOTES
+   *
+   *  Should have O(n) operations, where n is 
+   *    n = MIN(a.length(), b.length())
+   *    
+   * http://stackoverflow.com/questions/1885557/simplest-code-for-array-intersection-in-javascript
+   */
   function intersect_safe(a, b) {
     var ai = 0, bi = 0;
     var result = [];
@@ -126,7 +137,7 @@ module.exports = function (app) {
     return result.length;
   }
 
-// TODO:  0.5 is a guess
+// TODO:  0.5 is a guess <= Kathrin: why 0.5? Are classes less important than resources? 
   function similarity(stuffa, stuffb) {
     return intersect_safe(stuffa.resources, stuffb.resources) + 0.5 * intersect_safe(stuffa.classes, stuffb.classes)
   }
@@ -165,9 +176,6 @@ module.exports = function (app) {
       });
     });
   });
-
-
-//var mstuff = {'gouda' : getStuff(}
 
 
 // tweet text goes in here returns events plus rankings

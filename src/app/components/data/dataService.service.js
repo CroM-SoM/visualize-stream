@@ -94,7 +94,7 @@
       }
     }
 
-    // checks te length of the users history array
+    // checks the length of the users history array
     vm.dates = function (history, user) {
       // calculate the average here for all time difference based on history.data.length but it should return form checkUserHistoryStream which it user stream return form API
       if (history.data.length > 20) {
