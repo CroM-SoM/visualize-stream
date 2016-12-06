@@ -137,7 +137,8 @@ module.exports = function (app) {
     return result.length;
   }
 
-// TODO:  0.5 is a guess <= Kathrin: why 0.5? Are classes less important than resources? 
+  // TODO:  0.5 is a guess <= Kathrin: why 0.5? Are classes less important than resources? 
+  // Let's try to use https://en.wikipedia.org/wiki/Jaccard_index 
   function similarity(stuffa, stuffb) {
     return intersect_safe(stuffa.resources, stuffb.resources) + 0.5 * intersect_safe(stuffa.classes, stuffb.classes)
   }
