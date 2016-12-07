@@ -101,8 +101,8 @@ module.exports = function (app) {
   }
 
 
-  /* finds the intersection of 
-   * two arrays in a simple fashion.  
+  /* finds the intersection of
+   * two arrays in a simple fashion.
    *
    * PARAMS
    *  a - first array, must already be sorted
@@ -110,9 +110,9 @@ module.exports = function (app) {
    *
    * NOTES
    *
-   *  Should have O(n) operations, where n is 
+   *  Should have O(n) operations, where n is
    *    n = MIN(a.length(), b.length())
-   *    
+   *
    * http://stackoverflow.com/questions/1885557/simplest-code-for-array-intersection-in-javascript
    */
   function intersect_safe(a, b) {
@@ -137,8 +137,8 @@ module.exports = function (app) {
     return result.length;
   }
 
-  // TODO:  0.5 is a guess <= Kathrin: why 0.5? Are classes less important than resources? 
-  // Let's try to use https://en.wikipedia.org/wiki/Jaccard_index 
+  // TODO:  0.5 is a guess <= Kathrin: why 0.5? Are classes less important than resources?
+  // Let's try to use https://en.wikipedia.org/wiki/Jaccard_index
   function similarity(stuffa, stuffb) {
     return intersect_safe(stuffa.resources, stuffb.resources) + 0.5 * intersect_safe(stuffa.classes, stuffb.classes)
   }
@@ -222,7 +222,7 @@ module.exports = function (app) {
             models.suggestions.create({
               user_id: req.body.user_id,
               tourist: req.body.tourist,
-              event: {similar_events: ret[0].event.place}
+              event: {similar_events: []}
             }).then(function (results) {
             })
           }

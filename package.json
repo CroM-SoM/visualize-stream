@@ -45,6 +45,7 @@
     "sequelize-cli": "^2.3.1",
     "serve-favicon": "~2.3.0",
     "socket.io": "*",
+    "swagger-tools": "^0.10.1",
     "sys": "0.0.1",
     "tedious": "^1.14.0",
     "twitter": "*",
